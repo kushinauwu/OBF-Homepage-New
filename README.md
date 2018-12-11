@@ -10,3 +10,5 @@ This is a very basic version, I haven't styled anything or linked to the proper 
 
 -- As of now, I've added the about, news and fellowships sections as posts editable directly from the wordpress editor. The links don't lead to any valid pages. For the events and projects, it could be better to just use custom posts like Yo recommended?
 
+--Path to the main theme files: OBF-Homepage-New -> obf-new -> wp-content -> themes -> obf-new
+
