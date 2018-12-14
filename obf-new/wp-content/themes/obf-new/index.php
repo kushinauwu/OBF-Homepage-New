@@ -79,7 +79,7 @@
             <!-- Search for post tagged accordingly -->
             <?php $query2 = new WP_Query( array( 'tag' => 'index-fellowships' ) ); ?>
             <?php if($query2->have_posts()) : ?>
-                <?php while($query2->have_posts()) : $query2->the_post(); ?>
+                <?php while($query2->have_posts()) : $query2->the_post(); ?>         
                 <section class = "fellowships-section">
                 <div class = "fellowships-background-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/biology-blur-close-up-760184.jpg);"> <!--Photo by Hiếu Hoàng from Pexels-->               
                 </div>
@@ -137,15 +137,19 @@
             
             
             <!-- Projects Section -->
-            <section class="projects-section">
+            <?php $project_query = new WP_Query( 'cat=8' ); ?>
+            <?php while($project_query -> have_posts()) : $project_query -> the_post(); ?>      
+                <section class="projects-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
+                            
                             <div class="row">
                                 <div class="col-md-8">
                                     <!-- heading wrapper -->
                                     <div class="projects-text-wrapper">
-                                    <h1>OBF Associated projects</h1>
+                                        
+                                    <h1><?php the_title(); ?></h1>
                                         </div>
                                 </div>
                             </div>
@@ -154,9 +158,11 @@
                                 <div class="col-sm-4 col-xs-6">
                                     <li class="project-name">
                                         <a href = "#">
-                                            <img src="<?php echo get_bloginfo('template_url') ?>/img/das.jpg">
+                                             <?php $image = wp_get_attachment_image_src(get_field('project_logo_1'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            
                                             <div class="project-title">
-                                                DAS
+                                                <?php the_field('project_name_1'); ?>
                                             </div>
                                         </a>
                                     </li>
@@ -164,9 +170,11 @@
                                 <div class="col-sm-4 col-xs-6">
                                     <li class="project-name">
                                         <a href="#">
-                                            <img src="<?php echo get_bloginfo('template_url') ?>/img/biopython.jpg">
+                                             <?php $image = wp_get_attachment_image_src(get_field('project_logo_2'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            
                                             <div class="project-title">
-                                                Biopython
+                                                <?php the_field('project_name_2'); ?>
                                             </div>
                                         </a>
                                     </li>
@@ -174,40 +182,48 @@
                                 <div class="col-sm-4 col-xs-6">
                                     <li class="project-name">
                                         <a href="#">
-                                        <img src="<?php echo get_bloginfo('template_url') ?>/img/biosql.jpg">
-                                        <div class="project-title">
-                                            BioSQL
-                                        </div>
+                                         <?php $image = wp_get_attachment_image_src(get_field('project_logo_3'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            
+                                            <div class="project-title">
+                                                <?php the_field('project_name_3'); ?>
+                                            </div>
                                             </a>
                                     </li>
                                 </div>
                                 <div class="col-sm-4 col-xs-6">
                                     <li class="project-name">
                                         <a href="#">
-                                        <img src="<?php echo get_bloginfo('template_url') ?>/img/emboss.jpg" >
-                                        <div class="project-title">
-                                            EMBOSS
-                                        </div>
+                                         <?php $image = wp_get_attachment_image_src(get_field('project_logo_4'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            
+                                            <div class="project-title">
+                                                <?php the_field('project_name_4'); ?>
+                                            </div>
                                             </a>
                                     </li>
                                 </div>
                                 <div class="col-sm-4 col-xs-6">
                                     <li class="project-name">
                                         <a href="#">
-                                        <img src="<?php echo get_bloginfo('template_url') ?>/img/biojava.jpg">
-                                        <div class="project-title">
-                                           BioJava
-                                        </div>
+                                         <?php $image = wp_get_attachment_image_src(get_field('project_logo_5'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            
+                                            <div class="project-title">
+                                                <?php the_field('project_name_5'); ?>
+                                            </div>
                                             </a>
                                     </li>
                                 </div>
                                 <div class="col-sm-4 col-xs-6">
                                     <li class="project-name">
                                         <a href="#">
-                                        <img src="<?php echo get_bloginfo('template_url') ?>/img/moby.jpg">
-                                        <div class="project-title">
-                                            MOBY
-                                        </div>
+                                         <?php $image = wp_get_attachment_image_src(get_field('project_logo_6'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            
+                                            <div class="project-title">
+                                                <?php the_field('project_name_6'); ?>
+                                            </div>
                                             </a>
                                     </li>
                                 </div>
@@ -224,6 +240,9 @@
                     </div>
                 </div>
             </section>  <!-- projects section end -->
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            
             
             <!--EVENTS SECTION -->
             <section class="events-section">
@@ -238,24 +257,37 @@
                                 </div>
                             </div>
                             
+                            <?php $event_query = new WP_Query( 'cat=7&posts_per_page=3' ); ?>
                             <ul class="list-inline row events-list">
+                                <?php while($event_query -> have_posts()) : $event_query -> the_post(); ?>
                                 <div class="col-sm-4 col-xs-4">
                                     <li class="event-details">
                                         <a href="#">
-                                            <img src="<?php echo get_bloginfo('template_url') ?>/img/GSoC-icon-192.png">
+                                            <?php the_post_thumbnail(); ?>
                                             <div class="event-name">
-                                                Google Summer of Code 2019
+                                                <?php the_title(); ?>
                                             </div>
                                             <div class="event-date">
-                                                TBA
+                                                <?php
+                                                //check if value in field is for event Date
+                                                $event_date = get_post_meta($post->ID, 'Date', true ); ?>
+                                                <?php if ( $event_date )  : echo $event_date; ?>
+                                                <?php else : ?>
+                                                <p><?php __('TBA'); ?></p>
+                                                <?php endif; ?>
+                                                <?php wp_reset_postdata(); ?>
+                                                
+                                                
                                             </div>
                                         </a>
                                     </li>
                                 </div>
-                                <div class="col-sm-4 col-xs-4">
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
+                                <!--<div class="col-sm-4 col-xs-4">
                                     <li class="event-details">
                                         <a href="#">
-                                            <img src="<?php echo get_bloginfo('template_url') ?>/img/Pear.png">
+                                            <img src="/img/Pear.png">
                                             <div class="event-name">
                                                 BOSC 2019
                                             </div>
@@ -268,7 +300,7 @@
                                 <div class="col-sm-4 col-xs-4">
                                     <li class="event-details">
                                         <a href="#">
-                                            <img src="<?php echo get_bloginfo('template_url') ?>/img/icons8-calendar-100.png">
+                                            <img src="/img/icons8-calendar-100.png">
                                             <div class="event-name">
                                                 Another event
                                             </div>
@@ -277,12 +309,117 @@
                                             </div>
                                         </a>
                                     </li>
-                                </div>
+                                </div> -->
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
+            
+            <!-- Board of Directors -->
+            <?php $board_query = new WP_Query( 'cat=10' ); ?>
+            <?php while($board_query -> have_posts()) : $board_query -> the_post(); ?>    
+             <section class="board-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="board-head-wrapper">
+                                        <h1><?php the_title(); ?></h1>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <ul class="list-inline row member-list">
+                                <div class="col-sm-4 col-xs-4">
+                                    <li class="member-details"> 
+                                            <?php $image = wp_get_attachment_image_src(get_field('member_photo_1'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            <div class="member-name">
+                                                <?php the_field('member_name_1'); ?>
+                                            </div>
+                                            <div class="member-position">
+                                                <?php the_field('member_position_1'); ?>
+                                            </div>       
+                                    </li>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                     <li class="member-details"> 
+                                            <?php $image = wp_get_attachment_image_src(get_field('member_photo_2'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            <div class="member-name">
+                                                <?php the_field('member_name_2'); ?>
+                                            </div>
+                                            <div class="member-position">
+                                                <?php the_field('member_position_2'); ?>
+                                            </div>       
+                                    </li>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                     <li class="member-details"> 
+                                            <?php $image = wp_get_attachment_image_src(get_field('member_photo_3'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            <div class="member-name">
+                                                <?php the_field('member_name_3'); ?>
+                                            </div>
+                                            <div class="member-position">
+                                                <?php the_field('member_position_3'); ?>
+                                            </div>       
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 board-button">
+                            <a href="/board" class="button">
+                                <span> See all members</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            
+            <!-- Join section -->
+            <section class="join-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="join-head-wrapper">
+                                        <h1>Join Us!</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <?php $joining_query = new WP_Query( 'cat=9&posts_per_page=3' ); ?>
+                            <ul class="list-inline row join-list">
+                                <?php while($joining_query -> have_posts()) : $joining_query -> the_post(); ?>
+                                <div class="col-sm-4 col-xs-4">
+                                    <li class="join-details">
+                                        <a href="#">
+                                            <?php the_post_thumbnail(); ?>
+                                            <div class="join-title">
+                                                <?php the_title(); ?>
+                                            </div>
+                                            
+                                        </a>
+                                    </li>
+                                </div>
+                                
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
         </div> <!--main content end -->
            
            <!--footer -->

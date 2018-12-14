@@ -8,7 +8,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
-
 * {
     margin: 0;
     padding: 0;
@@ -488,7 +487,7 @@ i {
 
 .projects-section .projects-text-wrapper {
     height: auto;
-    transform: translateX(-3%);
+    transform: translateX(-12%);
     
 }
 
@@ -518,6 +517,8 @@ i {
     border-right-color: deepskyblue;
     border-radius: 25%; 
     transition: 0.5s ease-in-out;
+    height: 150px;
+    width: 150px;
 }
 
 .projects-list .project-name img:hover {  
@@ -567,7 +568,7 @@ i {
 }
 
 /*EVENTS SECTION*/
-.events-section {
+.events-section, .join-section {
     margin-top: 50px;
     margin-left: 0;
     margin-right: 0;
@@ -577,19 +578,17 @@ i {
     transition: 1s ease;
 }
 
-.events-section .events-head-wrapper {
-    position: relative;
-    top: 20%;
+.events-section .events-head-wrapper{
     height: auto;
-    transform: translateX(-7%);
+    transform: translateX(-16%);
 }
 
-.events-list {
+.events-list, join-list {
     list-style: none;
     margin-top: 40px;
 }
 
-.events-list .event-details {
+.events-list .event-details, .join-list .join-details {
     margin-bottom: 40px;
     text-align: center;
 }
@@ -610,7 +609,7 @@ i {
     border-radius: 70px;
     }
 
-.events-list .event-details .event-name {
+.events-list .event-details .event-name, .join-list .join-details .join-title {
     margin-top: 0;
     font-family: 'Slabo 27px', serif;
     font-weight: bold;
@@ -629,6 +628,92 @@ i {
     font-size: 22px;
 
 }
+
+/*Board of Directors*/
+.board-section {
+    margin-top: 20px;
+     background-color: #1b2e25; /*bord of directorsa section  bgcolor*/
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
+   opacity: 1;
+    padding: 55px 0 0 0;
+    transition: 1s ease;
+}
+
+.board-section .board-head-wrapper {
+    height: auto;
+    transform: translateX(-18%);
+}
+
+.board-section .board-head-wrapper h1 {
+    color: #88eef7; /*projects section heading*/
+}
+
+
+.member-list {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.board-section .member-list .member-details {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.board-section .member-list .member-details img {
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 250px;
+    width: 250px;
+    border: 1px solid whitesmoke; /*event icon border*/
+    border-radius: 180px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.member-list .member-details .member-name {
+    margin-top: 0;
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 26px;
+    letter-spacing: 0.7px;
+    transition: 0.3s ease;
+    color: whitesmoke;
+}
+
+.member-list .member-details .member-position {
+    margin-top: 0;
+    font-family: 'Slabo 27px',serif;
+    font-weight: bold;
+    color: lightblue; /* event TBA */
+    font-size: 22px;
+
+}
+
+.board-button .button {
+     position: relative;
+    left: 40%;
+    display: inline-block;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-family: 'Montserrat',serif;
+    font-size: 20px;
+    border-radius: 0 25px 25px 0;
+    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%);   /*project button bg color*/
+    transition: 0.5s ease-in-out;
+}
+
+.board-button .button:hover {
+    background-position: right center;
+    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%); /* project buutton bg color hover*/
+    color: dimgray;
+}
+
 
 /*FOOTER SECTION*/
 .footer-section {
@@ -704,6 +789,24 @@ i {
 .footer-logo {
     padding: 20px;
 }
+
+/*JOIN SECTION*/
+
+.join-section .join-head-wrapper {
+    height: auto;
+    transform: translateX(-20%);
+}
+.join-list .join-details img {
+    padding: 30px;
+    margin-bottom: 20px;
+    height: 250px;
+    width: 250px;
+    border: 3px grey; /*event icon border*/
+    border-radius: 180px;
+    border-style:solid;
+    transition: 0.3s ease-in-out;
+}
+
 
 @media only screen and (max-width: 600px) {
   * {

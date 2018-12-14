@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name:events
-*/
-?>
-
 <?php get_header(); ?>
            
         <!--main content start -->
