@@ -11,7 +11,6 @@
         <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
@@ -32,7 +31,7 @@
                         <div class="col-12"> 
                             <!--OBF logo -->
                             <div class="navbar-header">
-                                <a class="navbar-logo" href="index.html">
+                                <a class="navbar-logo" href="<?php echo home_url(); ?>">
                                 <img src="<?php echo get_bloginfo('template_url') ?>/img/obf-logo-1.png">
                                 </a>
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar">
