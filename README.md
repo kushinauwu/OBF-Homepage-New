@@ -1,5 +1,11 @@
 # OBF Homepage New
 
+**Installation Guidelines**
+
+-- Plugin Advanced Custom Fields has been installed. 
+
+**Details**
+
 This is a very basic version, I haven't styled anything or linked to the proper pages. 
 
 -- Separated the header and footer from the main content.
@@ -11,4 +17,11 @@ This is a very basic version, I haven't styled anything or linked to the proper 
 -- As of now, I've added the about, news and fellowships sections as posts editable directly from the wordpress editor. The links don't lead to any valid pages. For the events and projects, it could be better to just use custom posts like Yo recommended?
 
 --Path to the main theme files: OBF-Homepage-New -> obf-new -> wp-content -> themes -> obf-new
+
+*Update 20/12/2018*
+-- Moved files from wp-content to root directory.
+
+-- Navbar styling issue resolved. Hamburger menu issue still stands. 
+
+-- About page is done. 
 
