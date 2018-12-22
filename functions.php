@@ -7,6 +7,9 @@ function obf_scripts_styles() {
     if ( is_page( 'about' ) ) {
         wp_enqueue_style('style-about.css', get_template_directory_uri().'/css/style-about.css',false,'1.0','all');
     }
+    else if ( is_page( 'fellowships' ) ) {
+        wp_enqueue_style('style-fellowships.css', get_template_directory_uri().'/css/style-fellowships.css',false,'1.0','all');
+    }
     
         wp_enqueue_style( 'style', get_stylesheet_uri() );
 
@@ -44,6 +47,19 @@ function create_posttype() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'events'),
+        
+    )
+  );
+    
+    register_post_type( 'obf_news',
+    array(
+      'labels' => array(
+        'name' => __( 'News' ),
+        'singular_name' => __( 'News' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'news'),
         
     )
   );
