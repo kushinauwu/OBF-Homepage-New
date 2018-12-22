@@ -137,7 +137,7 @@
             
             
             <!-- Projects Section -->
-            <?php $project_query = new WP_Query( 'cat=8' ); ?>
+            <?php $project_query = new WP_Query( array( 'tag' => 'index-projects' ) ); ?>
             <?php while($project_query -> have_posts()) : $project_query -> the_post(); ?>      
                 <section class="projects-section">
                 <div class="container">
@@ -257,7 +257,9 @@
                                 </div>
                             </div>
                             
-                            <?php $event_query = new WP_Query( 'cat=7&posts_per_page=3' ); ?>
+                            <?php $event_query = new WP_Query( array( 
+                            'tag' => 'index-events',
+                            'posts_per_page' => 3) ); ?>
                             <ul class="list-inline row events-list">
                                 <?php while($event_query -> have_posts()) : $event_query -> the_post(); ?>
                                 <div class="col-sm-4 col-xs-4">
@@ -317,7 +319,7 @@
             </section>
             
             <!-- Board of Directors -->
-            <?php $board_query = new WP_Query( 'cat=10' ); ?>
+            <?php $board_query = new WP_Query( array( 'tag' => 'index-board') ); ?>
             <?php while($board_query -> have_posts()) : $board_query -> the_post(); ?>    
              <section class="board-section">
                 <div class="container">
@@ -396,7 +398,8 @@
                                 </div>
                             </div>
                             
-                            <?php $joining_query = new WP_Query( 'cat=9&posts_per_page=3' ); ?>
+                            <?php $joining_query = new WP_Query( array( 'tag' => 'index-join',
+                                                                      'posts_per_page' => 3 ) ); ?>
                             <ul class="list-inline row join-list">
                                 <?php while($joining_query -> have_posts()) : $joining_query -> the_post(); ?>
                                 <div class="col-sm-4 col-xs-4">
