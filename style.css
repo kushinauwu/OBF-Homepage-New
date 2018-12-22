@@ -95,8 +95,8 @@ a:hover {
 
 #menu-main-menu .menu-item {
      padding: 10px 0; 
-    text-align: right;
-    display: inline-block;
+    text-align: left;
+    display: block;
     transition: 0.5s ease;
 }
 
