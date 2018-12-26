@@ -9,11 +9,10 @@
             <?php if($query0->have_posts()) : ?>
                 <?php while($query0->have_posts()) : $query0->the_post(); ?>
             <section class = "about-section">
-                <div class = "about-background-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/abstract-animal-aquarium-753266.jpg);"> <!--Photo by Egor Kamelev from Pexels-->               
-                </div>
-                <div class = "container">
+               
+                
                     <div class = "row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-5">
                             <!--wrapper for text -->
                             <div class="about-text-wrapper"> 
                                 <div class="about-content">
@@ -36,8 +35,12 @@
                                 </div>
                             </div> <!-- text wrapper end -->
                         </div>
-                    </div>                                     
+                        <div class="col-sm-7">
+                             <div class = "about-background-image"> <!--Photo by Egor Kamelev from Pexels-->
+                                 <img src="<?php echo get_bloginfo('template_url') ?>/img/abstract-animal-aquarium-753266.jpg">
                 </div>
+                        </div>
+                    </div>                                     
             </section> 
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
@@ -81,11 +84,9 @@
             <?php if($query2->have_posts()) : ?>
                 <?php while($query2->have_posts()) : $query2->the_post(); ?>         
                 <section class = "fellowships-section">
-                <div class = "fellowships-background-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/biology-blur-close-up-760184.jpg);"> <!--Photo by Hiếu Hoàng from Pexels-->               
-                </div>
-                <div class = "container">                
+                                
                     <div class = "row">
-                        <div class="col-md-6">
+                        <div class="col-sm-6">
                             <!-- wrapper for text -->
                             <div class="fellowships-text-wrapper">
                                 <div class="fellowships-content">
@@ -125,9 +126,12 @@
                                 </div>
                             </div> <!-- text wrappper end -->
                         </div>
-                    </div>                  
+                        <div class="col-sm-6">
+                            <div class = "fellowships-background-image"> <!--Photo by Hiếu Hoàng from Pexels-->        
+                                <img src="<?php echo get_bloginfo('template_url') ?>/img/biology-blur-close-up-760184.jpg">
                 </div>
-                
+                        </div>
+                    </div>                     
             </section>  <!-- fellowships section end -->  
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
@@ -140,19 +144,15 @@
             <?php $project_query = new WP_Query( array( 'tag' => 'index-projects' ) ); ?>
             <?php while($project_query -> have_posts()) : $project_query -> the_post(); ?>      
                 <section class="projects-section">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12">
-                            
-                            <div class="row">
-                                <div class="col-md-8">
                                     <!-- heading wrapper -->
                                     <div class="projects-text-wrapper">
                                         
                                     <h1><?php the_title(); ?></h1>
                                         </div>
-                                </div>
-                            </div>
+                                
                             <!-- list of linked projects -->
                             <ul class="list-inline row projects-list">
                                 <div class="col-sm-4 col-xs-6">
@@ -246,15 +246,11 @@
             
             <!--EVENTS SECTION -->
             <section class="events-section">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="row">
-                                <div class="col-md-6">
                                     <div class="events-head-wrapper">
-                                        <h1>Upcoming events</h1>
-                                    </div>
-                                </div>
+                                        <h1>Upcoming events</h1>                                    
                             </div>
                             
                             <?php $event_query = new WP_Query( array( 
@@ -322,17 +318,14 @@
             <?php $board_query = new WP_Query( array( 'tag' => 'index-board') ); ?>
             <?php while($board_query -> have_posts()) : $board_query -> the_post(); ?>    
              <section class="board-section">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="row">
-                                <div class="col-md-6">
+                           
                                     <div class="board-head-wrapper">
                                         <h1><?php the_title(); ?></h1>
                                     </div>
-                                </div>
-                            </div>
-                            
+                        </div>
                             <ul class="list-inline row member-list">
                                 <div class="col-sm-4 col-xs-4">
                                     <li class="member-details"> 
@@ -379,7 +372,6 @@
                                 <span> See all members</span>
                             </a>
                         </div>
-                    </div>
                 </div>
             </section>
             <?php endwhile; ?>
@@ -387,17 +379,12 @@
             
             <!-- Join section -->
             <section class="join-section">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="row">
-                                <div class="col-md-6">
                                     <div class="join-head-wrapper">
                                         <h1>Join Us!</h1>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                                    </div>                           
                             <?php $joining_query = new WP_Query( array( 'tag' => 'index-join',
                                                                       'posts_per_page' => 3 ) ); ?>
                             <ul class="list-inline row join-list">
