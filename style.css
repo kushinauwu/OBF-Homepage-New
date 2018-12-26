@@ -129,6 +129,21 @@ a:hover {
     font-size: 22px;    
 }
 
+.active {
+    background-color: #c4dff5;
+    border-radius: 25px;
+    text-decoration: none;
+}
+.dropdown-menu>.active>a {
+    text-decoration: none;
+    background-image: none;
+    background-color: transparent;
+    outline: 0;
+}
+
+#menu-main-menu .menu-item-has-children:hover {
+    border-radius: 25px 25px 0 0;
+}
 
 
 .nav>li>a:hover, .nav>li>a:focus {
@@ -159,7 +174,7 @@ a:hover {
     z-index: 1;
     text-align:left;
     left: 0;
-    border-radius: 20px;
+    border-radius: 0 25px 25px 25px;
     margin-top: 0;
 }
 
@@ -185,6 +200,13 @@ a:hover {
     display: block;    
 }
 
+.dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: darkslateblue;
+    text-decoration: none;
+    background-color: transparent;
+    outline: 0;
+}
+
 i {
     border: solid darkslateblue; /* navbar arrow color */
     border-width: 0 3px 3px 0;
@@ -199,48 +221,52 @@ i {
 
 
 /*ABOUT SECTION // SoOME FELLOWSHIP SECTION COMMONS*/
-.about-section, .fellowships-section {
-    background-position: left 42vh, right top;
+.about-section,.fellowships-section {
+    /*background-position: left 42vh, right top;
     background-size: 35% 50% 600px;
-    max-width: 500px;
+    max-width: 500px;*/
+    margin-top: 3%;
+    }
+
+.about-section .about-background-image, .fellowships-section .fellowships-background-image {
 }
 
-.about-section .about-background-image {
+.about-background-image img, .fellowships-section .fellowships-background-image img{
+    position: absolute;
     max-width: 786px;
-    max-height: 480px;
-    position:absolute;
-    margin-top: 50px;
-    right: 0;
+    right: 0%;
     width: 100%;
-    height: 80%;  
-    background-size: cover;
+    max-height: 480px;
     border-radius: 100px 0 0 100px;
-    background-repeat:no-repeat;
-    opacity: 0.8;   
 }
 
-.col-sm-6 {
+/*.col-sm-6 {
     width: 50%;
     float: left;
     position: relative;
     padding-left: 40px;
     padding-right: 30px;
-}
+}*/
 
 .about-section .about-text-wrapper, .fellowships-section .fellowships-text-wrapper {
-    position: relative;
+   /* position: relative;
     height: 600px;
-    left: 7%;
+    left: 7%;*/
+    margin-bottom: 5%;
 }
 
 .about-section .about-text-wrapper .about-content, .fellowships-section .fellowships-text-wrapper .fellowships-content{
-    position: relative;
-    top: 20%;
+    /*position: relative;
+    top: 20%;*/
    /* transform: translateY(-50%);*/
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: 15%;
+    margin-bottom: 0;
 }
 
 .about-section .about-text-wrapper .about-content-info, .fellowships-section .fellowships-text-wrapper .fellowships-content-info {
-    padding-right: 40px;
+   /* padding-right: 40px;*/
     font-size: 22px;
    /* color: #2d95b5;*/
     color: rgb(001,017,032); /* about and felloship text color */
@@ -250,13 +276,17 @@ i {
     letter-spacing: 0.7px;
 }
 
-.about-content-button .button {
+.container-fluid {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.about-content-button .button{
     position: relative;
     top: 30px;
     display: inline-block;
-    color: white; /* about button text color*/
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 25px 10px 25px;
-    font-weight: normal;
     font-style: normal;
     font-family: 'Montserrat', serif;
     border-radius: 0 25px 25px 0;
@@ -279,11 +309,14 @@ i {
     font-weight: bold;
 }
 
+
+/*NEWS SECTION and some FELLOWSHIP SECTION COMMMONS*/
+
 /*NEWS SECTION and some FELLOWSHIP SECTION COMMMONS*/
 .news-section {
     /*background-color: #d6f6c6;*/
     background-color: #1b2e25; /* mid section bgcolor*/
-    margin-top: 0px;
+    margin-top: 100px;
     padding: 55px 0px 70px;
     position: relative;
     margin-bottom: 30px;
@@ -325,7 +358,7 @@ i {
     margin-left: 43%;
 }
 
-.news-section .blog-list, .fellowships-section .fellowship-info-list {
+.news-section .blog-list{
     margin-top: 20px;
     list-style: none;
     padding-left: 0;   
@@ -360,11 +393,11 @@ i {
     position: relative;
     top: 30px;   
     display: inline-block;
-    color: white;
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 15px 10px 25px;
-    font-weight: normal;
     font-style: normal;
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Montserrat', serif;
     font-weight: bold;
     border-radius: 25px 0 0 25px;
@@ -391,40 +424,36 @@ i {
 }
 
 /*FELLOWSHIPS SECTION*/
-.fellowships-section {
-    height: 100%;
-   opacity: 1;
-    width: 100%;
-    transition: 1s ease;
-    margin-top: 80px;
+
+ .fellowships-section .fellowships-text-wrapper .fellowships-content{
+    /*position: relative;
+    top: 20%;*/
+   /* transform: translateY(-50%);*/
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 0;
 }
 
-.fellowships-section .fellowships-text-wrapper {
-    position: relative;
-    top: 20%;
-    height: auto;
-}
-.fellowships-section .fellowships-background-image {
-    max-width: 560px;
-    max-height: 480px;
-    position: absolute;
-    margin-top: 0px;
-    right: 0;
-    width: 100%;
-    height: 80%; 
-    background-size: cover;
-    border-radius: 100px 0 0 100px;
-    background-repeat: no-repeat;
-    transition: 1.25s ease-in-out;
-}
+
+.fellowship-info-list .list-question {
+    border-bottom: 1px solid grey;
+    padding: 15px 0 5px 0;
+    width: 90%;
+    border-bottom-right-radius: 0px;
+    text-align: justify;   
+    list-style: none;
+} 
 
 .fellowship-info-list .list-question a{
     display: block;
     padding: 0;
-    color: #2d95b5; /* fellowship link text color */
+    color: #2d95b5; 
     background-color: transparent;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 22px;
+        font-family: 'Slabo 27px', serif;
+
     transition: 0.3s ease;
 }
 
@@ -437,13 +466,14 @@ i {
     position: relative;
     top: 40px;
     display: inline-block;
-    color: white;
+    color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 25px 10px 25px;
     margin-bottom: 50px;
     font-weight: bold;
     font-family: 'Montserrat',serif;
     border-radius: 0 25px 25px 0;
-    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%);   /* fellowshups button bgcolor*/
+    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%); 
     transition: 0.5s ease-in-out;
 
 }
@@ -462,13 +492,11 @@ i {
 }
 
 
-.col-md-6 {
+/*.col-md-6 {
     width: 65%;
     float: left;
     position: relative;
-    padding-left: 40px;
-    padding-right: 30px;
-}
+    padding-lef*/
 
 /*PROJECTS SECTION*/
 
@@ -487,7 +515,6 @@ i {
 
 .projects-section .projects-text-wrapper {
     height: auto;
-    transform: translateX(-12%);
     
 }
 
@@ -550,7 +577,8 @@ i {
      position: relative;
     left: 40%;
     display: inline-block;
-    color: white;
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 15px 25px 15px 25px;
     margin-bottom: 50px;
     font-weight: bold;
@@ -580,7 +608,6 @@ i {
 
 .events-section .events-head-wrapper{
     height: auto;
-    transform: translateX(-16%);
 }
 
 .events-list, join-list {
@@ -644,7 +671,6 @@ i {
 
 .board-section .board-head-wrapper {
     height: auto;
-    transform: translateX(-18%);
 }
 
 .board-section .board-head-wrapper h1 {
@@ -697,7 +723,8 @@ i {
      position: relative;
     left: 40%;
     display: inline-block;
-    color: white;
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 15px 25px 15px 25px;
     margin-bottom: 50px;
     font-weight: bold;
@@ -794,7 +821,6 @@ i {
 
 .join-section .join-head-wrapper {
     height: auto;
-    transform: translateX(-20%);
 }
 .join-list .join-details img {
     padding: 30px;
