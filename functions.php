@@ -36,7 +36,7 @@ function obf_theme_setup() {
 add_action('after_setup_theme','obf_theme_setup');
 add_theme_support( 'post-thumbnails' );
 
-function create_posttype() {
+/*function create_posttype() {
 
   register_post_type( 'obf_event',
     array(
@@ -77,6 +77,6 @@ function create_posttype() {
     )
   );
 }
-add_action( 'init', 'create_posttype' );
+add_action( 'init', 'create_posttype' );*/
 
  
