@@ -32,7 +32,7 @@
                             <!--OBF logo -->
                             <div class="navbar-header">
                                 <a class="navbar-logo" href="<?php echo home_url(); ?>">
-                                <img src="<?php echo get_bloginfo('template_url') ?>/img/obf-logo-1.png">
+                                <img src="<?php echo get_bloginfo('template_url') ?>/img/obf-logo-header.png">
                                 </a>
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar">
                                     <span class="sr-only">Toggle navigation</span>
