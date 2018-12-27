@@ -4,12 +4,12 @@
 
   * ***Setup and Plugin Installation***
 
-1. Download/clone repository. Unzip and open *OBF-Homepage-New-master* folder and move all files to the local WordPress directory.
+1. Download/clone repository. Unzip and open *OBF-Homepage-New-master* folder and move all files inside the folder to the local WordPress theme directory, in wp-content->Themes.
 2. Login to wordpress local installation.
 3. Go to **Plugins->Add New**
 4. Search for '*Advanced Custom Fields*' and install plugin. Activate plugin.
 5. Go to **Plugins->Add new** again and search for '*All-in-One WP Migration'* plugin and install. Activate plugin.
-6. We're importing from file, and it is above 2 MB, but WP only allows files below that limit. So we will download and install the file extension. Go to [Import WP Migration](https://import.wp-migration.com/) and download the **Basic** version.
+6. We're importing from file, and it is above 2 MB, but WP only allows files below that limit. So we will download and install the file extension. Go to [Import WP Migration](https://import.wp-migration.com/) and download the **Basic** version in any folder.
 7. Go back to the **Plugins menu-> Add New**. Select '*Upload Plugin*' beside the *Add Plugins* heading. Choose the file extension .zip file that was downloaded from [Import WP Migration](https://import.wp-migration.com/) and click on *Install Now*.
 8. Once it is installed, click on '*Activate Plugin*' to activate the extension.
 
