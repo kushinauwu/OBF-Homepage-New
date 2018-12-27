@@ -317,7 +317,7 @@ i {
     /*background-color: #d6f6c6;*/
     background-color: #1b2e25; /* mid section bgcolor*/
     margin-top: 100px;
-    padding: 55px 0px 70px;
+    padding: 55px 20px 70px 0;
     position: relative;
     margin-bottom: 30px;
     transition: 1s ease;
