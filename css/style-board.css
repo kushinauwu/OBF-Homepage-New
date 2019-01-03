@@ -2,7 +2,7 @@
 Theme Name: obf-new
 Author: kushinauwu
 Description: basic revised obf homepage theme
-Version: 5.0.5
+Version: 5.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -280,7 +280,7 @@ i {
     color: whitesmoke;
 }
 
-.past-members .members-list .member-name {
+.past-members .members-list .member-name a{
     color: lightblue;
 }
 
@@ -308,7 +308,11 @@ i {
     text-transform: uppercase;
 }
 
-.expectations-list li {
+.expectations-text-wrapper ul{
+    list-style: none;
+}
+
+.expectations-text-wrapper ul li {
     font-family: 'Slabo 27px', serif;
     font-size: 20px;
     padding: 10px 15px;
@@ -317,12 +321,12 @@ i {
     text-align: justify;
 }
 
-.expectations:nth-child(odd) {
+.expectations-text-wrapper ul li:nth-child(odd) {
     background-color: #cfffff;
     
 }
 
-.expectations:nth-child(even) {
+.expectations-text-wrapper ul li:nth-child(even) {
     background-color: #cccccf;
 }
 
@@ -539,7 +543,7 @@ a:hover {
     font-size: 3.6vh;
  }
 
-.expectations-list li {
+.expectations-text-wrapper ul li {
     font-family: 'Lato', serif;
     font-size: 2.5vh;
     padding: 2vh 2.5vh;
