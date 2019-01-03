@@ -118,12 +118,10 @@ Template Name:about
         ?>
         <?php if ( $activities->have_posts() ) : while ( $activities->have_posts() ) : $activities->the_post(); ?>
          <section class="obf-activity">
-                <div class="container">
-                    <div class="row">
+                <div class="container-fluid">
                         <h1><?php the_title(); ?></h1>
-                    </div>
                 </div>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row">

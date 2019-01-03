@@ -51,7 +51,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-4 col-sm-offset-4">
-                                <a href="index.html">
+                                <a href="<?php echo home_url(); ?>">
                                     <img src="<?php echo get_bloginfo('template_url') ?>/img/obf-logo.png" width=300px>
                                 </a>
                             </div>

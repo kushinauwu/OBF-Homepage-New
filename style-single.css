@@ -1,0 +1,22 @@
+/*
+Theme Name: obf-new
+Author: kushinauwu
+Description: basic revised obf homepage theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+p {
+    font-size: 22px;
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 0.7px;
+    text-align: justify;
+}
+
+.h3 {
+    font-size: 30px;
+    font-family: 'Montserrat', serif;
+    text-align: justify;
+}

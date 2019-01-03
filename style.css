@@ -95,8 +95,8 @@ a:hover {
 
 #menu-main-menu .menu-item {
      padding: 10px 0; 
-    text-align: right;
-    display: inline-block;
+    text-align: left;
+    display: block;
     transition: 0.5s ease;
 }
 
@@ -129,6 +129,25 @@ a:hover {
     font-size: 22px;    
 }
 
+button.navbar-toggler {
+    display: none;
+}
+
+.active {
+    background-color: #c4dff5;
+    border-radius: 25px;
+    text-decoration: none;
+}
+.dropdown-menu>.active>a {
+    text-decoration: none;
+    background-image: none;
+    background-color: transparent;
+    outline: 0;
+}
+
+#menu-main-menu .menu-item-has-children:hover {
+    border-radius: 25px 25px 0 0;
+}
 
 
 .nav>li>a:hover, .nav>li>a:focus {
@@ -159,7 +178,7 @@ a:hover {
     z-index: 1;
     text-align:left;
     left: 0;
-    border-radius: 20px;
+    border-radius: 0 25px 25px 25px;
     margin-top: 0;
 }
 
@@ -185,6 +204,13 @@ a:hover {
     display: block;    
 }
 
+.dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: darkslateblue;
+    text-decoration: none;
+    background-color: transparent;
+    outline: 0;
+}
+
 i {
     border: solid darkslateblue; /* navbar arrow color */
     border-width: 0 3px 3px 0;
@@ -199,48 +225,52 @@ i {
 
 
 /*ABOUT SECTION // SoOME FELLOWSHIP SECTION COMMONS*/
-.about-section, .fellowships-section {
-    background-position: left 42vh, right top;
+.about-section,.fellowships-section {
+    /*background-position: left 42vh, right top;
     background-size: 35% 50% 600px;
-    max-width: 500px;
+    max-width: 500px;*/
+    margin-top: 3%;
+    }
+
+.about-section .about-background-image, .fellowships-section .fellowships-background-image {
 }
 
-.about-section .about-background-image {
+.about-background-image img, .fellowships-section .fellowships-background-image img{
+    position: absolute;
     max-width: 786px;
-    max-height: 480px;
-    position:absolute;
-    margin-top: 50px;
-    right: 0;
+    right: 0%;
     width: 100%;
-    height: 80%;  
-    background-size: cover;
+    max-height: 480px;
     border-radius: 100px 0 0 100px;
-    background-repeat:no-repeat;
-    opacity: 0.8;   
 }
 
-.col-sm-6 {
+/*.col-sm-6 {
     width: 50%;
     float: left;
     position: relative;
     padding-left: 40px;
     padding-right: 30px;
-}
+}*/
 
 .about-section .about-text-wrapper, .fellowships-section .fellowships-text-wrapper {
-    position: relative;
+   /* position: relative;
     height: 600px;
-    left: 7%;
+    left: 7%;*/
+    margin-bottom: 5%;
 }
 
 .about-section .about-text-wrapper .about-content, .fellowships-section .fellowships-text-wrapper .fellowships-content{
-    position: relative;
-    top: 20%;
+    /*position: relative;
+    top: 20%;*/
    /* transform: translateY(-50%);*/
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: 15%;
+    margin-bottom: 0;
 }
 
 .about-section .about-text-wrapper .about-content-info, .fellowships-section .fellowships-text-wrapper .fellowships-content-info {
-    padding-right: 40px;
+   /* padding-right: 40px;*/
     font-size: 22px;
    /* color: #2d95b5;*/
     color: rgb(001,017,032); /* about and felloship text color */
@@ -250,13 +280,17 @@ i {
     letter-spacing: 0.7px;
 }
 
-.about-content-button .button {
+.container-fluid {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.about-content-button .button{
     position: relative;
     top: 30px;
     display: inline-block;
-    color: white; /* about button text color*/
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 25px 10px 25px;
-    font-weight: normal;
     font-style: normal;
     font-family: 'Montserrat', serif;
     border-radius: 0 25px 25px 0;
@@ -283,8 +317,8 @@ i {
 .news-section {
     /*background-color: #d6f6c6;*/
     background-color: #1b2e25; /* mid section bgcolor*/
-    margin-top: 0px;
-    padding: 55px 0px 70px;
+    margin-top: 100px;
+    padding: 55px 20px 70px 0;
     position: relative;
     margin-bottom: 30px;
     transition: 1s ease;
@@ -325,11 +359,12 @@ i {
     margin-left: 43%;
 }
 
-.news-section .blog-list, .fellowships-section .fellowship-info-list {
+.news-section .blog-list{
     margin-top: 20px;
     list-style: none;
     padding-left: 0;   
     display: block;
+    margin-right: 5%;
 }
 
 .blog-list .list-post, .fellowship-info-list .list-question {
@@ -360,11 +395,11 @@ i {
     position: relative;
     top: 30px;   
     display: inline-block;
-    color: white;
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 15px 10px 25px;
-    font-weight: normal;
     font-style: normal;
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Montserrat', serif;
     font-weight: bold;
     border-radius: 25px 0 0 25px;
@@ -391,40 +426,36 @@ i {
 }
 
 /*FELLOWSHIPS SECTION*/
-.fellowships-section {
-    height: 100%;
-   opacity: 1;
-    width: 100%;
-    transition: 1s ease;
-    margin-top: 80px;
+
+ .fellowships-section .fellowships-text-wrapper .fellowships-content{
+    /*position: relative;
+    top: 20%;*/
+   /* transform: translateY(-50%);*/
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 0;
 }
 
-.fellowships-section .fellowships-text-wrapper {
-    position: relative;
-    top: 20%;
-    height: auto;
-}
-.fellowships-section .fellowships-background-image {
-    max-width: 560px;
-    max-height: 480px;
-    position: absolute;
-    margin-top: 0px;
-    right: 0;
-    width: 100%;
-    height: 80%; 
-    background-size: cover;
-    border-radius: 100px 0 0 100px;
-    background-repeat: no-repeat;
-    transition: 1.25s ease-in-out;
-}
+
+.fellowship-info-list .list-question {
+    border-bottom: 1px solid grey;
+    padding: 15px 0 5px 0;
+    width: 90%;
+    border-bottom-right-radius: 0px;
+    text-align: justify;   
+    list-style: none;
+} 
 
 .fellowship-info-list .list-question a{
     display: block;
     padding: 0;
-    color: #2d95b5; /* fellowship link text color */
+    color: #2d95b5; 
     background-color: transparent;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 22px;
+        font-family: 'Slabo 27px', serif;
+
     transition: 0.3s ease;
 }
 
@@ -437,13 +468,14 @@ i {
     position: relative;
     top: 40px;
     display: inline-block;
-    color: white;
+    color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 25px 10px 25px;
     margin-bottom: 50px;
     font-weight: bold;
     font-family: 'Montserrat',serif;
     border-radius: 0 25px 25px 0;
-    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%);   /* fellowshups button bgcolor*/
+    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%); 
     transition: 0.5s ease-in-out;
 
 }
@@ -459,15 +491,6 @@ i {
     z-index: 10;
     font-size: 18px;
     text-align: center;
-}
-
-
-.col-md-6 {
-    width: 65%;
-    float: left;
-    position: relative;
-    padding-left: 40px;
-    padding-right: 30px;
 }
 
 /*PROJECTS SECTION*/
@@ -487,7 +510,6 @@ i {
 
 .projects-section .projects-text-wrapper {
     height: auto;
-    transform: translateX(-12%);
     
 }
 
@@ -550,7 +572,8 @@ i {
      position: relative;
     left: 40%;
     display: inline-block;
-    color: white;
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 15px 25px 15px 25px;
     margin-bottom: 50px;
     font-weight: bold;
@@ -580,7 +603,6 @@ i {
 
 .events-section .events-head-wrapper{
     height: auto;
-    transform: translateX(-16%);
 }
 
 .events-list, join-list {
@@ -599,7 +621,7 @@ i {
     height: 250px;
     width: 250px;
     border: 5px skyblue; /*event icon border*/
-    border-radius: 180px;
+    border-radius: 50%;
     border-style:dashed;
     transition: 0.3s ease-in-out;
 }
@@ -644,7 +666,6 @@ i {
 
 .board-section .board-head-wrapper {
     height: auto;
-    transform: translateX(-18%);
 }
 
 .board-section .board-head-wrapper h1 {
@@ -673,7 +694,7 @@ i {
 }
 
 
-.member-list .member-details .member-name {
+.member-list .member-details .member-name a{
     margin-top: 0;
     font-family: 'Slabo 27px', serif;
     font-weight: bold;
@@ -697,13 +718,14 @@ i {
      position: relative;
     left: 40%;
     display: inline-block;
-    color: white;
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
     padding: 15px 25px 15px 25px;
     margin-bottom: 50px;
     font-weight: bold;
     font-family: 'Montserrat',serif;
     font-size: 20px;
-    border-radius: 0 25px 25px 0;
+    border-radius: 25px;
     background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%);   /*project button bg color*/
     transition: 0.5s ease-in-out;
 }
@@ -794,7 +816,6 @@ i {
 
 .join-section .join-head-wrapper {
     height: auto;
-    transform: translateX(-20%);
 }
 .join-list .join-details img {
     padding: 30px;
@@ -808,7 +829,7 @@ i {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 769px) {
   * {
     margin: 0;
     padding: 0;
@@ -816,7 +837,7 @@ i {
 }
 
 body {
-    font-family: 'K2D', sans-serif;
+    font-family: 'Lato', serif;
     font-size: 15px;
     line-height: 1.5;
     letter-spacing: 0.7px;
@@ -915,7 +936,8 @@ a:hover {
     border-bottom: 2px solid transparent;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    font-size: 4vh;    
+    font-size: 4vh;   
+    text-align: right;
 }
 
 .dropdown {
@@ -973,58 +995,89 @@ i {
 .down {
     transform: rotate(45deg) translateY(-5px);    
 }
+    
+button.navbar-toggler {
+    display: block;
+    border: none;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    background-image: none;
+    background-color: transparent;
+}
+    
+    .fa-bars {
+        border: none;
+        border-width: 0;
+        color: darkslateblue;
+    }
 
 /* ABOUT */
 
+.about-section {
+    /*background-position: left 42vh, right top;
+    background-size: 35% 50% 600px;
+    max-width: 500px;*/
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0vh;
+}
 
 .about-section .about-background-image {
+}
+
+.about-background-image img {
    display: none;
 }
 
-.col-sm-6 {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-}
 
 .about-section .about-text-wrapper, .fellowships-section .fellowships-text-wrapper {
-    position: relative;
-    height: auto;
-    left: auto;
-    right: auto;
+
+    margin-left: 4%;
+    margin-right: 4%;
+    
 }
 
+.about-section .about-text-wrapper .about-content, .fellowships-section .fellowships-text-wrapper .fellowships-content{
+    margin-left: 2%;
+   padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 0;
+}
 
-.about-section .about-text-wrapper .about-content-info, .fellowships-section .fellowships-text-wrapper .fellowships-content-info {
-    padding-right: 0;
+.about-section .about-text-wrapper .about-content-info{
+   /* padding-right: 40px;*/
     font-size: 3vh;
    /* color: #2d95b5;*/
     color: rgb(001,017,032); /* about and felloship text color */
-    margin-bottom: 5vh;
+    margin-bottom: 10px;
     text-align: justify;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 0.1vh;
+    font-family: 'Lato', serif;
+    letter-spacing: normal;
 }
 
+.container-fluid {
+    margin-left: 2%;
+    margin-right: 2%;
+}
 .about-content-button .button {
     position: relative;
-    top: 2vh;
+    top: 3vh;
+    left: 30%;
     display: inline-block;
-    color: white; /* about button text color*/
-    padding: 2% 5%;
+    color: darkslategray; /* about button text color*/
+    padding: 1vh 2vh 1vh 2vh;
     font-weight: normal;
     font-style: normal;
     font-family: 'Montserrat', serif;
-    border-radius: 3vh;
-    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 99%); /* about button bg color*/
-    transition: 0.5s ease-in-out;  
-    margin-left: 30%;
-    margin-right: auto;
+    border-radius: 0 25px 25px 0;
+    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%); /* about button bg color*/
+    transition: 0.5s ease-in-out;   
 }
 
 .about-content-button .button:hover {
     background-position: right center;
-    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 99%); /* about button hover bg color */
+    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%); /* about button hover bg color */
     color: grey;
 }
 
@@ -1032,102 +1085,102 @@ i {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     z-index: 10;
-    font-size: 100%;
+    font-size: 2.5vh;
     text-align: center;
     font-weight: bold;
+    vertical-align: text-top;
 }
 
-/*NEWS SECTION */
+/*NEWS SECTION and some FELLOWSHIP SECTION COMMMONS*/
 .news-section {
     /*background-color: #d6f6c6;*/
     background-color: #1b2e25; /* mid section bgcolor*/
-       opacity: 1;
-
-    margin-top: 0;
-    padding: 0;
+    margin-top: 3vh;
+    padding: 2%;
     position: relative;
+    margin-bottom: 3vh;
     transition: 1s ease;
-    margin-bottom: 2vh;
+    
 }
 
 .news-section h1 {
     font-size: 5vh;
-    margin-bottom: 0;
+    margin-bottom: 1vh;
     color: #88eef7; /*mid section heading*/
    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;    
     padding: 0;
-    text-align: left;
 }
 
  .news-section .news-image {
-     
-     display: none;
+     display: none;   
 }
 
 .col-md-7{
     position: relative;
     padding-left: 0;
     padding-right: 0;
+    float: left;
     width: 100%;
 }
 
 .col-md-offset-5 {
-    margin-left: 0%
+    margin-left: 0;
 }
 
 .news-section .blog-list, .fellowships-section .fellowship-info-list {
-    margin-top: 0px;
+    margin-top: 2vh;
     list-style: none;
     padding-left: 0;   
     display: block;
-    
 }
 
 .blog-list .list-post, .fellowship-info-list .list-question {
     border-bottom: 1px solid gray;
-    padding: 1vh 0 0.5vh 0;
+    padding: 1% 0;
     border-bottom-right-radius: 0px;
-      
+    text-align: justify;   
 } 
 
 .blog-list .list-post a {
     color: whitesmoke; /* mid section text color*/
     display: block;
-    padding: 1vh 0px;
+    padding 2% 0px;
     background-color: transparent;
     text-decoration: none;
-    font-family: 'Lato', sans-serif;;
+    font-family: 'Lato', serif;
     font-size: 3vh;
-    letter-spacing: 0.7px;
+    letter-spacing: normal;
     transition: 0.3s ease;
-    text-align: justify; 
 }
 
 .blog-list .list-post a:hover {
     color: skyblue;
+    
 } 
 
 .news-button .button {
-    
-     position: relative;
-    top: 2vh;
+    position: relative;
+    top: 3vh;   
+    left: 30%;
     display: inline-block;
-    color: darkslategray; /* about button text color*/
-    padding: 2% 5%;
+    color: darkslategray;
+    padding: 1vh 2vh 1vh 2vh;
     font-weight: normal;
+    text-shadow: 1px 1px 2px gray;
     font-style: normal;
+    font-size: 2.5vh;
     font-family: 'Montserrat', serif;
-    border-radius: 3vh;
-    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 99%); /* about button bg color*/
-    transition: 0.5s ease-in-out;  
-    margin-left: 30%;
-    margin-right: auto;
+    font-weight: bold;
+    border-radius: 25px 0 0 25px;
+    background-image: linear-gradient(to left, #84fab0 0%,  #8fd3f4 51%); /*  mid section button bg color*/
+    margin-bottom: 4vh;
+    transition: 0.5s ease-in-out;
 }
 
 .news-button .button:hover {
     background-position: right center;
-    background-image: linear-gradient(to left, #8fd3f4 0%, #84fab0 99%); /*  mid section button bg color */
+    background-image: linear-gradient(to left, #8fd3f4 0%, #84fab0 51%); /*  mid section button bg color */
     color: grey;
 }
 
@@ -1137,32 +1190,41 @@ i {
 
 .news-button .button span {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
     z-index: 10;
-    font-size: 100%;
+    font-size: 2.5vh;
     text-align: center;
-    font-weight: bold;
+    vertical-align: text-top;
 }
 
 /*FELLOWSHIPS SECTION*/
 .fellowships-section {
-    height: auto;
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
+    height: 100%;
+    width: 100%;
     transition: 1s ease;
     margin-top: 0;
-       opacity: 1;
-
+    margin-bottom: 3vh;
+    padding-bottom: 3vh;
 }
 
 .fellowships-section .fellowships-text-wrapper {
     position: relative;
     top: 0;
+    height: auto;
 }
 .fellowships-section .fellowships-background-image {
-  
     display: none;
+}
+
+
+.fellowships-section .fellowships-text-wrapper .fellowships-content-info p {
+   /* padding-right: 40px;*/
+    font-size: 3vh;
+   /* color: #2d95b5;*/
+    color: rgb(001,017,032); /* about and felloship text color */
+    margin-bottom: 1vh;
+    text-align: justify;
+    font-family: 'Lato', serif;
+    letter-spacing: normal;
 }
 
 .fellowship-info-list .list-question a{
@@ -1171,8 +1233,11 @@ i {
     color: #2d95b5; /* fellowship link text color */
     background-color: transparent;
     text-decoration: none;
+    padding: 1% 0;
     font-size: 3vh;
     transition: 0.3s ease;
+    font-family: 'Lato', serif;
+    font-weight: normal;
 }
 
 .fellowship-info-list .list-question a:hover{
@@ -1181,48 +1246,34 @@ i {
 }
 
 .fellowships-apply-button .button {
-    
-     position: relative;
-    top: 2vh;
+    position: relative;
+    top: 3vh;
+    left: 30%;
     display: inline-block;
-    color: white; /* about button text color*/
-    padding: 2% 5%;
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'Montserrat', serif;
-    border-radius: 3vh;
-    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 99%); /* about button bg color*/
-    transition: 0.5s ease-in-out;  
-    margin-left: 30%;
-    margin-right: auto;
+    color: darkslategray;
+    text-shadow: 1px 1px 2px gray;
+    padding: 1vh 2vh 1vh 2vh;
     margin-bottom: 0;
-
+    font-weight: bold;
+    font-family: 'Montserrat',serif;
+    border-radius: 0 25px 25px 0;
+    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%);   /* fellowshups button bgcolor*/
+    transition: 0.5s ease-in-out;
 }
 
 .fellowships-apply-button .button:hover {
     background-position: right center;
-    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 99%);
+    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
     color: grey;
 }
 
 .fellowships-apply-button .button span {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
     z-index: 10;
-    font-size: 100%;
+    font-size: 2.5vh;
     text-align: center;
-    font-weight: bold;
+    vertical-align:text-top;
 }
-
-
-.col-md-6 {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    margin-bottom: 0;
-}
-
-/*PROJECTS SECTION*/
 
 
 .projects-section {
@@ -1241,7 +1292,7 @@ i {
 
 .projects-section .projects-text-wrapper {
     height: auto;
-    transform: translateX(-5%);
+    transform: translateX(0%);
     
 }
 
@@ -1256,9 +1307,7 @@ i {
 
 .projects-list .project-name {
     margin-bottom: 2vh;
-    text-align: center;
-    
-     
+    text-align: center;    
 }
 
 .projects-list .project-name img {
@@ -1282,7 +1331,7 @@ i {
 
 .projects-list .project-name .project-title {
     margin-top: 0;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Lato', serif;
     font-weight: bold;
     color: whitesmoke; /*project titles*/
     display: block;
@@ -1290,7 +1339,7 @@ i {
     background-color: transparent;
     text-decoration: none;
     font-size: 3vh;
-    letter-spacing: 0.7px;
+    letter-spacing: normal;
     transition: 0.3s ease;
 }
 
@@ -1300,22 +1349,26 @@ i {
 
 .projects-button .button {
      position: relative;
-    left: 20%;
+    left: 30%;
     display: inline-block;
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
     font-weight: bold;
-    font-family: 'Montserrat',serif;
     transition: 0.5s ease-in-out;
-    
-    top: 2vh;
+    text-shadow: 1px 1px 2px gray;
+    top: 3vh;
     color: darkslategray; /* about button text color*/
-    padding: 2% 5%;
+    padding: 1% 3%;
     border-radius: 3vh;
     background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 99%); /* about button bg color*/
     transition: 0.5s ease-in-out;  
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0;
+    margin-bottom: 2vh;
+}
+
+.projects-button .button span {
+    font-size: 2.5vh;
+    font-family: 'Montserrat', serif;
 }
 
 .projects-button .button:hover {
@@ -1325,7 +1378,7 @@ i {
 }
 
 /*EVENTS SECTION*/
-.events-section {
+.events-section, .board-section {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
@@ -1336,17 +1389,17 @@ i {
     padding-top: 1vh;
 }
 
-.events-section .events-head-wrapper {
+.events-section .events-head-wrapper,{
     height: auto;
     transform: none;
 }
 
-.events-list {
+.events-list{
     list-style: none;
     margin-top: 3vh;
 }
 
-.events-list .event-details {
+.events-list .event-details{
     margin-bottom: 2vh;
     text-align: center;
 }
@@ -1386,6 +1439,125 @@ i {
     color: dimgray; /* event TBA */
     font-size: 2vh;
 
+}
+
+
+/*Board of Directors*/
+.board-section {
+    margin-top: 0px;
+     background-color: #1b2e25; /*bord of directorsa section  bgcolor*/
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
+   opacity: 1;
+    padding: 3vh 0 0 0;
+    transition: 1s ease;
+}
+
+.board-section .board-head-wrapper {
+    height: auto;
+}
+
+.board-section .board-head-wrapper h1 {
+    color: #88eef7; /*projects section heading*/
+}
+
+
+.member-list {
+    list-style: none;
+    margin-top: 4vh;
+}
+
+.board-section .member-list .member-details {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    text-align: center;
+}
+
+.board-section .member-list .member-details img {
+    padding: 1vh;
+    margin-bottom: 2vh;
+    height: auto;
+    width: 100%;
+    border: 1px solid whitesmoke; /*event icon border*/
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+
+.member-list .member-details .member-name a{
+    margin-top: 0;
+    font-family: 'Montserrat', serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 3vh;
+    letter-spacing: normal;
+    transition: 0.3s ease;
+    color: whitesmoke;
+}
+
+.member-list .member-details .member-position {
+    margin-top: 0;
+    font-family: 'Lato',serif;
+    font-weight: normal;
+    color: lightblue; 
+    font-size: 2.5vh;
+
+}
+
+.board-button .button {
+     position: relative;
+    left: 25%;
+    display: inline-block;
+    color: darkslategray;
+    padding: 1% 3%;
+    text-shadow: 1px 1px 2px gray;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-family: 'Montserrat',serif;
+    font-size: 2.5vh;
+    border-radius:25px;
+    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%);   /*project button bg color*/
+    transition: 0.5s ease-in-out;
+}
+
+.board-button .button:hover {
+    background-position: right center;
+    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%); /* project buutton bg color hover*/
+    color: dimgray;
+}
+
+/*JOIN SECTION*/
+
+.join-section .join-head-wrapper {
+    height: auto;
+}
+.join-list .join-details img {
+    padding: 2vh;
+    margin-bottom: 2vh;
+    height: auto;
+    width: 100%;
+    border: 3px grey; /*event icon border*/
+    border-radius: 50%;
+    border-style:solid;
+    transition: 0.3s ease-in-out;
+    margin-left: 0%;
+    margin-right: auto;
+    margin-top: 2vh;
+}
+
+.join-title {
+    margin-top: 0;
+    margin-left: 0;
+    font-family: 'Lato', serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+    font-size: 3vh;
+    transition: 0.3s ease;
+    text-align: center;
+    letter-spacing: normal;
 }
 
 /*FOOTER SECTION*/
@@ -1468,5 +1640,4 @@ i {
 .footer-logo {
     padding: 1vh;
 }
-
 }
