@@ -27,6 +27,17 @@
 
 **Details**
 
+*Update 03/01/2019*
+-- Added pages for fellowships, board of directors and the meeting minutes page. :) Member profiles can be edited from dashboard menu under the custom post type menu title 'Board Member Profiles'. Used taxonomies to classify if a member is a current member or a past member.
+
+-- Added news page as main blog page, but the content is not added yet, it is still just dummy posts. The special categories used for the rest of the posts are excluded though, so actual blog posts will be the only posts seen in this page. 
+
+-- Updated front page to reflect changes in board of directors page dynamically.
+
+-- Mobile menu works now! I made some changes to the menu setup itself.
+
+-- Added user 'yo' for Yo :)
+
 *Update 27/12/2018*
 -- Changed the homepage from index page to a static front page to be able to use the News page as a dedicated blog page in accordance with the WordPress model. The News tab is just temporary for now!
 
