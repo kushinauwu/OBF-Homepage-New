@@ -60,4 +60,8 @@
                     <!--</div>-->
                     </nav>
                 </div>
+<<<<<<< HEAD
             </div> <!--navigation bar end -->
+=======
+            </nav> <!--navigation bar end -->
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1

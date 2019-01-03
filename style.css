@@ -129,10 +129,13 @@ a:hover {
     font-size: 22px;    
 }
 
+<<<<<<< HEAD
 button.navbar-toggler {
     display: none;
 }
 
+=======
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 .active {
     background-color: #c4dff5;
     border-radius: 25px;
@@ -312,6 +315,9 @@ i {
     text-align: center;
     font-weight: bold;
 }
+
+
+/*NEWS SECTION and some FELLOWSHIP SECTION COMMMONS*/
 
 /*NEWS SECTION and some FELLOWSHIP SECTION COMMMONS*/
 .news-section {
@@ -493,6 +499,16 @@ i {
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+
+/*.col-md-6 {
+    width: 65%;
+    float: left;
+    position: relative;
+    padding-lef*/
+
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 /*PROJECTS SECTION*/
 
 
@@ -1640,4 +1656,9 @@ button.navbar-toggler {
 .footer-logo {
     padding: 1vh;
 }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1

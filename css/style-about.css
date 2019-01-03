@@ -67,7 +67,10 @@ a:hover {
     text-decoration: none;
 }
 
-
+.container-fluid {
+    margin-left: 2%;
+    margin-right: 2%;
+}
 
 /*NAVIGATION*/
 .navbar {
@@ -525,7 +528,13 @@ span {
     padding-left: 170px;
     font-family: 'Caudex',serif;
     font-size: 20px;
+<<<<<<< HEAD
      color: darkslategray;    
+=======
+     color: darkslategray;
+    text-shadow: 1px 1px 2px #a6a6a6;
+    
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 }
 
 #one .small-left {
@@ -593,6 +602,10 @@ span {
     font-size: 20px;
     font-family: 'Caudex',serif;
      color: darkslategray;
+<<<<<<< HEAD
+=======
+    text-shadow: 1px 1px 2px #a6a6a6;
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 }
 
 /*FOOTER SECTION*/

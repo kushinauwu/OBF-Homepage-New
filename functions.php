@@ -12,12 +12,15 @@ function obf_scripts_styles() {
     else if ( is_page( 'fellowships' ) ) {
         wp_enqueue_style('style-fellowships.css', get_template_directory_uri().'/css/style-fellowships.css',false,'1.0','all');
     }
+<<<<<<< HEAD
     else if ( is_page( 'board' ) ) {
         wp_enqueue_style('style-board.css', get_template_directory_uri().'/css/style-board.css',false,'5.0.5','all');
     }
     else if ( is_page( 'meeting-minutes' ) ) {
         wp_enqueue_style('style-meeting-minutes.css', get_template_directory_uri().'/css/style-meeting-minutes.css',false,'1.0','all');
     }
+=======
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
     
     else if ( is_single() ) {
         wp_enqueue_style('style-single.css', get_template_directory_uri().'/css/style-single.css',false,'1.0','all');
@@ -90,6 +93,7 @@ add_theme_support( 'post-thumbnails' );
   );
 }
 add_action( 'init', 'create_posttype' );*/
+<<<<<<< HEAD
 
 //basic function to edit
 /*function team_post_type() {
@@ -197,5 +201,7 @@ add_filter( 'post_link', 'obf_permalink_links', 10, 2 );*/
 
 
 
+=======
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 
  

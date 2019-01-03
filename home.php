@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<<<<<<< HEAD
 <h3>Dummy post to check if news page is working. Please ignore for the time being. :) </h3>
 
 <!--first post-->
@@ -11,6 +12,13 @@ $exclude5 = get_cat_ID('meeting minutes');
 $q = '-'.$exclude1.',-'.$exclude2.',-'.$exclude3.',-'.$exclude4.',-'.$exclude5;
 $args = array(
 	'cat' => $q,
+=======
+<h1>DUmmy post to check if news page is working. Please ignore for th time being. :) </h1>
+
+<!--first post-->
+<?php $args = array(
+	'category_name' => 'fellowships',
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
     'posts_per_page' => 1,
 );
 $query = new WP_query ( $args );
@@ -20,7 +28,11 @@ if ( $query->have_posts() ) { ?>
 	
 		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
+<<<<<<< HEAD
 		<article id="post-<?php the_ID(); ?>">
+=======
+		<article id="post-<?php the_ID(); ?>" <?php post_class( 'fellowship' ); ?>>
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 	
 	<div class="left one-third">
 	
@@ -40,16 +52,26 @@ if ( $query->have_posts() ) { ?>
 		
 	</div>
 	
+<<<<<<< HEAD
 	<div class="right two-thirds news-excerpt">
 	
 		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	   <p>This is the excerpt</p>
+=======
+	<div class="right two-thirds fellowship-excerpt">
+	
+		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+	
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 		<?php the_excerpt(); ?>
 		
 	</div>
 	
 	<div class="clear">
+<<<<<<< HEAD
         <p>this is the content</p>
+=======
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 		<?php the_content(); ?>
 	</div>
 	
@@ -64,6 +86,7 @@ if ( $query->have_posts() ) { ?>
 
 
 <!--other posts-->
+<<<<<<< HEAD
 <?php $exclude11 = get_cat_ID('fellowships');
 $exclude22 = get_cat_ID('about');
 $exclude33 = get_cat_ID('events');
@@ -80,6 +103,17 @@ if ( $query1->have_posts() ) { ?>
 	<section class="fellowships list full-width">
 	
 		<?php while ( $query1->have_posts() ) : $query1->the_post(); ?>
+=======
+<?php $args = array(
+	'category_name' => 'fellowships',
+);
+$query = new WP_query ( $args );
+if ( $query->have_posts() ) { ?>
+
+	<section class="fellowships list full-width">
+	
+		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'fellowship', 'left', 'half' ) ); ?>>
   
@@ -102,7 +136,11 @@ if ( $query1->have_posts() ) { ?>
 					
 			<?php the_excerpt(); ?>
 			
+<<<<<<< HEAD
 			<div class="button"><a href="<?php the_permalink(); ?>">Read more</a></div>
+=======
+			<div class="button"><a href="<?php the_permalink(); ?>">Explore the Book</a></div>
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
   		
   		</article>
   

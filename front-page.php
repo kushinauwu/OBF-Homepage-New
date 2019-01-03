@@ -64,7 +64,11 @@
                         <h1><?php the_title(); ?></h1>
                             <?php the_content(); ?>
                             <div class="news-button">
+<<<<<<< HEAD
                             <a href="blog" class = "button">
+=======
+                            <a href="/news" class = "button">
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                                 <span>Read More</span>
                                 </a>
                             </div> <!-- news button end -->
@@ -116,7 +120,11 @@
                                             <!-- questions list end -->
                                             <!-- apply button -->
                                             <div class="fellowships-apply-button">
+<<<<<<< HEAD
                                                 <a href="fellowships#fellowships-applications" class="button">
+=======
+                                                <a href="/apply" class="button">
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                                                 <span>
                                                    Apply </span>
                                                 </a>
@@ -233,7 +241,11 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 projects-button">
+<<<<<<< HEAD
                             <a href="projects" class="button">
+=======
+                            <a href="/projects" class="button">
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                                 <span> See more projects</span>
                             </a>
                         </div>
@@ -315,13 +327,19 @@
             </section>
             
             <!-- Board of Directors -->
+<<<<<<< HEAD
               
+=======
+            <?php $board_query = new WP_Query( array( 'tag' => 'index-board') ); ?>
+            <?php while($board_query -> have_posts()) : $board_query -> the_post(); ?>    
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
              <section class="board-section">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12">
                            
                                     <div class="board-head-wrapper">
+<<<<<<< HEAD
                                         <h1>Board of directors</h1>
                                     </div>
                         </div>
@@ -357,18 +375,69 @@
                                 <p><?php __('No post found'); ?></p>
                                 <?php endif;
                                 wp_reset_postdata(); ?>
+=======
+                                        <h1><?php the_title(); ?></h1>
+                                    </div>
+                        </div>
+                            <ul class="list-inline row member-list">
+                                <div class="col-sm-4 col-xs-4">
+                                    <li class="member-details"> 
+                                            <?php $image = wp_get_attachment_image_src(get_field('member_photo_1'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            <div class="member-name">
+                                                <?php the_field('member_name_1'); ?>
+                                            </div>
+                                            <div class="member-position">
+                                                <?php the_field('member_position_1'); ?>
+                                            </div>       
+                                    </li>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                     <li class="member-details"> 
+                                            <?php $image = wp_get_attachment_image_src(get_field('member_photo_2'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            <div class="member-name">
+                                                <?php the_field('member_name_2'); ?>
+                                            </div>
+                                            <div class="member-position">
+                                                <?php the_field('member_position_2'); ?>
+                                            </div>       
+                                    </li>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                     <li class="member-details"> 
+                                            <?php $image = wp_get_attachment_image_src(get_field('member_photo_3'), 'full'); ?>
+                                            <img src="<?php echo $image[0]; ?>" />
+                                            <div class="member-name">
+                                                <?php the_field('member_name_3'); ?>
+                                            </div>
+                                            <div class="member-position">
+                                                <?php the_field('member_position_3'); ?>
+                                            </div>       
+                                    </li>
+                                </div>
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                             </ul>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 board-button">
+<<<<<<< HEAD
                             <a href="board" class="button">
+=======
+                            <a href="/board" class="button">
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                                 <span> See all members</span>
                             </a>
                         </div>
                 </div>
             </section>
+<<<<<<< HEAD
            
+=======
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
             
             <!-- Join section -->
             <section class="join-section">
@@ -406,4 +475,8 @@
         </div> <!--main content end -->
            
            <!--footer -->
+<<<<<<< HEAD
 <?php get_footer(); ?>
+=======
+<?php get_footer(); ?>
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1

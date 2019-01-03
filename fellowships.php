@@ -40,7 +40,11 @@ Template Name:fellowships
     <?php $arg2 = array( 'name' => 'selection-criteria' );
             $selection_criteria = new WP_Query( $arg2 ); ?>
         <?php if ( $selection_criteria->have_posts() ) : while ( $selection_criteria->have_posts() ) : $selection_criteria->the_post(); ?>
+<<<<<<< HEAD
             <section class="selection-criteria" id="fellowships-selection-criteria">
+=======
+            <section class="selection-criteria">
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                     <div class="container-fluid">
                         
                                 <h1><?php the_title(); ?></h1>
@@ -142,9 +146,59 @@ Template Name:fellowships
     <?php $arg2 = array( 'name' => 'coverage' );
             $coverage = new WP_Query( $arg2 ); ?>
         <?php if ( $coverage->have_posts() ) : while ( $coverage->have_posts() ) : $coverage->the_post(); ?>
+<<<<<<< HEAD
                <section class="coverage" id="fellowships-coverage">
                 <div class="container-fluid">
                     <h1><?php the_title(); ?></h1> 
+=======
+               <section class="coverage">
+                <div class="container-fluid">
+                    <h1><?php the_title(); ?></h1>
+                   <!-- <div class="row">
+                         <div class="col-xs-10">
+                                <div class="coverage-text">
+                                   <p>The fellowship can be used to cover <b>direct travel costs</b> (such as airfare, train, metro, bus and taxi), <b>hotel, child-care and / or conference registration fees</b> up to a value of <b>USD 1,000</b>. </p>
+                                </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="coverage-icon">
+                                <img src="Picture2.png" />
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                         <div class="col-xs-2">
+                            <div class="coverage-icon">
+                                <img src="cover2.png" />
+                            </div>
+                        </div>
+                          <div class="col-xs-10">
+                                <div class="coverage-text" id="two">
+                                    <p>Note that rental car expenses and personal car mileage are <b>not eligible for reimbursement.</b></p>
+                                    <p>We anticipate that these awards will supplement travel costs, <b>not cover all expenses.</b></p>
+
+                                </div>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="row">
+                          <div class="col-xs-10">
+                                <div class="coverage-text" id="three">
+                                    <p>If you anticipate that <b>you would require more than USD 1,000 </b>in order to attend the event, please <b>include that information on the application form.</b> </p>
+                                    <p>The OBF will reimburse the recipient <b>after the event</b> based on <b>receipts</b> provided and <b>proof of attendance</b>. There is no cash value beyond eligible and documented expenses.</p>
+
+                                </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="coverage-icon">
+                                <img src="cover3.png" />
+                            </div>
+                        </div>
+                       
+                    </div>-->
+                    
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                     <div class="row">
                         <div class="col-md-12">
                             <div class="coverage-text">
@@ -158,9 +212,13 @@ Template Name:fellowships
                                     <li>
                                         <p><?php the_field('fellowship_note_3'); ?></p>
                                     </li>
+<<<<<<< HEAD
                                     <li>
                                         <p><?php the_field('fellowship_note_3'); ?></p>
                                     </li>
+=======
+                                    
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                                 </ul>
                         </div>
                     </div>
@@ -177,7 +235,11 @@ Template Name:fellowships
     <?php $arg2 = array( 'name' => 'requirements' );
             $requirements = new WP_Query( $arg2 ); ?>
         <?php if ( $requirements->have_posts() ) : while ( $requirements->have_posts() ) : $requirements->the_post(); ?>
+<<<<<<< HEAD
                <section class="applicant-requirements" id="fellowships-requirements">
+=======
+               <section class="applicant-requirements">
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                     <div class="container-fluid">
                         <h1><?php the_title(); ?></h1>
                          
@@ -199,7 +261,11 @@ Template Name:fellowships
     <?php $arg2 = array( 'name' => 'applications' );
             $applications = new WP_Query( $arg2 ); ?>
         <?php if ( $applications->have_posts() ) : while ( $applications->have_posts() ) : $applications->the_post(); ?>
+<<<<<<< HEAD
                <section class="applications" id="fellowships-applications">
+=======
+               <section class="applications">
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
                    <div class="container-fluid">
                         <h1><?php the_title(); ?></h1>
                        <div class="row">
@@ -232,4 +298,8 @@ Template Name:fellowships
            </div>
            
 <!--footer -->
+<<<<<<< HEAD
 <?php get_footer(); ?>
+=======
+<?php get_footer(); ?>
+>>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
