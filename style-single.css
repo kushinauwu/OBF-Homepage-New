@@ -2,7 +2,7 @@
 Theme Name: obf-new
 Author: kushinauwu
 Description: basic revised obf homepage theme
-Version: 1.0
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,4 +19,50 @@ p {
     font-size: 30px;
     font-family: 'Montserrat', serif;
     text-align: justify;
+}
+
+span.author-date {
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+}
+
+.nav-next {
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    font-size: 18px;
+
+}
+
+.nav-previous {
+    display: inline;
+    font-size: 18px;
+}
+
+img {
+    display: block;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+figure {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.navigation-wrapper {
+    text-align: center;
+}
+
+.post-navigation {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-align: center;
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+
 }

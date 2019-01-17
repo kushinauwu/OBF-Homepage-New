@@ -1,51 +1,46 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
-    <head>
-        <meta charset="<?php bloginfo('charset') ?>">
-        <meta name = "viewport" content="width=device-width, initial-scale=1">
-        <meta name = "description" content="Open Bioinformatics Foundation theme ">
-        <meta name = "keywords" content="Bioinformatics, Technology, OBF, BOSC, Open Bioinformatics Foundation">
-        <meta name = "author" content="kushinauwu">
-        <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
+<head>
+    <meta charset="<?php bloginfo('charset') ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Open Bioinformatics Foundation theme ">
+    <meta name="keywords" content="Bioinformatics, Technology, OBF, BOSC, Open Bioinformatics Foundation">
+    <meta name="author" content="kushinauwu">
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>
+        <?php bloginfo('name'); ?>
+        <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
+        <?php wp_title(); ?>
+    </title>
+    <?php wp_head(); ?>
+</head>
 
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">-->
-        <!-- jQuery library -->
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>-->
-        <!-- Latest compiled JavaScript -->
-        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>-->        
-        <title><?php bloginfo('name'); ?> 
-            <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
-            <?php wp_title(); ?></title>
-        <?php wp_head(); ?>
-    </head>
-    
-    <body>     
-       <div class="wrapper" id = "main">
-       
-           <!--navigation bar start -->
-            <div class="navbar navbar-expand-md">
-                <div class="container">
-                    <!--<div class="row">-->
-                        <!--<div class="col-12"> -->
-                            <!--OBF logo -->
-                            <div class="navbar-header">
-                                <a class="navbar-logo" href="<?php echo home_url(); ?>">
-                                <img src="<?php echo get_bloginfo('template_url') ?>/img/obf-logo-header.png">
-                                </a>
-                                </div>
-                                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'obf-new' ); ?>">
-                                    <span class="sr-only navbar-toggler-icon"></span>
-                                    <i class="fas fa-bars fa-4x"></i>
-                                    
-                                </button>
-                            <nav class="collapse navbar-collapse" id="navigation-bar" role="navigation" aria-label="Main Menu">
-                    <span class="sr-only"><?php esc_html_e( 'Main Menu', 'obf-new' ); ?></span>
-                           <?php 
+<body>
+    <div class="wrapper" id="main">
+
+        <!--navigation bar start -->
+        <div class="navbar navbar-expand-md">
+            <div class="container">
+                <!--OBF logo -->
+                <div class="navbar-header">
+                    <a class="navbar-logo" href="<?php echo home_url(); ?>">
+                        <img src="<?php echo get_bloginfo('template_url') ?>/img/obf-logo-header.png">
+                    </a>
+                </div>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'obf-new' ); ?>">
+                    <span class="sr-only navbar-toggler-icon"></span>
+                    <i class="fas fa-bars fa-4x"></i>
+
+                </button>
+                <nav class="collapse navbar-collapse" id="navigation-bar" role="navigation" aria-label="Main Menu">
+                    <span class="sr-only">
+                        <?php esc_html_e( 'Main Menu', 'obf-new' ); ?></span>
+                    <?php 
                             wp_nav_menu( array(
 	'theme_location'  => 'primary',
 	'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
@@ -55,13 +50,7 @@
 	'walker'          => new WP_Bootstrap_Navwalker(),
 ) );
                             ?>
-                            
-                       <!-- </div>-->
-                    <!--</div>-->
-                    </nav>
-                </div>
-<<<<<<< HEAD
-            </div> <!--navigation bar end -->
-=======
-            </nav> <!--navigation bar end -->
->>>>>>> ee4f0450e09b64cdfe8f8e27b780b670ef701cb1
+                </nav>
+            </div>
+        </div>
+        <!--navigation bar end -->

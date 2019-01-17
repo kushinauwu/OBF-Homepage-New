@@ -2,7 +2,7 @@
 Theme Name: obf-new
 Author: kushinauwu
 Description: basic revised obf homepage theme
-Version: 5.0.6
+Version: 5.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * {
     margin: 0;
     padding: 0;
-   
+
 }
 
 body {
@@ -37,10 +37,11 @@ body {
     padding-right: 30px;
     height: auto;
 }
+
 img {
     height: auto;
     max-width: 100%;
-    vertical-align: middle;   
+    vertical-align: middle;
 }
 
 section {
@@ -50,11 +51,11 @@ section {
 h1 {
     font-size: 48px;
     margin-bottom: 30px;
-    color: #275aa1; /* section headings text*/
-   font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;    
+    color: #275aa1;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
     padding: 0;
-    text-align: left;   
+    text-align: left;
 }
 
 a {
@@ -66,15 +67,13 @@ a:hover {
     text-decoration: none;
 }
 
-
-
 /*NAVIGATION*/
 .navbar {
-   margin-top: 0px;
+    margin-top: 0px;
     padding-top: 20px;
     margin-bottom: 0px;
     padding-bottom: 20px;
-    background-color: whitesmoke; 
+    background-color: whitesmoke;
 
 }
 
@@ -96,25 +95,27 @@ a:hover {
 .navbar ul {
     list-style: none;
     margin-bottom: auto;
-    
+
 }
 
 #menu-main-menu .menu-item {
-     padding: 10px 0; 
+    padding: 10px 0;
     text-align: right;
     display: inline-block;
     transition: 0.5s ease;
 }
 
 #menu-main-menu .menu-item:hover {
-    background-color: rgba(128,0,128,0.2); /* navbar hover bg color */
+    background-color: rgba(128, 0, 128, 0.2);
     border-radius: 25px;
-    text-decoration:none;
+    text-decoration: none;
 }
-#menu-main-menu .nav-link:hover, #menu-main-menu .nav-link:focus {
+
+#menu-main-menu .nav-link:hover,
+#menu-main-menu .nav-link:focus {
     display: block;
     padding-top: 0px;
-    color: darkslateblue; /* navbar link text color */
+    color: darkslateblue;
     font-weight: normal;
     font-style: normal;
     border-bottom: 2px solid transparent;
@@ -126,27 +127,26 @@ a:hover {
 .navbar ul li a {
     display: block;
     padding-top: 0px;
-    color: darkslateblue; /* navbar link text color */
+    color: darkslateblue;
     font-weight: normal;
     font-style: normal;
     border-bottom: 2px solid transparent;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    font-size: 22px;    
+    font-size: 22px;
 }
 
-
-
-.nav>li>a:hover, .nav>li>a:focus {
+.nav > li > a:hover,
+.nav > li > a:focus {
     display: block;
     padding-top: 0px;
-    color: darkslateblue; /* navbar link text color */
+    color: darkslateblue;
     font-weight: normal;
     font-style: normal;
     border-bottom: 2px solid transparent;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    font-size: 22px;    
+    font-size: 22px;
     background-color: transparent;
 }
 
@@ -158,41 +158,35 @@ a:hover {
 .navbar-collapse .dropdown .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: rgba(196,245,198,0.9); /* main link navbar dropdown hover bg color*/
+    background-color: rgba(196, 245, 198, 0.9);
     width: auto;
     height: auto;
-    box-shadow: 8px 8px 16px 0 rgba(128,0,128,0.2);
+    box-shadow: 8px 8px 16px 0 rgba(128, 0, 128, 0.2);
     z-index: 1;
-    text-align:left;
+    text-align: left;
     left: 0;
     border-radius: 20px;
     margin-top: 0;
 }
 
-
-
 .dropdown .dropdown-menu li a {
-    color: darkslategray; /* navbar dropdown text color */
+    color: darkslategray;
     font-size: 18px;
     transition: 0.3s ease;
 }
 
-
-
-
 .dropdown-menu li a:hover {
-   background-color: transparent; /* navbar dropdown hover bg color*/
+    background-color: transparent;
     background-image: none;
     border-radius: 10px;
-    
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block;    
+    display: block;
 }
 
 i {
-    border: solid darkslateblue; /* navbar arrow color */
+    border: solid darkslateblue;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -200,7 +194,7 @@ i {
 }
 
 .down {
-    transform: rotate(45deg) translateY(-5px);    
+    transform: rotate(45deg) translateY(-5px);
 }
 
 /*Members list*/
@@ -209,6 +203,7 @@ i {
     margin-top: 2vh;
     padding-top: 0;
 }
+
 .members-list {
     margin-top: 0px;
 }
@@ -216,12 +211,14 @@ i {
 .current-members .members-list .member-details {
     margin-bottom: 40px;
     text-align: center;
-    
 }
-.current-members .col-xs-4 {
+
+.current-members .col-xs-4,
+.past-members .col-xs-4 {
     height: 400px;
     margin-bottom: 20px;
 }
+
 .members-list .member-details img {
     margin-bottom: 10px;
     height: 40%;
@@ -230,7 +227,6 @@ i {
     padding: 5px;
     background-color: lightblue;
     transition: 0.3s ease-in-out;
-    
 }
 
 .members-list .member-details .member-name {
@@ -242,20 +238,20 @@ i {
 }
 
 .members-list .member-details .member-position {
-    font-family: 'Montserrat',serif;
+    font-family: 'Montserrat', serif;
     font-weight: bold;
-    color: dimgray; /* event TBA */
+    color: dimgray;
     font-size: 20px;
 
 }
 
 .members-list .member-details .member-info {
-    font-family: 'Slabo 27px',serif;
-    color: dimgray; /* event TBA */
+    font-family: 'Slabo 27px', serif;
+    color: dimgray;
     font-size: 18px;
 }
 
-.members-contact p{
+.members-contact p {
     margin-bottom: 20px;
     padding: 0;
     font-family: 'Slabo 27px', serif;
@@ -270,22 +266,29 @@ i {
 .past-members .members-list .member-details {
     margin-bottom: 40px;
     text-align: center;
-    
+
 }
+
 .past-members h1 {
     color: #88eef7;
     margin-top: 40px;
 }
-.past-members .members-list .member-info, .past-members .members-list .member-position {
+
+.past-members .members-list .member-info,
+.past-members .members-list .member-position {
     color: whitesmoke;
 }
 
-.past-members .members-list .member-name a{
+.past-members .members-list .member-name a {
     color: lightblue;
 }
 
 .past-members .member-info p a {
     color: lightblue;
+}
+
+.join-board {
+    margin-bottom: 3vh;
 }
 
 .join-board .joining-text {
@@ -303,12 +306,13 @@ i {
 .expectations-heading h2 {
     color: #275aa1;
     margin-top: 30px;
-    padding:0 0 1% 0;
+    padding: 0 0 1% 0;
     text-align: justify;
     text-transform: uppercase;
+    font-family: K2D;
 }
 
-.expectations-text-wrapper ul{
+.expectations-text-wrapper ul {
     list-style: none;
 }
 
@@ -323,7 +327,7 @@ i {
 
 .expectations-text-wrapper ul li:nth-child(odd) {
     background-color: #cfffff;
-    
+
 }
 
 .expectations-text-wrapper ul li:nth-child(even) {
@@ -334,34 +338,34 @@ i {
 /*FOOTER SECTION*/
 .footer-section {
     padding: 30px 0;
-    background-color: whitesmoke; /* footer bg color */
+    background-color: whitesmoke;
     margin-top: 0;
 }
 
 .footer-section h3 {
     margin-bottom: 30px;
-    color: #275aa1; /* footer heading color */
-   font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase; 
+    color: #275aa1;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
     font-size: 34px;
 }
 
 .footer-section p {
- margin-bottom: 30px;  
-    color: darkslategray; /* footer text color */
-    font-family: 'Slabo 27px',serif;
+    margin-bottom: 30px;
+    color: darkslategray;
+    font-family: 'Slabo 27px', serif;
     font-size: 22px;
 }
 
-.footer-section input{
+.footer-section input {
     text-align: center;
     border-radius: 20px;
-    background-color: rgba(147,112,219,0.3);
+    background-color: rgba(147, 112, 219, 0.3);
     padding: 5px 5px 5px 5px;
 }
 
 .footer-section button {
-    background-image: linear-gradient(to right, #84fab0 0%,  #8fd3f4 51%); /* footer section button bg color */
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
     position: relative;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -369,7 +373,7 @@ i {
     padding-right: 18px;
     border-radius: 20px;
     margin-left: 5px;
-    font-family: 'Montserrat',serif;
+    font-family: 'Montserrat', serif;
     font-weight: bold;
     border: none;
     box-shadow: 2px 2px 12px purple;
@@ -382,19 +386,19 @@ i {
 
 .footer-section .org-menu {
     list-style: none;
-    
+
 }
 
 .footer-section .org-menu .org-menu-item a {
-    color: darkslategray; /* footer organisation text color */
+    color: darkslategray;
     transition: color 0.2s;
-    font-family: 'Slabo 27px',serif;
+    font-family: 'Slabo 27px', serif;
     padding: 20px;
     font-size: 24px;
 }
 
 .footer-section .org-menu .org-menu-item a:hover {
-    color: dodgerblue; /* footer link hover text color */
+    color: dodgerblue;
 }
 
 .footer-section .network-item {
@@ -406,188 +410,187 @@ i {
 }
 
 
-@media only screen and (max-width: 1300px) {
-}
+@media only screen and (max-width: 1300px) {}
 
 /*mobile display*/
 
 @media only screen and (max-width: 769px) {
- 
+
     * {
-    margin: 0;
-    padding: 0;
-   
-}
+        margin: 0;
+        padding: 0;
 
-body {
-    font-family: 'K2D', sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    letter-spacing: 0.7px;
-    padding: 0px;
-    margin: 0;
-    overflow-x: hidden
-}
+    }
 
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-}
+    body {
+        font-family: 'K2D', sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+        letter-spacing: 0.7px;
+        padding: 0px;
+        margin: 0;
+        overflow-x: hidden
+    }
 
-section {
-    display: block;
-}
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+    }
 
-h1 {
-    font-size: 5vh;
-    margin-bottom: 1vh;
-    color: #275aa1; /* section headings text*/
-   font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;    
-    padding: 0;
-    text-align: left;   
-}
+    section {
+        display: block;
+    }
 
-a {
-    transition: color 0.2s;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/*Members list*/
-.current-members {
-    margin-bottom: 4vh;
-    margin-top: 2vh;
-    padding-top: 0;
-}
-    
-.current-members .col-xs-4 {
-    height: 100%;
-    margin-bottom: 20px;
-}
-
-
-.current-members h1 {
+    h1 {
         font-size: 5vh;
-    margin-bottom: 2vh;
-}
-    
-.current-members .members-list .member-details {
-    height: 55vh;
-    margin-bottom: 3vh;
-}
-    
-.members-list .member-details img {
-    margin-bottom: 0.5vh;
-    height: auto;
-    width: 20vh;
-    padding: 0;
-}
+        margin-bottom: 1vh;
+        color: #275aa1;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        padding: 0;
+        text-align: left;
+    }
 
-.members-list .member-details .member-name {
-    font-size: 3vh;
-}
+    a {
+        transition: color 0.2s;
+        text-decoration: none;
+    }
 
-.members-list .member-details .member-position {
-    font-size: 2.5vh;
-}
+    a:hover {
+        text-decoration: none;
+    }
 
-.members-list .member-details .member-info {
-    font-family: 'Lato',serif;
-    font-size: 2vh;
-    letter-spacing: normal;
-    text-align: justify;
-}
+    /*Members list*/
+    .current-members {
+        margin-bottom: 4vh;
+        margin-top: 2vh;
+        padding-top: 0;
+    }
 
- .current-members .members-list .col-xs-4, .past-members .members-list .col-xs-4 {
+    .current-members .col-xs-4,
+    .past-members .col-xs-4 {
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .current-members h1 {
+        font-size: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    .current-members .members-list .member-details {
+        height: 55vh;
+        margin-bottom: 3vh;
+    }
+
+    .members-list .member-details img {
+        margin-bottom: 0.5vh;
+        height: auto;
+        width: 20vh;
+        padding: 0;
+    }
+
+    .members-list .member-details .member-name {
+        font-size: 3vh;
+    }
+
+    .members-list .member-details .member-position {
+        font-size: 2.5vh;
+    }
+
+    .members-list .member-details .member-info {
+        font-family: 'Lato', serif;
+        font-size: 2vh;
+        letter-spacing: normal;
+        text-align: justify;
+    }
+
+    .current-members .members-list .col-xs-4,
+    .past-members .members-list .col-xs-4 {
         width: 50%;
     }
-.current-members .members-contact p{
-    padding: 0;
-    font-family: 'Lato', serif;
-    font-size: 3vh;
-}
-    
-.past-members h1 {
-    margin-top: 4vh;
-    font-size: 5vh;
-    margin-bottom: 2vh;
-}
-    
-.past-members .members-list .member-details {
-    height: 55vh;
-    margin-bottom: 3vh;
-}
 
-    
-.join-board .joining-text {
-    font-family: 'Lato', serif;
-    font-size: 3vh;
-}
-    
+    .current-members .members-contact p {
+        padding: 0;
+        font-family: 'Lato', serif;
+        font-size: 3vh;
+    }
+
+    .past-members h1 {
+        margin-top: 4vh;
+        font-size: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    .past-members .members-list .member-details {
+        height: 55vh;
+        margin-bottom: 3vh;
+    }
+
+
+    .join-board .joining-text {
+        font-family: 'Lato', serif;
+        font-size: 3vh;
+    }
+
     .join-board {
         margin-bottom: 0;
     }
 
     /*Board Expectations*/
-.board-expectations {
-    margin-top: 2vh;
-    padding: 0px 0 50px 0;
-}
-    
-.expectations-heading h2 {
-    font-size: 3.6vh;
- }
+    .board-expectations {
+        margin-top: 2vh;
+        padding: 0px 0 50px 0;
+    }
 
-.expectations-text-wrapper ul li {
-    font-family: 'Lato', serif;
-    font-size: 2.5vh;
-    padding: 2vh 2.5vh;
-    margin: 1vh 0;
-    letter-spacing: normal;
-}
-    
-    
+    .expectations-heading h2 {
+        font-size: 3.6vh;
+    }
 
-.footer-section {
-    padding: 1vh 0;
-}
+    .expectations-text-wrapper ul li {
+        font-family: 'Lato', serif;
+        font-size: 2.5vh;
+        padding: 2vh 2.5vh;
+        margin: 1vh 0;
+        letter-spacing: normal;
+    }
 
-.footer-section h3 {
-    margin-bottom: 2vh;
-    font-size: 4vh;
-}
+    .footer-section {
+        padding: 1vh 0;
+    }
 
-.footer-section p {
- margin-bottom: 2vh;  
-    font-family: 'Lato',serif;
-    font-size: 2.5vh;
-}
+    .footer-section h3 {
+        margin-bottom: 2vh;
+        font-size: 4vh;
+    }
 
-.footer-section button {
-   font-size: 3vh;
-}
+    .footer-section p {
+        margin-bottom: 2vh;
+        font-family: 'Lato', serif;
+        font-size: 2.5vh;
+    }
 
-.footer-section button:hover {
-    color: whitesmoke;
-}
+    .footer-section button {
+        font-size: 3vh;
+    }
 
+    .footer-section button:hover {
+        color: whitesmoke;
+    }
 
-.footer-section .org-menu .org-menu-item a {
-    font-family: 'Lato',serif;
-    padding: 2vh;
-    font-size: 2.5vh;
-}
+    .footer-section .org-menu .org-menu-item a {
+        font-family: 'Lato', serif;
+        padding: 2vh;
+        font-size: 2.5vh;
+    }
 
-.footer-section .network-item {
-    margin: 2%;
-}
+    .footer-section .network-item {
+        margin: 2%;
+    }
 
-.footer-logo {
-    padding: 2vh;
-}
+    .footer-logo {
+        padding: 2vh;
+    }
 }

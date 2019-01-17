@@ -8,10 +8,70 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
+p {
+    font-size: 22px;
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 0.7px;
+    text-align: justify;
+}
+
+.h3 {
+    font-size: 30px;
+    font-family: 'Montserrat', serif;
+    text-align: justify;
+}
+
+span.author-date {
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+}
+
+.nav-next {
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    font-size: 18px;
+
+}
+
+.nav-previous {
+    display: inline;
+    font-size: 18px;
+}
+
+img {
+    display: block;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+figure {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.navigation-wrapper {
+    text-align: left;
+}
+
+.post-navigation {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-align: center;
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+
+}
+
+
 .container-fluid {
     margin-left: 30px;
     margin-right: 30px;
-    
+
 }
 
 .single-content {
@@ -39,7 +99,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     color: #275aa1;
 }
 
-.single-content ul li, .single-content ol li {
+.single-content ul li,
+.single-content ol li {
     margin-left: 3%;
     font-size: 22px;
     font-family: 'Slabo 27px', serif;
@@ -47,24 +108,37 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     letter-spacing: 0.7px;
 }
 
+/*mobile display*/
 @media only screen and (max-width: 769px) {
     .single-content p {
-    font-size: 2.8vh;
-    font-family: 'Lato', serif;
-    letter-spacing: normal;
-}
+        font-size: 2.8vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
 
-.single-content h3 {
-    font-size: 3.5vh;
-}
+    .single-content h3 {
+        font-size: 3.5vh;
+    }
+
+    .single-content h4 {
+        font-size: 3.1vh;
+    }
+
+    .single-content ul li,
+    .single-content ol li {
+        font-size: 2.8vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
     
-.single-content h4 {
-    font-size: 3.1vh;
-}
+    .nav-next {
+        display: block;
+        position: relative;
+    }
     
-.single-content ul li , .single-content ol li {
-    font-size: 2.8vh;
-    font-family: 'Lato', serif;
-    letter-spacing: normal;
-}
+    .nav-previous {
+        display: block;
+    }
+    
+    
 }
