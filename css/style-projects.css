@@ -1,0 +1,295 @@
+/*
+Theme Name: obf-new
+Author: kushinauwu
+Description: basic revised obf homepage theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+
+/*Main projects */
+
+.main-projects,
+.affiliated-projects,
+.related-projects {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.projects-details {
+    margin-bottom: 30px;
+}
+
+.project-icon {
+    display: inline;
+    text-align: center;
+    font-family: 'Montserrat', serif;
+    font-size: 30px;
+    color: #275aa1;
+    font-weight: bold;
+}
+
+
+
+.project-icon img {
+    border: 3px solid #84d3f4;
+    padding: 5px;
+    height: auto;
+    width: 170px;
+}
+
+
+.project-info p {
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 0.7px;
+    font-size: 20px;
+    text-align: justify;
+    color: darkslategray;
+}
+
+/*related projects*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-container .related-projects-details {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.related-projects-icon img {
+    border: 3px solid #84d3f4;
+    padding: 5px;
+    width: 150px;
+    height: auto;
+}
+
+.related-projects-heading h2 {
+    font-family: 'Montserrat', serif;
+    color: #275aa1;
+}
+
+.related-projects-info p {
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Ontologies and definitions*/
+
+.ontologies-definitions,
+.in-memoriam {
+    background-color: #1b2e25;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.ontologies-definitions-heading h1,
+.in-memoriam-heading h1 {
+    color: #88eef7;
+}
+
+.ontologies-definitions-list li,
+.in-memoriam-list li {
+    margin-bottom: 20px;
+}
+
+.ontologies-definitions-list li .ontology-title,
+.in-memoriam-list li .in-memoriam-project-title {
+    color: lightblue;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.ontologies-definitions-list li p,
+.in-memoriam-list li p {
+    margin: 0 15px 20px 5px;
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    color: whitesmoke;
+    display: inline;
+}
+
+
+/*FOOTER SECTION*/
+.footer-section {
+    padding: 30px 0;
+    background-color: whitesmoke;
+    /* footer bg color */
+    margin-top: 0;
+}
+
+.footer-section h3 {
+    margin-bottom: 30px;
+    color: #275aa1;
+    /* footer heading color */
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 34px;
+}
+
+.footer-section p {
+    margin-bottom: 30px;
+    color: darkslategray;
+    /* footer text color */
+    font-family: 'Slabo 27px', serif;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.footer-section input {
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(147, 112, 219, 0.3);
+    padding: 5px 5px 5px 5px;
+}
+
+.footer-section button {
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
+    /* footer section button bg color */
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 20px;
+    margin-left: 5px;
+    font-family: 'Montserrat', serif;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 12px purple;
+    transition: 0.2s ease-in-out;
+}
+
+.footer-section button:hover {
+    color: whitesmoke;
+}
+
+.footer-section .org-menu {
+    list-style: none;
+
+}
+
+.footer-section .org-menu .org-menu-item a {
+    color: darkslategray;
+    /* footer organisation text color */
+    transition: color 0.2s;
+    font-family: 'Slabo 27px', serif;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.footer-section .org-menu .org-menu-item a:hover {
+    color: dodgerblue;
+    /* footer link hover text color */
+}
+
+.footer-section .network-item {
+    margin: 12px;
+}
+
+.footer-logo {
+    padding: 20px;
+}
+
+/*tablet resolution*/
+
+@media only screen and (max-width:769px) {
+
+    .main-projects,
+    .affiliated-projects,
+    .related-projects {
+        margin-bottom: 0vh;
+        margin-top: 0px;
+    }
+
+    .projects-details {
+        margin-bottom: 3vh;
+    }
+
+    .main-projects-head h1,
+    .affiliated-projects-head h1,
+    .related-projects-head h1 {
+        margin-bottom: 4vh;
+        font-size: 5vh;
+    }
+
+    .project-icon {
+        font-size: 3.8vh;
+    }
+
+    .project-icon img {
+        width: 120px;
+        height: auto;
+        margin-bottom: 2vh;
+    }
+
+    .project-info p {
+        font-size: 3vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 49% 49%;
+    }
+
+    .grid-container .related-projects-details {
+        text-align: center;
+        padding: 1vh 0;
+    }
+
+
+    .related-projects-icon img {
+        width: 120px;
+        height: auto;
+    }
+
+    .related-projects-heading h2 {
+        font-size: 3.8vh;
+    }
+
+    .related-projects-info p {
+        font-size: 3vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+        word-wrap: break-word;
+        text-align: justify;
+        padding: 0;
+    }
+
+    .ontologies-definitions,
+    .in-memoriam {
+        background-color: #1b2e25;
+        padding-top: 2vh;
+        padding-bottom: 0px;
+    }
+
+    .ontologies-definitions-heading h1 {
+        margin-bottom: 4vh;
+        font-size: 5vh;
+    }
+
+    .ontologies-definitions-list li .ontology-title,
+    .in-memoriam-list li .in-memoriam-project-title {
+        font-size: 3.5vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
+
+    .ontologies-definitions-list li p,
+    .in-memoriam-list li p {
+        font-size: 3vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
+
+}

@@ -15,13 +15,9 @@
 
         <!--first post-->
         <?php 
-        $exclude1 = get_cat_ID('fellowships');
-        $exclude2 = get_cat_ID('about');
-        $exclude3 = get_cat_ID('events');
-        $exclude4 = get_cat_ID('home');
-        $exclude5 = get_cat_ID('meeting minutes');
-        $exclude6 = get_cat_ID('board content');
-        $q = '-'.$exclude1.',-'.$exclude2.',-'.$exclude3.',-'.$exclude4.',-'.$exclude5.',-'.$exclude6;
+        $obf_exclude = get_cat_ID('home');
+
+        $q = '-'.$obf_exclude;
         
         $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
         
@@ -69,13 +65,8 @@
         <?php } ?>
 
         <?php 
-        $exclude1 = get_cat_ID('fellowships');
-        $exclude2 = get_cat_ID('about');
-        $exclude3 = get_cat_ID('events');
-        $exclude4 = get_cat_ID('home');
-        $exclude5 = get_cat_ID('meeting minutes');
-        $exclude6 = get_cat_ID('board content');
-        $q = '-'.$exclude1.',-'.$exclude2.',-'.$exclude3.',-'.$exclude4.',-'.$exclude5.',-'.$exclude6;
+        $obf_exclude = get_cat_ID('home');
+        $q = '-'.$obf_exclude;
         
         $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
         if ( $paged == 1 ){
@@ -93,7 +84,7 @@
         ) );
         
         if ( $query->have_posts() ) { ?>
-        <section class="recent-posts">
+        <section class="recent-posts grid-container">
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
             <div class="post-display">

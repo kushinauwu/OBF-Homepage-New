@@ -1,6 +1,6 @@
 <?php
 
-//enqueue scripts and stylesheet
+// Enqueue scripts and stylesheet
 function obf_scripts_styles() {
         wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.3.7', true );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.7' );
@@ -12,6 +12,9 @@ function obf_scripts_styles() {
     }
     else if ( is_page( 'board' ) ) {
         wp_enqueue_style('style-board.css', get_template_directory_uri().'/css/style-board.css',false,'5.0.7','all');
+    }
+    else if ( is_page( 'projects' ) ) {
+        wp_enqueue_style('style-projects.css', get_template_directory_uri().'/css/style-projects.css', false, '1.0','all');
     }
     else if ( is_page( 'meeting-minutes' ) ) {
         wp_enqueue_style('style-meeting-minutes.css', get_template_directory_uri().'/css/style-meeting-minutes.css',false,'1.0','all');
@@ -28,10 +31,10 @@ function obf_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts','obf_scripts_styles' );
 
-//require nav walker
+// Require nav walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
-// theme setup support
+// Theme setup support
 function obf_theme_setup() {
     //nav menu support
     register_nav_menus(array(
@@ -138,7 +141,8 @@ function obf_post_taxonomy() {
 		'hierarchical' => true,
 		'query_var' => true,
 		'rewrite' => false,
-		'labels' => $obf_board_labels
+		'labels' => $obf_board_labels,
+        'show_admin_column' => true
 	) );
     
     register_taxonomy( strtolower($obf_projects_singular), 'obf-projects', array(
@@ -148,21 +152,22 @@ function obf_post_taxonomy() {
 		'hierarchical' => true,
 		'query_var' => true,
 		'rewrite' => false,
-		'labels' => $obf_projects_labels
+		'labels' => $obf_projects_labels,
+        'show_admin_column' => true
 	) );
 }
 add_action( 'init', 'obf_post_taxonomy', 0 );
 
 
-
-// offset the main query on the home page 
-function tutsplus_offset_main_query ( $query ) {
+// Offset the main query on the home page 
+function obf_offset_main_query ( $query ) {
      if ( $query->is_home() && $query->is_main_query() && !$query->is_paged() ) {
          $query->set( 'offset', '2' );
     }
  }
-add_action( 'pre_get_posts', 'tutsplus_offset_main_query' );
+add_action( 'pre_get_posts', 'obf_offset_main_query' );
 
+// Move comment field from default top position to bottom
 function obf_move_comment_field_to_bottom( $fields ) {
     $comment_field = $fields['comment'];
     unset( $fields['comment'] );
@@ -172,6 +177,7 @@ function obf_move_comment_field_to_bottom( $fields ) {
   
 add_filter( 'comment_form_fields', 'obf_move_comment_field_to_bottom' );
 
+// Change excerpt length to 20 words
 function obf_custom_excerpt_length( $length ) {
         return 20;
     }

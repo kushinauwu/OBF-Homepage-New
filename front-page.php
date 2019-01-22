@@ -53,9 +53,8 @@
     <!-- about OBF end -->
 
     <!-- news/blog section -->
-    <?php $query1 = new WP_Query( array( 'tag' => 'index-news' ) ); ?>
-    <?php if($query1->have_posts()) : ?>
-    <?php while($query1->have_posts()) : $query1->the_post(); ?>
+    <!--?php $query1 = new WP_Query( array( 'tag' => 'index-news' ) ); ?>-->
+
     <section class="news-section">
         <div class="news-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/aquatic-plants-background-beautiful-424763.jpg);">
             <!--Photo by Fancycrave.com from Pexels-->
@@ -65,9 +64,32 @@
                 <!--move content by 5 columns -->
                 <div class="col-md-7 col-md-offset-5">
                     <h1>
-                        <?php the_title(); ?>
+                        The latest happenings in the OBF Community
                     </h1>
-                    <?php the_content(); ?>
+
+
+                    <ul class="blog-list">
+                        <?php 
+        $obf_exclude = get_cat_ID('home');
+        $q = '-'.$obf_exclude;
+        $query = new WP_query ( array(
+            'cat' => $q,
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => 5,
+        ) );
+        
+        if ( $query->have_posts() ) { ?>
+                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <li class="list-post">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_title(); ?></a></li>
+                        <?php endwhile;
+                wp_reset_postdata(); 
+                                    } ?>
+                    </ul>
+
+                    <!--blog post links end -->
                     <div class="news-button">
                         <a href="blog" class="button">
                             <span>Read More</span>
@@ -77,18 +99,10 @@
             </div>
         </div>
     </section> <!-- news section end -->
-    <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
-    <?php else : ?>
-    <p>
-        <?php __('No post found'); ?>
-    </p>
-    <?php endif; ?>
+
 
     <!--fellowships section -->
-    <?php $query2 = new WP_Query( array( 'tag' => 'index-fellowships' ) ); ?>
-    <?php if($query2->have_posts()) : ?>
-    <?php while($query2->have_posts()) : $query2->the_post(); ?>
+
     <section class="fellowships-section">
 
         <div class="row">
@@ -96,11 +110,34 @@
                 <div class="fellowships-text-wrapper">
                     <div class="fellowships-content">
                         <h1>
-                            <?php the_title(); ?>
+                            Travel Fellowships
                         </h1>
                         <div class="fellowships-content-wrapper">
                             <div class="fellowships-content-info">
-                                <?php the_content(); ?>
+                                The OBF Travel Fellowship program aims at increasing diverse participation at events promoting open source bioinformatics software development and open science in the biological research community.
+                                <!-- questions list -->
+                                <ul class="fellowship-info-list">
+                                    <li style="list-style-type: none;">
+                                        <ul class="fellowship-info-list">
+                                            <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-selection-criteria" data-wplink-url-error="true">What are the selection criteria?</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="fellowship-info-list">
+                                    <li style="list-style-type: none;">
+                                        <ul class="fellowship-info-list">
+                                            <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-coverage" data-wplink-url-error="true">What does the fellowship cover?</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="fellowship-info-list">
+                                    <li style="list-style-type: none;">
+                                        <ul class="fellowship-info-list">
+                                            <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-requirements" data-wplink-url-error="true">What do you require of applicants?</a></li>
+                                            <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-applications" data-wplink-url-error="true">Who will review the applicants?</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                                 <div class="fellowships-apply-button">
                                     <a href="fellowships#fellowships-applications" class="button">
                                         <span>
@@ -120,102 +157,57 @@
             </div>
         </div>
     </section> <!-- fellowships section end -->
-    <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
-    <?php else : ?>
-    <p>
-        <?php __('No post found'); ?>
-    </p>
-    <?php endif; ?>
+
 
 
     <!-- Projects Section -->
-    <?php $project_query = new WP_Query( array( 'tag' => 'index-projects' ) ); ?>
-    <?php while($project_query -> have_posts()) : $project_query -> the_post(); ?>
+
     <section class="projects-section">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="projects-text-wrapper">
                         <h1>
-                            <?php the_title(); ?>
+                            Associated Projects
                         </h1>
                     </div>
 
                     <!-- list of linked projects -->
                     <ul class="list-inline row projects-list">
+                        <?php
+                                $args = array(
+                                                'post_type' => 'obf-projects',
+                                                'tax_query' => array(
+                                                            array (
+                                                                'taxonomy' => 'project-type',
+                                                                'field' => 'slug',
+                                                                'terms' => 'main-projects',
+                                                            )
+                                                        ),
+                                            );
+                                $main_projects = new WP_Query( $args );
+                            ?>
+                        <?php if ( $main_projects->have_posts() ) : while ( $main_projects->have_posts() ) : $main_projects->the_post(); ?>
                         <div class="col-sm-4 col-xs-6">
                             <li class="project-name">
-                                <a href="#">
-                                    <?php $image = wp_get_attachment_image_src(get_field('project_logo_1'), 'full'); ?>
-                                    <img src="<?php echo $image[0]; ?>" />
+                                <?php $project_url = get_post_meta( get_the_ID(), 'project_url', true ); ?>
+                                <a href="<?php echo $project_url; ?>">
+                                    <?php the_post_thumbnail(); ?>
 
                                     <div class="project-title">
-                                        <?php the_field('project_name_1'); ?>
+
+                                        <a href="<?php echo $project_url; ?>" target="_blank">
+                                            <?php the_title(); ?></a>
                                     </div>
                                 </a>
                             </li>
                         </div>
-                        <div class="col-sm-4 col-xs-6">
-                            <li class="project-name">
-                                <a href="#">
-                                    <?php $image = wp_get_attachment_image_src(get_field('project_logo_2'), 'full'); ?>
-                                    <img src="<?php echo $image[0]; ?>" />
-
-                                    <div class="project-title">
-                                        <?php the_field('project_name_2'); ?>
-                                    </div>
-                                </a>
-                            </li>
-                        </div>
-                        <div class="col-sm-4 col-xs-6">
-                            <li class="project-name">
-                                <a href="#">
-                                    <?php $image = wp_get_attachment_image_src(get_field('project_logo_3'), 'full'); ?>
-                                    <img src="<?php echo $image[0]; ?>" />
-
-                                    <div class="project-title">
-                                        <?php the_field('project_name_3'); ?>
-                                    </div>
-                                </a>
-                            </li>
-                        </div>
-                        <div class="col-sm-4 col-xs-6">
-                            <li class="project-name">
-                                <a href="#">
-                                    <?php $image = wp_get_attachment_image_src(get_field('project_logo_4'), 'full'); ?>
-                                    <img src="<?php echo $image[0]; ?>" />
-
-                                    <div class="project-title">
-                                        <?php the_field('project_name_4'); ?>
-                                    </div>
-                                </a>
-                            </li>
-                        </div>
-                        <div class="col-sm-4 col-xs-6">
-                            <li class="project-name">
-                                <a href="#">
-                                    <?php $image = wp_get_attachment_image_src(get_field('project_logo_5'), 'full'); ?>
-                                    <img src="<?php echo $image[0]; ?>" />
-
-                                    <div class="project-title">
-                                        <?php the_field('project_name_5'); ?>
-                                    </div>
-                                </a>
-                            </li>
-                        </div>
-                        <div class="col-sm-4 col-xs-6">
-                            <li class="project-name">
-                                <a href="#">
-                                    <?php $image = wp_get_attachment_image_src(get_field('project_logo_6'), 'full'); ?>
-                                    <img src="<?php echo $image[0]; ?>" />
-
-                                    <div class="project-title">
-                                        <?php the_field('project_name_6'); ?>
-                                    </div>
-                                </a>
-                            </li>
-                        </div>
+                        <?php endwhile; else : ?>
+                        <p>
+                            <?php __('No post found'); ?>
+                        </p>
+                        <?php endif;
+                                wp_reset_postdata(); ?>
 
                     </ul>
                 </div>
@@ -229,8 +221,6 @@
             </div>
         </div>
     </section> <!-- projects section end -->
-    <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
 
 
     <!--EVENTS SECTION -->

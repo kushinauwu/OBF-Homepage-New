@@ -70,20 +70,22 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .recent-posts {
     margin-top: 3%;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
-.recent-posts .post-display {
+/*.recent-posts .post-display {
     width: 32.5%;
     display: inline-block;
     vertical-align: top;
     text-align: left;
     margin-bottom: 3%;
     position: relative;
-}
+}*/
 
 .recent-posts-wrapper {
     background-color: rgba(100, 100, 100, 0.5);
-    margin: 1% 2%;
+    margin: 1% 0%;
     padding: 1% 3%;
     height: 240px;
     width: 400px;
@@ -106,15 +108,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     filter: blur(2px) brightness(50%);
     max-height: 100%;
     margin: 0 0;
-    max-height: 100%;  
-    max-width: 100%; 
+    max-height: 100%;
+    max-width: 100%;
     width: auto;
     height: auto;
-    position: absolute;  
-    top: 0;  
-    bottom: 0;  
-    left: 0;  
-    right: 0;  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
 }
 
@@ -155,14 +157,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 @media only screen and (min-width: 1025px) {
-    .recent-posts .post-display {
+    /*.recent-posts .post-display {
         width: 49%;
-    }
-    
+    }*/
+
     .latest-post-content {
         padding: 5px;
     }
-    
+
     .latest-post-content p {
         width: 80%;
         margin-left: 10%;
@@ -171,8 +173,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 @media only screen and (max-width: 1024px) {
 
-    .recent-posts .post-display {
+    /*.recent-posts .post-display {
         width: 49%;
+    }*/
+
+    .recent-posts {
+        display: grid;
+        grid-template-columns: auto auto;
     }
 
     .latest-post-content {
@@ -188,24 +195,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*Mobile display */
 @media only screen and (max-width: 768px) {
 
-    .recent-posts .post-display {
-        width: 49%;
+    .recent-posts {
+        display: grid;
+        grid-template-columns: auto auto;
     }
 
     .recent-posts-wrapper {
-        margin: 5% 2%;
+        margin: 5% 0%;
         padding: 1% 3%;
-        height: 250px;
         width: 90%;
         height: 300px;
     }
-    
+
     .latest-post-content h1 {
         width: 100%;
         margin-left: 0;
         padding: 0;
     }
-    
+
     .latest-post-content p {
         width: 100%;
         margin-left: 0;
@@ -263,8 +270,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         height: auto;
     }
 
-    .recent-posts .post-display {
-        width: 100%;
+    .recent-posts {
+        display: grid;
+        grid-template-columns: auto;
     }
 
     .recent-posts-content p {

@@ -220,7 +220,7 @@ i {
 .introduction-text {
     padding-right: 40px;
     margin-left: 0px;
-    font-size: 26px;
+    font-size: 24px;
     /* color: #2d95b5;*/
     color: rgb(001, 017, 032);
     /* about and felloship text color */
@@ -333,7 +333,7 @@ i {
     margin-left: 2%;
     margin-right: 2%;
     font-family: 'Slabo 27px', serif;
-    font-size: 24px;
+    font-size: 22px;
     transition: 0.3s ease;
     margin-bottom: 1%;
 }
@@ -360,7 +360,7 @@ i {
 
 .applicant-requirements p {
     font-family: 'Slabo 27px', serif;
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 0.7px;
     margin-left: 0px;
     margin-bottom: 0;
@@ -368,7 +368,7 @@ i {
 
 .applicant-requirements ul li {
     font-family: 'Slabo 27px', serif;
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 0.7px;
     margin-left: 0px;
     list-style-type: square;
@@ -377,6 +377,7 @@ i {
 
 .applicant-req-blurb p {
     margin-bottom: 0;
+    font-size: 22px;
 }
 
 .applicant-req-blurb {
@@ -404,7 +405,7 @@ i {
 
 .applications .applications-text {
     font-family: 'Slabo 27px', serif;
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 0.7px;
     margin-left: 0px;
     list-style-type: square;
