@@ -16,6 +16,9 @@ function obf_scripts_styles() {
     else if ( is_page( 'projects' ) ) {
         wp_enqueue_style('style-projects.css', get_template_directory_uri().'/css/style-projects.css', false, '1.0','all');
     }
+    else if ( is_page( 'events' ) ) {
+        wp_enqueue_style('style-events.css', get_template_directory_uri().'/css/style-events.css',false,'1.0','all');
+    }
     else if ( is_page( 'meeting-minutes' ) ) {
         wp_enqueue_style('style-meeting-minutes.css', get_template_directory_uri().'/css/style-meeting-minutes.css',false,'1.0','all');
     }
@@ -79,6 +82,21 @@ function obf_post_type() {
 		'not_found_in_trash' => __("No Projects Found in Trash"),
 		'parent_item_colon' => ''
 	);
+    
+    $obf_events_labels = array(
+		'name' => _x("Events", "post type general name"),
+		'singular_name' => _x("Event", "post type singular name"),
+		'menu_name' => 'Events',
+		'add_new' => _x("Add New", "event item"),
+		'add_new_item' => __("Add New Event"),
+		'edit_item' => __("Edit Event"),
+		'new_item' => __("New Event"),
+		'view_item' => __("View Event"),
+		'search_items' => __("Search Events"),
+		'not_found' =>  __("No Events Found"),
+		'not_found_in_trash' => __("No Events Found in Trash"),
+		'parent_item_colon' => ''
+	);
 	
 	// Register post type
 	register_post_type('obf-board' , array(
@@ -95,6 +113,14 @@ function obf_post_type() {
 		'has_archive' => false,
 		'rewrite' => false,
 		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+	) );
+    
+    register_post_type('obf-events' , array(
+		'labels' => $obf_events_labels,
+		'public' => true,
+		'has_archive' => false,
+		'rewrite' => false,
+		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields','excerpt')
 	) );
 }
 add_action( 'init', 'obf_post_type', 0 );

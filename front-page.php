@@ -232,37 +232,47 @@
                         <h1>Upcoming events</h1>
                     </div>
 
-                    <?php $event_query = new WP_Query( array( 
-                            'tag' => 'index-events',
-                            'posts_per_page' => 3) ); ?>
+                   
                     <ul class="list-inline row events-list">
-                        <?php while($event_query -> have_posts()) : $event_query -> the_post(); ?>
+                        <?php
+                                $args = array(
+                                                'post_type' => 'obf-events',
+                                                
+                                                            'meta_key' => 'start_date',
+                                                            'orderby' => 'meta_value_num',
+                                                            'order' => 'DESC',
+                                                        
+                                    'posts_per_page' => 3,
+                                            );
+                                $present_member = new WP_Query( $args );
+                            ?>
+                    <?php if ( $present_member->have_posts() ) : while ( $present_member->have_posts() ) : $present_member->the_post(); ?>
                         <div class="col-sm-4 col-xs-4">
                             <li class="event-details">
                                 <a href="#">
-                                    <?php the_post_thumbnail(); ?>
+                                    <?php if ( has_post_thumbnail() ) :
+                                    the_post_thumbnail();
+                                    else : ?>
+                                    <img src="" />
+                                    <?php endif; ?>
                                     <div class="event-name">
-                                        <?php the_title(); ?>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </div>
                                     <div class="event-date">
-                                        <?php
-                                                //check if value in field is for event Date
-                                                $event_date = get_post_meta($post->ID, 'Date', true ); ?>
-                                        <?php if ( $event_date )  : echo $event_date; ?>
-                                        <?php else : ?>
-                                        <p>
-                                            <?php __('TBA'); ?>
-                                        </p>
-                                        <?php endif; ?>
-                                        <?php wp_reset_postdata(); ?>
-
-
+                                        <?php the_field('start_date'); ?> to <?php the_field('end_date'); ?>
+                                    </div>
+                                    <div class="event-location">
+                                        <?php the_field('location'); ?>
                                     </div>
                                 </a>
                             </li>
                         </div>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
+                        <?php endwhile; else : ?>
+                    <p>
+                        <?php __('No post found'); ?>
+                    </p>
+                    <?php endif;
+                                wp_reset_postdata(); ?>
                     </ul>
                 </div>
             </div>

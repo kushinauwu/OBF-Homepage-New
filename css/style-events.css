@@ -1,0 +1,268 @@
+/*
+Theme Name: obf-new
+Author: kushinauwu
+Description: basic revised obf homepage theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+/*ongoing events*/
+
+.ongoing-events {
+    margin-bottom: 40px;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.card {
+    box-shadow: 1px 5px 10px grey;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-top: 4vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-img {
+    text-align: center;
+}
+
+.card-img img {
+    width: 200px;
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-body {
+    margin-left: 20px;
+}
+
+.card-body h2 {
+    font-family: 'Montserrat', serif;
+    font-size: 40px;
+    color: #275aa1;
+    font-weight: bold;
+}
+
+.card-body i {
+    margin-right: 20px;
+    margin-right: 20px;
+    border: 0;
+    padding: 0;
+    margin-left: 0;
+}
+
+.card-body p {
+    font-family: 'Slabo 27px', serif;
+    font-size: 22px;
+    color: darkslategray;
+    margin-top: 20px;
+}
+
+.card-info {
+    border-top: 1px solid lightgray;
+    margin-top: 20px;
+    background-color: white;
+    padding-bottom: 0;
+    padding-top: 20px;
+    color: darkslategray;
+}
+
+.card-info p {
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+}
+
+/*upcoming events*/
+.upcoming-events {
+    padding-bottom: 40px;
+}
+
+/*past events*/
+
+.past-events {
+    background-color: #1b2e25;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.past-events h1 {
+    color: #88eef7;
+}
+
+.past-events-list li {
+    padding-bottom: 10px;
+}
+
+.past-events-list a {
+    color: ghostwhite;
+    font-family: 'Montserrat', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.past-events-list a:hover {
+    color: lightblue;
+}
+
+.past-events-list {
+    margin-left: 30px;
+}
+
+.past-events-list li .info-past {
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
+    color: ghostwhite;
+}
+
+
+/*tablet resolution*/
+
+@media only screen and (max-width:768px) {
+    h1 {
+        font-size: 36px;
+        margin-bottom: 4vh;
+    }
+
+    .container-grid {
+        grid-template-columns: 30% 70%;
+    }
+
+    .card-body h2 {
+        font-size: 5vh;
+    }
+
+    .card-body i {
+        margin-right: 2vh;
+    }
+
+    .card-body p {
+        font-size: 3.7vh;
+        margin-top: 2vh;
+        margin-left: 2vh;
+    }
+
+    .card-info {
+        margin-top: 3vh;
+        padding-bottom: 0;
+    }
+
+    .card-info p {
+        font-size: 3vh;
+    }
+
+    /*past events*/
+
+    .past-events {
+        margin-top: 5vh;
+        padding-top: 4vh;
+    }
+
+    .past-events h1 {
+        margin-bottom: 3vh;
+    }
+
+    .past-events-list li {
+        font-size: 3.7vh;
+        margin-bottom: 2vh;
+    }
+
+    .past-events-list li .info-past {
+        font-size: 3vh;
+    }
+}
+
+/*Mobile resolution*/
+@media only screen and (max-width:480px) {
+
+    /*ongoing events*/
+    h1 {
+        font-size: 5vh;
+        margin-bottom: 0;
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .card {
+        box-shadow: 1px 5px 10px grey;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        margin-top: 4vh;
+        padding: 10px 0;
+    }
+
+    .card-img {
+        text-align: center;
+    }
+
+    .card-img img {
+        width: 60%;
+        height: auto;
+    }
+
+    .card-body h2 {
+        font-family: 'Montserrat', serif;
+        font-size: 4vh;
+        color: #275aa1;
+        font-weight: bold;
+    }
+
+    .card-body i {
+        margin-right: 2vh;
+    }
+
+    .card-body p {
+        font-family: 'Lato', serif;
+        font-size: 3.3vh;
+        margin-top: 2vh;
+        margin-left: 2vh;
+    }
+
+    .card-info {
+        margin-top: 0vh;
+    }
+
+    .card-info p {
+        font-family: 'Lato', serif;
+        font-size: 3vh;
+        text-align: justify;
+    }
+
+    /*past events*/
+
+    .past-events {
+        background-color: #1b2e25;
+        margin-top: 4vh;
+        padding-top: 3vh;
+    }
+
+    .past-events h1 {
+        color: #88eef7;
+        font-size: 5vh;
+    }
+
+    .past-events-list li {
+        font-size: 3.3vh;
+        margin-bottom: 2vh;
+    }
+
+    .past-events-list {
+        margin-left: 3vh;
+    }
+
+    .past-events-list li .info-past {
+        font-size: 3vh;
+        font-family: 'Lato', serif;
+    }
+}
