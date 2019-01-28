@@ -27,6 +27,34 @@
 
 **Details**
 
+*Update 28/01/2019*
+
+-- Added page for events. Made a custom post type for events as well. :) I used custom fields to store the location, start date and end date fields of the event. Added appropriate filters so that event dates are checked against the current date, and events are classified as upcoming, ongoing or past events on this basis. Added stylesheet for this page too.
+
+-- Updated single page for events.
+
+-- Added icon credits to footer.
+
+
+*Update 22/01/2019*
+
+-- Made projects page! :) Projects are displayed according to taxonomy now, which can be seen fro admin dashboard too. Also, added stylesheet for projects page.
+
+-- Made changes to front page so as to show dynamic content from the board of directors page and projects page.
+
+-- Added support to show board and project taxonomy in the admin menu, when viewing list of items for these custom post types.
+
+-- Changed some font sizes that seemed irregular through pages.
+
+
+*Update 17/01/2019*
+-- Updated pages so that no separate posts for page contents remain. Contents of About, Fellowships can be edited from the page editor itself. Member profiles can still be edited from the dashboard menu, but page content can be edited from the page editor. :)
+
+-- News page shows all the blog posts and shows the latest post styled differently than the others. Comments section added to single blog posts. Added stylesheet for news page and single post page
+
+-- Made custom post type for projects and taxonomies.
+
+
 *Update 03/01/2019*
 -- Added pages for fellowships, board of directors and the meeting minutes page. :) Member profiles can be edited from dashboard menu under the custom post type menu title 'Board Member Profiles'. Used taxonomies to classify if a member is a current member or a past member.
 
@@ -38,12 +66,14 @@
 
 -- Added user 'yo' for Yo :)
 
+
 *Update 27/12/2018*
 -- Changed the homepage from index page to a static front page to be able to use the News page as a dedicated blog page in accordance with the WordPress model. The News tab is just temporary for now!
 
 -- Fixed some design issues
 
 -- Added use of plugin All-in-One WP Migration.
+
 
 *Update 20/12/2018*
 -- Moved files from wp-content to root directory.
