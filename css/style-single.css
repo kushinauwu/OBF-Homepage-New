@@ -40,6 +40,12 @@ span.author-date {
     font-size: 18px;
 }
 
+.avatar {
+    margin-left: 0;
+    display: inline;
+    margin-right: 0;
+}
+
 img {
     display: block;
     margin-left: 30%;
@@ -130,15 +136,13 @@ figure {
         font-family: 'Lato', serif;
         letter-spacing: normal;
     }
-    
+
     .nav-next {
         display: block;
         position: relative;
     }
-    
+
     .nav-previous {
         display: block;
     }
-    
-    
 }

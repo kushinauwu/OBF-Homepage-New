@@ -10,6 +10,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /*MAIN PAGE*/
 
+/*.gsoc-main-page .container-fluid {
+     margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+}*/
+
+.container-fluid-cancel {
+    margin-left: calc(-2% - 17px);
+    margin-right: calc(-2% - 17px);
+}
+
 .gsoc-menu .grid-container {
     display: grid;
     grid-template-columns: 49% 51%;
@@ -27,6 +39,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .gsoc-menu-content h3 {
     margin-top: 20px;
+    text-align: center;
 }
 
 .gsoc-menu-content h3 a {
@@ -34,11 +47,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     color: #275aa1;
     font-size: 30px;
     margin-top: 0;
+
 }
 
 .gsoc-menu-content p {
     color: darkslategray;
     font-size: 24px;
+    font-family: 'K2D', sans-serif;
 }
 
 .gsoc-menu-content p a {
@@ -200,9 +215,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         grid-template-columns: 50% 50%;
     }
 
+    .gsoc-menu-content p {
+        font-family: 'K2D', sans-serif;
+    }
+
     h1 {
         font-size: 36px;
         margin-bottom: 2vh;
+    }
+
+    p,
+    li,
+    a {
+        font-family: 'Slabo 27px', serif;
+        letter-spacing: 0.7px;
     }
 
     /*Introduction text*/
@@ -211,7 +237,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     }
 
     .gsoc-introduction-text p {
-        font-family: 'Slabo 27px', serif;
         font-size: 22px;
         color: darkslategray;
         text-align: justify;

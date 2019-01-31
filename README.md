@@ -27,6 +27,11 @@
 
 **Details**
 
+*Update 31/01/2018*
+
+-- Added GSoC menu page, overview and guidelines page. Made a gsoc page template so more pages and content can be added and styles will be maintained. 
+
+
 *Update 28/01/2019*
 
 -- Added page for events. Made a custom post type for events as well. :) I used custom fields to store the location, start date and end date fields of the event. Added appropriate filters so that event dates are checked against the current date, and events are classified as upcoming, ongoing or past events on this basis. Added stylesheet for this page too.

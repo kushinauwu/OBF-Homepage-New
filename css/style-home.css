@@ -33,6 +33,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 }
 
+.latest-post-content h1 a {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .latest-post-content p {
     background-color: rgba(255, 255, 255, 0.5);
     color: darkslategray;
@@ -131,6 +135,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 1% 2%;
+    font-size: 24px;
+    text-transform: none;
 }
 
 .recent-posts-content p {
@@ -138,7 +144,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     text-align: justify;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 1% 2%;
-
+    font-size: 15px;
 }
 
 .navigation-wrapper {
@@ -154,6 +160,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-family: 'Montserrat', serif;
     font-size: 16px;
 
+}
+
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 @media only screen and (min-width: 1025px) {
