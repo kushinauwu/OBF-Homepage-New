@@ -1,6 +1,6 @@
 <?php
 
-// Enqueue scripts and stylesheet
+// Enqueue scripts and stylesheet for pages
 function obf_scripts_styles() {
         wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.3.7', true );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.7' );
@@ -19,6 +19,9 @@ function obf_scripts_styles() {
     else if ( is_page( 'events' ) ) {
         wp_enqueue_style('style-events.css', get_template_directory_uri().'/css/style-events.css',false,'1.0','all');
     }
+    else if ( is_page( 'gsoc' ) ) {
+        wp_enqueue_style('style-gsoc.css', get_stylesheet_directory_uri().'/css/style-gsoc.css',false,'1.0','all');
+    }
     else if ( is_page( 'meeting-minutes' ) ) {
         wp_enqueue_style('style-meeting-minutes.css', get_template_directory_uri().'/css/style-meeting-minutes.css',false,'1.0','all');
     }
@@ -33,6 +36,14 @@ function obf_scripts_styles() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );    
 }
 add_action( 'wp_enqueue_scripts','obf_scripts_styles' );
+
+// Enqueue styles for page templates, with styles applicable for child pages
+function obf_enqueue_page_template_styles() {
+    if ( is_page_template( 'gsoc.php' ) ) {
+        wp_enqueue_style( 'style-gsoc.css', get_template_directory_uri() . '/css/style-gsoc.css' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'obf_enqueue_page_template_styles' );
 
 // Require nav walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';

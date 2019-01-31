@@ -62,7 +62,10 @@ a:hover {
     text-decoration: none;
 }
 
-
+p {
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+}
 
 /*NAVIGATION*/
 .navbar {
@@ -1934,5 +1937,11 @@ input#submit:active {
     #respond input[type=text],
     textarea {
         width: 100%;
+    }
+    
+    p {
+        font-family: 'Lato', serif;
+        font-size: 3vh;
+        letter-spacing: normal;
     }
 }

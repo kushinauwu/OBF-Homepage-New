@@ -1,0 +1,414 @@
+/*
+Theme Name: obf-new
+Author: kushinauwu
+Description: basic revised obf homepage theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+/*MAIN PAGE*/
+
+.gsoc-menu .grid-container {
+    display: grid;
+    grid-template-columns: 49% 51%;
+}
+
+.gsoc-menu-content {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.gsoc-menu-content img {
+    width: 180px;
+}
+
+.gsoc-menu-content h3 {
+    margin-top: 20px;
+}
+
+.gsoc-menu-content h3 a {
+    font-family: 'Montserrat', serif;
+    color: #275aa1;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.gsoc-menu-content p {
+    color: darkslategray;
+    font-size: 24px;
+}
+
+.gsoc-menu-content p a {
+    color: #275aa1;
+}
+
+/*OVERVIEW PAGE*/
+/*Introduction text*/
+.gsoc-introduction {
+    margin-top: 60px;
+}
+
+.gsoc-introduction-text {
+    padding: 5% 0;
+
+}
+
+.gsoc-introduction-text p {
+    padding: 5% 0;
+    font-family: 'Slabo 27px', serif;
+    font-size: 24px;
+    color: darkslategray;
+    text-align: justify;
+}
+
+.gsoc-logo {
+    padding: 5% 0;
+}
+
+.gsoc-logo img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    position: relative;
+    bottom: 20px;
+    padding: 5% 0;
+}
+
+/*GSoC overview*/
+.gsoc-overview {
+    margin-top: 20px;
+}
+
+.gsoc-overview-text p {
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.gsoc-overview h2 {
+    color: #275aa1;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.facts-links-list {
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-left: 2%;
+    text-align: justify;
+}
+
+.facts-links-list li {
+    margin-bottom: 5px;
+}
+
+.gsoc-overview .grid-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.why-apply-list {
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+}
+
+.why-apply-list li {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    margin: 1% 2%;
+    border-radius: 20px;
+    text-align: justify;
+}
+
+.why-apply-list li:nth-child(odd) {
+    background-color: #cfffff;
+}
+
+.why-apply-list li:nth-child(even) {
+    background-color: #cccccf;
+}
+
+.image-list {
+    text-align: center;
+}
+
+.image-list img {
+    display: block;
+    margin: 0 auto 12%;
+    width: 50%;
+    max-width: 170px;
+    height: auto;
+}
+
+/*progress reports*/
+
+.progress-reports {
+    margin-top: 40px;
+}
+
+.progress-reports,
+.previous-years {
+    background-color: #1b2e25;
+    padding-top: 30px;
+}
+
+.progress-reports h1,
+.previous-years h1 {
+    color: #88eef7
+}
+
+.progress-reports-content p,
+.previous-years p {
+    color: ghostwhite;
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.progress-reports-content a,
+.previous-years a {
+    color: lightblue;
+}
+
+/*previous years*/
+.previous-years {
+    padding-bottom: 30px;
+}
+
+.previous-years ul li {
+    color: ghostwhite;
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 2%;
+    text-align: justify;
+}
+
+/*Tablet resolution*/
+@media only screen and (max-width:768px) {
+
+    /*main page*/
+
+    .gsoc-menu .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 2vh;
+    }
+
+    /*Introduction text*/
+    .gsoc-introduction {
+        margin-top: 40px;
+    }
+
+    .gsoc-introduction-text p {
+        font-family: 'Slabo 27px', serif;
+        font-size: 22px;
+        color: darkslategray;
+        text-align: justify;
+    }
+
+    .gsoc-logo img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        position: relative;
+        bottom: 20px;
+    }
+
+    /*GSoC overview*/
+    .gsoc-overview {
+        margin-top: 10px;
+    }
+
+    .gsoc-overview-text p {
+        font-size: 18px;
+    }
+
+    .facts-links-list {
+        font-size: 18px;
+    }
+
+    .why-apply-list {
+        font-size: 18px;
+    }
+
+    /*progress reports*/
+
+    .progress-reports {
+        margin-top: 20px;
+    }
+
+    .progress-reports,
+    .previous-years {
+        padding-top: 20px;
+    }
+
+    .progress-reports-content p,
+    .previous-years p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /*previous years*/
+    .previous-years {
+        padding-bottom: 30px;
+    }
+
+    .previous-years ul li {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    h1 {
+        font-size: 5vh;
+    }
+
+    /*main page*/
+
+    .gsoc-menu .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .gsoc-menu-content {
+        margin-bottom: 4vh;
+        margin-right: 2vh;
+    }
+
+    .gsoc-menu-content h3 {
+        margin-top: 2vh;
+    }
+
+    .gsoc-menu-content h3 a {
+        font-size: 4.7vh;
+    }
+
+    .gsoc-menu-content p {
+        font-size: 3.5vh;
+        font-family: 'K2D';
+    }
+
+    /*Introduction text*/
+    .gsoc-introduction {
+        margin-top: 4vh;
+    }
+
+    .gsoc-introduction-text {
+        padding: 0;
+    }
+
+    .gsoc-introduction-text p {
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+        font-size: 3vh;
+        padding: 0;
+    }
+
+    .gsoc-logo {
+        padding: 0;
+    }
+
+    .gsoc-logo img {
+        display: block;
+        width: 70%;
+        top: 1vh;
+        padding: 0;
+    }
+
+    /*GSoC overview*/
+    .gsoc-overview {
+        margin-top: 20px;
+    }
+
+    .gsoc-overview-text p {
+        font-size: 3vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
+
+    .gsoc-overview h2 {
+        font-size: 4.2vh;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+    }
+
+    .facts-links-list {
+        font-size: 3vh;
+    }
+
+    .facts-links-list li {
+        margin-bottom: 0.5vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
+
+    .why-apply-list {
+        font-size: 2.5vh;
+    }
+
+    .why-apply-list li {
+        margin-bottom: 20px;
+        padding: 1vh 1.5vh;
+        margin: 2% 2%;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
+
+    .image-list {
+        text-align: center;
+        display: none;
+    }
+
+    .gsoc-overview .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .image-list img {
+        display: inline;
+        width: 25%;
+        margin: 2vh 1vh;
+    }
+
+    /*progress reports*/
+
+    .progress-reports {
+        margin-top: 4vh;
+    }
+
+    .progress-reports,
+    .previous-years {
+        padding-top: 3vh;
+    }
+
+    .progress-reports-content p,
+    .previous-years p {
+        font-size: 3vh;
+        margin-bottom: 1vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
+
+    /*previous years*/
+    .previous-years {
+        padding-bottom: 3vh;
+    }
+
+    .previous-years ul li {
+        font-size: 3vh;
+        margin-bottom: 1vh;
+        font-family: 'Lato', serif;
+        letter-spacing: normal;
+    }
+}
