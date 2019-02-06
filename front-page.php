@@ -38,7 +38,7 @@
             <div class="col-sm-7">
                 <div class="about-background-image">
                     <!--Photo by Egor Kamelev from Pexels-->
-                    <img src="<?php echo get_bloginfo('template_url') ?>/img/abstract-animal-aquarium-753266.jpg">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/abstract-animal-aquarium-753266.jpg">
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
     <!--?php $query1 = new WP_Query( array( 'tag' => 'index-news' ) ); ?>-->
 
     <section class="news-section">
-        <div class="news-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/aquatic-plants-background-beautiful-424763.jpg);">
+        <div class="news-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/page-photos/aquatic-plants-background-beautiful-424763.jpg);">
             <!--Photo by Fancycrave.com from Pexels-->
         </div>
         <div class="container">
@@ -64,7 +64,7 @@
                 <!--move content by 5 columns -->
                 <div class="col-md-7 col-md-offset-5">
                     <h1>
-                        The latest happenings in the OBF Community
+                        Latest News
                     </h1>
 
 
@@ -116,28 +116,13 @@
                             <div class="fellowships-content-info">
                                 The OBF Travel Fellowship program aims at increasing diverse participation at events promoting open source bioinformatics software development and open science in the biological research community.
                                 <!-- questions list -->
-                                <ul class="fellowship-info-list">
-                                    <li style="list-style-type: none;">
-                                        <ul class="fellowship-info-list">
+                                
+                                        <ul class="fellowship-info-list list-unstyled">
                                             <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-selection-criteria" data-wplink-url-error="true">What are the selection criteria?</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <ul class="fellowship-info-list">
-                                    <li style="list-style-type: none;">
-                                        <ul class="fellowship-info-list">
                                             <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-coverage" data-wplink-url-error="true">What does the fellowship cover?</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <ul class="fellowship-info-list">
-                                    <li style="list-style-type: none;">
-                                        <ul class="fellowship-info-list">
                                             <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-requirements" data-wplink-url-error="true">What do you require of applicants?</a></li>
                                             <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-applications" data-wplink-url-error="true">Who will review the applicants?</a></li>
                                         </ul>
-                                    </li>
-                                </ul>
                                 <div class="fellowships-apply-button">
                                     <a href="fellowships#fellowships-applications" class="button">
                                         <span>
@@ -152,7 +137,7 @@
             <div class="col-sm-6">
                 <div class="fellowships-background-image">
                     <!--Photo by Hiếu Hoàng from Pexels-->
-                    <img src="<?php echo get_bloginfo('template_url') ?>/img/biology-blur-close-up-760184.jpg">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/biology-blur-close-up-760184.jpg">
                 </div>
             </div>
         </div>
@@ -188,7 +173,7 @@
                                 $main_projects = new WP_Query( $args );
                             ?>
                         <?php if ( $main_projects->have_posts() ) : while ( $main_projects->have_posts() ) : $main_projects->the_post(); ?>
-                        <div class="col-sm-4 col-xs-6">
+                        <div class="col-sm-3 col-xs-6">
                             <li class="project-name">
                                 <?php $project_url = get_post_meta( get_the_ID(), 'project_url', true ); ?>
                                 <a href="<?php echo $project_url; ?>">
@@ -345,24 +330,42 @@
                     <div class="join-head-wrapper">
                         <h1>Join Us!</h1>
                     </div>
-                    <?php $joining_query = new WP_Query( array( 'tag' => 'index-join',
-                                                                      'posts_per_page' => 3 ) ); ?>
                     <ul class="list-inline row join-list">
-                        <?php while($joining_query -> have_posts()) : $joining_query -> the_post(); ?>
+                      
                         <div class="col-sm-4 col-xs-4">
                             <li class="join-details">
-                                <a href="#">
-                                    <?php the_post_thumbnail(); ?>
+                                <a href="donate">
+                                    <img src="<?php echo get_bloginfo('template_url') ?>/img/icons/heart.png">
                                     <div class="join-title">
-                                        <?php the_title(); ?>
+                                        Support / Donate!
+                                    </div>
+
+                                </a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-xs-4">
+                            <li class="join-details">
+                                <a href="">
+                                    <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/Pear.png">
+                                    <div class="join-title">
+                                        Volunteer for BOSC!
+                                    </div>
+
+                                </a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-xs-4">
+                            <li class="join-details">
+                                <a href="membership">
+                                    <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/obf_logo_icon-circle-tr.png">
+                                    <div class="join-title">
+                                        Join the OBF!
                                     </div>
 
                                 </a>
                             </li>
                         </div>
 
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,138 @@
+/*
+Theme Name: obf-new
+Author: kushinauwu
+Description: basic revised obf homepage theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+/*membership introduction*/
+
+.membership-introduction {
+    margin-bottom: 40px;
+}
+
+.membership-introduction-text {
+    margin: 5% auto;
+}
+
+.membership-introduction-text p {
+    font-family: 'Slabo 27px', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.membership-image {
+    text-align: right;
+}
+
+.membership-image img {
+    width: 100%;
+    box-shadow: 0px 2px 20px grey;
+}
+
+
+.membership-eligibility,
+.membership-participation {
+    background-color: #1b2e25;
+    padding-top: 30px;
+}
+
+.membership-eligibility h1,
+.membership-participation h1 {
+    color: #88eef7;
+}
+
+.membership-eligibility p,
+.membership-participation p,
+.membership-participation li {
+    color: white;
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+}
+
+.membership-participation ul {
+    margin-bottom: 20px;
+}
+
+.join-obf-button .button {
+    position: relative;
+    display: inline-block;
+    color: darkslategray;
+    padding: 15px 25px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 1px grey;
+    font-weight: bold;
+    font-family: 'Montserrat', serif;
+    font-size: 22px;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 99%);
+    /*project button bg color*/
+    transition: 0.5s ease-in-out;
+}
+
+.join-obf-button .button:hover {
+    background-position: right center;
+    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 99%);
+    color: #1f1f1f;
+}
+
+@media only screen and (max-width: 769px) {
+    .membership-introduction-text {
+        margin: 1% 0;
+    }
+
+    .join-obf-button {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .membership-introduction {
+        margin-bottom: 3vh;
+    }
+
+    .membership-introduction-text {
+        margin: 2% auto;
+    }
+
+    .membership-introduction-text p {
+        font-family: 'Lato', sans-serif;
+        font-size: 3vh;
+        text-align: justify;
+    }
+
+    .membership-eligibility,
+    .membership-participation {
+        padding-top: 2vh;
+    }
+
+    .membership-eligibility p,
+    .membership-participation p,
+    .membership-participation li {
+        font-family: 'Lato', sans-serif;
+        font-size: 3vh;
+    }
+
+    .membership-participation ul {
+        margin-bottom: 1vh;
+    }
+
+    .join-obf-button {
+        text-align: center;
+    }
+    .join-obf-button .button {
+        padding: 2vh 3vh;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        font-size: 3vh;
+        border-radius: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+}

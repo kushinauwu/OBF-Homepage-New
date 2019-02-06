@@ -26,6 +26,14 @@ function obf_scripts_styles() {
         wp_enqueue_style('style-meeting-minutes.css', get_template_directory_uri().'/css/style-meeting-minutes.css',false,'1.0','all');
     }
     
+    else if ( is_page( 'membership' ) ) {
+        wp_enqueue_style('style-membership.css', get_template_directory_uri().'/css/style-membership.css',false,'1.0','all');
+    }
+    
+    else if ( is_page( 'donate' ) ) {
+        wp_enqueue_style('style-donate.css', get_template_directory_uri().'/css/style-donate.css',false,'1.0','all');
+    }
+    
     else if ( is_single() ) {
         wp_enqueue_style('style-single.css', get_template_directory_uri().'/css/style-single.css',false,'1.1','all');
     }

@@ -29,7 +29,7 @@
                 <!--OBF logo -->
                 <div class="navbar-header">
                     <a class="navbar-logo" href="<?php echo home_url(); ?>">
-                        <img src="<?php echo get_bloginfo('template_url') ?>/img/obf-logo-header.png">
+                        <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/obf-logo-header.png">
                     </a>
                 </div>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'obf-new' ); ?>">
@@ -43,7 +43,7 @@
                     <?php 
                             wp_nav_menu( array(
 	'theme_location'  => 'primary',
-	'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+	'depth'	          => 3, // 1 = no dropdowns, 2 = with dropdowns.
 	'container'       => 'false',
 	'menu_class'      => 'navbar nav navbar-nav mr-auto pull-right',
 	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',

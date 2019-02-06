@@ -1,0 +1,46 @@
+
+/*
+Theme Name: obf-new
+Author: kushinauwu
+Description: basic revised obf homepage theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+.donate-button .button {
+        position: relative;
+        display: inline-block;
+        color: darkslategray;
+        padding: 15px 25px;
+        text-shadow: 1px 1px 2px gray;
+        margin-bottom: 50px;
+        font-weight: bold;
+        font-family: 'Montserrat', serif;
+        font-size: 22px;
+        border-radius: 25px;
+        background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 99%);
+        transition: 0.5s ease-in-out;
+    }
+
+    .donate-button .button:hover {
+        background-position: right center;
+        background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
+        color: dimgray;
+    }
+
+
+@media only screen and (max-width: 480px) {
+    .donate-button {
+        text-align: center;
+    }
+    .donate-button .button {
+        text-align: center;
+        padding: 3vh 4vh;
+        margin-bottom: 5vh;
+        font-size: 3.5vh;
+        border-radius: 25px;
+
+    }
+}
