@@ -125,17 +125,15 @@ p {
 
 }
 
-.navbar .nav-logo {
+.navbar .navbar-logo {
     padding: 0;
     margin-left: 0;
 }
 
-.navbar-header .nav-logo img {
-    margin-top: 30px;
-    padding-top: 38px;
-    display: block;
-    height: auto;
-    max-width: 200px;
+.navbar-header .navbar-logo img {
+
+    max-height: 100px;
+    width: auto;
     vertical-align: middle;
     border: 0;
 }
@@ -950,6 +948,11 @@ join-list {
 .footer-section .org-menu .org-menu-item a:hover {
     color: dodgerblue;
     /* footer link hover text color */
+}
+
+.networks {
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 .footer-section .network-item {

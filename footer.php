@@ -2,7 +2,7 @@
     <section class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 col-xs-4">
+                <div class="col-sm-4">
                     <div class="footer-sub-section">
                         <h3>Contact</h3>
 
@@ -11,7 +11,7 @@
                         <button type="submit">Subscribe!</button>
                     </div>
                 </div>
-                <div class="col-sm-4 col-xs-4">
+                <div class="col-sm-4">
                     <div class="footer-sub-section">
                         <h3>Organization</h3>
                         <ul class="org-menu">
@@ -27,7 +27,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4 col-xs-4">
+                <div class="col-sm-4">
                     <div class="footer-sub-section">
                         <h3>Connect</h3>
                         <ul class="list-inline networks">

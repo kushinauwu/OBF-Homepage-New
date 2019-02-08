@@ -50,6 +50,10 @@ function obf_enqueue_page_template_styles() {
     if ( is_page_template( 'gsoc.php' ) ) {
         wp_enqueue_style( 'style-gsoc.css', get_template_directory_uri() . '/css/style-gsoc.css' );
     }
+    else if ( is_page_template( 'bosc.php' ) ) {
+        wp_enqueue_style( 'style-bosc.css', get_template_directory_uri() . '/css/style-bosc.css' );
+    }
+    
 }
 add_action( 'wp_enqueue_scripts', 'obf_enqueue_page_template_styles' );
 
@@ -61,6 +65,7 @@ function obf_theme_setup() {
     //nav menu support
     register_nav_menus(array(
         'primary' => __('Primary Menu','obf-new'),
+        'secondary' => __('Secondary Menu','obf-new')
     ));
     
 }
