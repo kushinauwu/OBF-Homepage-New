@@ -18,17 +18,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 }
 
-nav#navigation-bar {
-    border-bottom: 1px solid lightgrey;
-    padding-bottom: 10px;
+.navbar .navbar-header {
+    margin-left: 5%;
 }
+
 .navbar .navbar-logo {
     padding: 0;
     margin-left: 0;
 }
 
 .navbar-header .navbar-logo img {
-
     max-height: 15vh;
     width: auto;
     vertical-align: middle;
@@ -38,12 +37,15 @@ nav#navigation-bar {
 .navbar ul {
     list-style: none;
     margin-bottom: auto;
-
+    border-radius: 25px 0 0 25px;
+    background-color: ghostwhite;
+    width: 75%;
+    padding-left: 12px;
 }
 
 #menu-bosc-menu .menu-item {
-    padding: 10px 1vh;
-    text-align: left;
+    padding: 10px 15px;
+    text-align: center;
     display: block;
     transition: 0.5s ease;
     font-family: 'K2D', sans-serif;
@@ -51,7 +53,6 @@ nav#navigation-bar {
 
 #menu-bosc-menu .menu-item:hover {
     background-color: rgba(128, 0, 128, 0.2);
-    /* navbar hover bg color */
     border-radius: 25px;
     text-decoration: none;
 }
@@ -61,7 +62,6 @@ nav#navigation-bar {
     display: block;
     padding-top: 0px;
     color: darkslateblue;
-    /* navbar link text color */
     font-weight: normal;
     font-style: normal;
     border-bottom: 2px solid transparent;
@@ -84,7 +84,9 @@ nav#navigation-bar {
     padding: 0;
 }
 
-button.navbar-toggler {}
+button.navbar-toggler {
+    display: none;
+}
 
 .active {
     background-color: #c4dff5;
@@ -102,7 +104,6 @@ button.navbar-toggler {}
     display: block;
     padding-top: 0px;
     color: darkslateblue;
-    /* navbar link text color */
     font-weight: normal;
     font-style: normal;
     border-bottom: 2px solid transparent;
@@ -114,7 +115,6 @@ button.navbar-toggler {}
 
 i {
     border: solid darkslateblue;
-    /* navbar arrow color */
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -125,14 +125,19 @@ i {
     transform: rotate(45deg) translateY(-5px);
 }
 
-
-/*custom bosc stuff*/
-
-.bosc-introduction {
-padding-bottom: 30px;
+p {
+    font-family: 'Slabo 27px';
+    font-size: 20px;
+    color: darkslategray;
 }
 
-.bosc-introduction-image img{
+/*bosc homepage*/
+
+.bosc-introduction-image {
+    padding-bottom: 30px;
+}
+
+.bosc-introduction-image img {
     margin-top: 1%;
 }
 
@@ -142,7 +147,8 @@ padding-bottom: 30px;
     margin-bottom: 0;
 }
 
-h1.bosc-overview, h1.bosc-summary{
+h1.bosc-overview,
+h1.bosc-summary {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 3%;
@@ -153,22 +159,32 @@ p.bosc-overview {
     padding: 0 3% 30px 3%;
 }
 
-.important-dates, .session-topics, .bosc-organizing-committee, .bosc-review-committee, .previous-boscs, .bosc-contact {
+.important-dates,
+.session-topics,
+.bosc-organizing-committee,
+.bosc-review-committee,
+.previous-boscs,
+.bosc-contact {
     padding-bottom: 20px;
 }
 
-.bosc-organizing-committee, .bosc-review-committee {
+.bosc-organizing-committee,
+.bosc-review-committee {
     margin-bottom: 0;
 }
 
-.dates-sessions .important-dates, .bosc-committee .bosc-organizing-committee, .bosc-previous-and-contact .bosc-contact {
+.dates-sessions .important-dates,
+.bosc-committee .bosc-organizing-committee,
+.bosc-previous-and-contact .bosc-contact {
     background-color: #fffcb9;
     margin-right: 0;
     margin-left: 0;
     width: 100%;
 }
 
-.dates-sessions .session-topics, .bosc-committee .bosc-review-committee, .bosc-previous-and-contact .previous-boscs {
+.dates-sessions .session-topics,
+.bosc-committee .bosc-review-committee,
+.bosc-previous-and-contact .previous-boscs {
     background-color: #e2ffb9;
     margin-left: 0;
     margin-right: 0;
@@ -191,14 +207,13 @@ p.bosc-overview {
 
 .bosc-registration .wp-block-button__link:hover {
     background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 99%);
-    /* project buutton bg color hover*/
     color: grey;
 }
 
 .bosc-summary {
     background-color: whitesmoke;
     margin-bottom: 0;
-    
+
 }
 
 p.bosc-summary {
@@ -208,38 +223,150 @@ p.bosc-summary {
 ul.bosc-summary {
     padding-bottom: 30px;
 }
+
 .bosc-summary li {
     margin-left: 3%;
 }
 
-.bosc-sponsors-images{
+.bosc-sponsors-images {
     margin-top: 5%;
 }
 
-@media only screen and (max-width: 991px) {
+
+/*about BOSC*/
+
+
+.previous-bosc-meetings h1 {
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+
+h1.bosc-history {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+ul.bosc-timeline {
+    list-style-type: none;
+    position: relative;
+    margin-left: 10%;
+}
+
+ul.bosc-timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+
+ul.bosc-timeline li {
+    margin: 30px 0;
+    padding-left: 20px;
+}
+
+ul.bosc-timeline li:before {
+    content: ' ';
+    background: #fff980;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #aaff33;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+    margin-top: 10px;
+}
+
+ul.bosc-timeline li a {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.get-involved {
+    padding: 0 3%;
+    margin-bottom: 20px;
+}
+
+div.get-involved:nth-child(odd) {
+    border: 2px solid #fffcb9;
+}
+
+div.get-involved:nth-child(even) {
+    border: 2px solid #e2ffb9;
+}
+
+.sponsors {
+    background-color: ghostwhite;
+    margin-bottom: 0;
+}
+
+h1.sponsors {
+    padding: 20px 3% 0 3%;
+}
+
+ul.sponsors {
+    padding-left: 5%;
+    padding-right: 3%;
+}
+
+p.sponsors {
+    padding: 10px 3% 30px 3%;
+}
+
+.bosc-related-channels {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.bosc-related-channels .wp-block-media-text .wp-block-media-text__content {
+    padding: 0;
+}
+
+.bosc-related-channels .wp-block-media-text .wp-block-media-text__media {
+    margin: auto;
+    width: 100px;
+    height: auto;
+}
+
+@media only screen and (max-width: 1024px) {
     .container {
         padding-left: 15px;
         padding-right: 15px;
     }
-    
-    nav#navigation-bar {
-        padding-right: 0;
-    }
+
     .navbar-header .navbar-logo img {
         max-height: 10vh;
     }
-    
-    .navbar ul {
-        padding-top: 0;
+
+    #menu-bosc-menu .menu-item {
+        padding: 10px 1.2vh;
     }
-    
+
     .navbar ul li a {
         font-size: 18px;
     }
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 991px) {
+    .navbar ul li a {
+        font-size: 18px;
+    }
 
+    .navbar-ul {
+        width: 79%;
+    }
+}
+
+@media only screen and (max-width: 769px) {
     .navbar {
         margin-top: 0px;
         padding-top: 3%;
@@ -268,8 +395,11 @@ ul.bosc-summary {
     nav#navigation-bar {
         padding-right: 3vh;
     }
+
     .navbar ul {
         padding-top: 3vh;
+        width: 100%;
+        padding-right: 10%;
     }
 
     .navbar ul li {
@@ -281,7 +411,6 @@ ul.bosc-summary {
 
     .navbar ul li:hover {
         background-color: rgba(196, 245, 198, 0.9);
-        /* navbar hover bg color */
         border-radius: 0;
         text-decoration: none;
     }
@@ -290,7 +419,6 @@ ul.bosc-summary {
         display: block;
         padding-top: 0px;
         color: darkslateblue;
-        /* navbar link text color */
         font-weight: normal;
         font-style: normal;
         border-bottom: 2px solid transparent;
@@ -311,7 +439,6 @@ ul.bosc-summary {
 
     i {
         border: solid darkslateblue;
-        /* navbar arrow color */
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;
@@ -333,18 +460,142 @@ ul.bosc-summary {
         background-color: transparent;
     }
 
+    button.navbar-toggler:active {
+        top: 0%;
+    }
+
     .fa-bars {
         border: none;
         border-width: 0;
         color: darkslateblue;
     }
-    
+
     .bosc-introduction-image {
         display: block;
     }
-    
+
     .bosc-sponsors {
         display: block;
     }
+}
 
+@media only screen and (max-width: 480px) {
+    p {
+        font-size: 3vh;
+        font-family: 'Lato', sans-serif;
+        letter-spacing: normal;
+        color: darkslategray;
+        word-break: break-word;
+    }
+
+    ul {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    /*about BOSC*/
+
+
+    .previous-bosc-meetings h1 {
+        margin-bottom: 0;
+        padding: 20px;
+    }
+
+
+    h1.bosc-history {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    ul.bosc-timeline {
+        margin-right: 2.5%;
+    }
+
+    ul.bosc-timeline:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+    }
+
+    ul.bosc-timeline li {
+        margin: 30px 0;
+        padding-left: 20px;
+    }
+
+    ul.bosc-timeline li:before {
+        content: ' ';
+        background: #fff980;
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #aaff33;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        z-index: 400;
+        margin-top: 10px;
+    }
+
+    ul.bosc-timeline li a {
+        font-size: 3.7vh;
+    }
+
+    .get-involved {
+        margin-bottom: 2vh;
+    }
+
+    div.get-involved:nth-child(odd) {
+        border: 2px solid #fffcb9;
+    }
+
+    div.get-involved:nth-child(even) {
+        border: 2px solid #e2ffb9;
+    }
+
+    .sponsors {
+        background-color: ghostwhite;
+        margin-bottom: 0;
+    }
+
+    h1.sponsors {
+        padding: 2vh 2% 1vh 2%;
+    }
+
+    ul.sponsors {
+        padding-left: 10%;
+        padding-right: 3%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    p.sponsors {
+        padding: 10px 3% 30px 3%;
+    }
+
+    .bosc-related-channels {
+        grid-template-columns: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .bosc-related-channels .wp-block-media-text {
+        grid-template-columns: auto;
+    }
+
+    .bosc-related-channels .wp-block-media-text .wp-block-media-text__content {
+        padding: 0 5%;
+    }
+
+    .bosc-related-channels .wp-block-media-text .wp-block-media-text__media {
+        margin: auto;
+        width: 100px;
+        height: auto;
+    }
 }

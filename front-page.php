@@ -37,8 +37,7 @@
             </div>
             <div class="col-sm-7">
                 <div class="about-background-image">
-                    <!--Photo by Egor Kamelev from Pexels-->
-                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/abstract-animal-aquarium-753266.jpg">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/hilmar_lapp_talk.jpg">
                 </div>
             </div>
         </div>
@@ -52,12 +51,8 @@
     <?php endif; ?>
     <!-- about OBF end -->
 
-    <!-- news/blog section -->
-    <!--?php $query1 = new WP_Query( array( 'tag' => 'index-news' ) ); ?>-->
-
     <section class="news-section">
-        <div class="news-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/page-photos/aquatic-plants-background-beautiful-424763.jpg);">
-            <!--Photo by Fancycrave.com from Pexels-->
+        <div class="news-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/page-photos/attendees_checking_boards.jpg);">
         </div>
         <div class="container">
             <div class="row">
@@ -116,13 +111,13 @@
                             <div class="fellowships-content-info">
                                 The OBF Travel Fellowship program aims at increasing diverse participation at events promoting open source bioinformatics software development and open science in the biological research community.
                                 <!-- questions list -->
-                                
-                                        <ul class="fellowship-info-list list-unstyled">
-                                            <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-selection-criteria" data-wplink-url-error="true">What are the selection criteria?</a></li>
-                                            <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-coverage" data-wplink-url-error="true">What does the fellowship cover?</a></li>
-                                            <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-requirements" data-wplink-url-error="true">What do you require of applicants?</a></li>
-                                            <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-applications" data-wplink-url-error="true">Who will review the applicants?</a></li>
-                                        </ul>
+
+                                <ul class="fellowship-info-list list-unstyled">
+                                    <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-selection-criteria" data-wplink-url-error="true">What are the selection criteria?</a></li>
+                                    <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-coverage" data-wplink-url-error="true">What does the fellowship cover?</a></li>
+                                    <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-requirements" data-wplink-url-error="true">What do you require of applicants?</a></li>
+                                    <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-applications" data-wplink-url-error="true">Who will review the applicants?</a></li>
+                                </ul>
                                 <div class="fellowships-apply-button">
                                     <a href="fellowships#fellowships-applications" class="button">
                                         <span>
@@ -217,7 +212,7 @@
                         <h1>Upcoming events</h1>
                     </div>
 
-                   
+
                     <ul class="list-inline row events-list">
                         <?php
                                 $args = array(
@@ -231,7 +226,7 @@
                                             );
                                 $present_member = new WP_Query( $args );
                             ?>
-                    <?php if ( $present_member->have_posts() ) : while ( $present_member->have_posts() ) : $present_member->the_post(); ?>
+                        <?php if ( $present_member->have_posts() ) : while ( $present_member->have_posts() ) : $present_member->the_post(); ?>
                         <div class="col-sm-4 col-xs-4">
                             <li class="event-details">
                                 <a href="#">
@@ -241,10 +236,12 @@
                                     <img src="" />
                                     <?php endif; ?>
                                     <div class="event-name">
-                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_title(); ?></a>
                                     </div>
                                     <div class="event-date">
-                                        <?php the_field('start_date'); ?> to <?php the_field('end_date'); ?>
+                                        <?php the_field('start_date'); ?> to
+                                        <?php the_field('end_date'); ?>
                                     </div>
                                     <div class="event-location">
                                         <?php the_field('location'); ?>
@@ -253,10 +250,10 @@
                             </li>
                         </div>
                         <?php endwhile; else : ?>
-                    <p>
-                        <?php __('No post found'); ?>
-                    </p>
-                    <?php endif;
+                        <p>
+                            <?php __('No post found'); ?>
+                        </p>
+                        <?php endif;
                                 wp_reset_postdata(); ?>
                     </ul>
                 </div>
@@ -275,7 +272,9 @@
                         <h1>Board of directors</h1>
                     </div>
                 </div>
-                <ul class="list-inline row member-list">
+            </div>
+            <ul class="list-inline member-list">
+                <div class="members">
                     <?php
                                 $args = array(
                                                 'post_type' => 'obf-board',
@@ -290,27 +289,27 @@
                                 $present_member = new WP_Query( $args );
                             ?>
                     <?php if ( $present_member->have_posts() ) : while ( $present_member->have_posts() ) : $present_member->the_post(); ?>
-                    <div class="col-sm-4 col-xs-4">
-                        <li class="member-details">
+                    <li class="member-details">
+                        <div class="member-photo">
                             <?php the_post_thumbnail(); ?>
-                            <div class="member-name">
-                                <?php $member_url = get_post_meta( get_the_ID(), 'external_url', true ); ?>
-                                <a href="<?php echo $member_url; ?>" target="_blank">
-                                    <?php the_title(); ?></a>
-                            </div>
-                            <div class="member-position">
-                                <?php the_field('member_position'); ?>
-                            </div>
-                        </li>
-                    </div>
+                        </div>
+                        <div class="member-name">
+                            <?php $member_url = get_post_meta( get_the_ID(), 'external_url', true ); ?>
+                            <a href="<?php echo $member_url; ?>" target="_blank">
+                                <?php the_title(); ?></a>
+                        </div>
+                        <div class="member-position">
+                            <?php the_field('member_position'); ?>
+                        </div>
+                    </li>
                     <?php endwhile; else : ?>
                     <p>
                         <?php __('No post found'); ?>
                     </p>
                     <?php endif;
                                 wp_reset_postdata(); ?>
-                </ul>
-            </div>
+                </div>
+            </ul>
         </div>
         <div class="row">
             <div class="col-xs-12 board-button">
@@ -331,7 +330,7 @@
                         <h1>Join Us!</h1>
                     </div>
                     <ul class="list-inline row join-list">
-                      
+
                         <div class="col-sm-4 col-xs-4">
                             <li class="join-details">
                                 <a href="donate">
@@ -361,7 +360,6 @@
                                     <div class="join-title">
                                         Join the OBF!
                                     </div>
-
                                 </a>
                             </li>
                         </div>

@@ -204,25 +204,24 @@ i {
     padding-top: 0;
 }
 
+.current-members-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
 .members-list {
     margin-top: 0px;
 }
 
 .current-members .members-list .member-details {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
-}
-
-.current-members .col-xs-4,
-.past-members .col-xs-4 {
-    height: 400px;
-    margin-bottom: 20px;
 }
 
 .members-list .member-details img {
     margin-bottom: 10px;
-    height: 40%;
-    width: 200px;
+    height: 200px;
+    width: auto;
     border-radius: 10%;
     padding: 5px;
     background-color: lightblue;
@@ -263,8 +262,31 @@ i {
     background-color: #1b2e25;
 }
 
+.past-members-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    word-break: break-word;
+}
+
+.past-members-grid .member-details img {
+    margin-bottom: 10px;
+    height: 100px;
+    width: auto;
+    border-radius: 10%;
+    padding: 5px;
+    background-color: lightblue;
+}
+
+.past-members-grid .member-details .member-name {
+    font-size: 20px;
+}
+
+.past-members-grid .member-details .member-position {
+    font-size: 18px;
+}
+
 .past-members .members-list .member-details {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
 
 }
@@ -410,7 +432,6 @@ i {
 }
 
 
-@media only screen and (max-width: 1300px) {}
 
 /*mobile display*/
 
@@ -468,28 +489,15 @@ i {
         padding-top: 0;
     }
 
-    .current-members .col-xs-4,
-    .past-members .col-xs-4 {
-        height: 100%;
-        margin-bottom: 20px;
-    }
-
-
     .current-members h1 {
         font-size: 5vh;
         margin-bottom: 2vh;
     }
 
-    .current-members .members-list .member-details {
-        height: 55vh;
-        margin-bottom: 3vh;
-    }
-
     .members-list .member-details img {
         margin-bottom: 0.5vh;
-        height: auto;
-        width: 20vh;
         padding: 0;
+        height: 150px;
     }
 
     .members-list .member-details .member-name {
@@ -505,11 +513,8 @@ i {
         font-size: 2vh;
         letter-spacing: normal;
         text-align: justify;
-    }
-
-    .current-members .members-list .col-xs-4,
-    .past-members .members-list .col-xs-4 {
-        width: 50%;
+        padding: 0 10px;
+        word-break: break-word;
     }
 
     .current-members .members-contact p {
@@ -592,5 +597,23 @@ i {
 
     .footer-logo {
         padding: 2vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .current-members-grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    .current-members .members-list .member-details {
+        margin-bottom: 30px;
+        margin-left: 3%;
+        margin-right: 3%;
+        text-align: center;
+    }
+
+    .members-list .member-details img {
+        height: 100px;
     }
 }

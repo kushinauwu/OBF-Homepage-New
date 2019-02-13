@@ -1,6 +1,8 @@
 <?php
 
-// Enqueue scripts and stylesheet for pages
+/*
+ * Enqueue scripts and stylesheet for pages
+ */
 function obf_scripts_styles() {
         wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.3.7', true );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.7' );
@@ -45,7 +47,9 @@ function obf_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts','obf_scripts_styles' );
 
-// Enqueue styles for page templates, with styles applicable for child pages
+/*
+ * Enqueue styles for page templates, with the same styles applicable for child pages of those templates
+ */
 function obf_enqueue_page_template_styles() {
     if ( is_page_template( 'gsoc.php' ) ) {
         wp_enqueue_style( 'style-gsoc.css', get_template_directory_uri() . '/css/style-gsoc.css' );
@@ -57,12 +61,16 @@ function obf_enqueue_page_template_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'obf_enqueue_page_template_styles' );
 
-// Require nav walker
+/*
+ * Get nav walker file from the website directory
+ */
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
-// Theme setup support
+/*
+ * Theme setup supports
+ */
 function obf_theme_setup() {
-    //nav menu support
+    //navigation menu support
     register_nav_menus(array(
         'primary' => __('Primary Menu','obf-new'),
         'secondary' => __('Secondary Menu','obf-new')
@@ -71,12 +79,15 @@ function obf_theme_setup() {
 }
 
 add_action('after_setup_theme','obf_theme_setup');
+//add support for thumbnails 
 add_theme_support( 'post-thumbnails' );
 
-// OBF Custom Post Types
+/*
+ * OBF Custom Post Types
+ */
 function obf_post_type() {
    
-   // Labels
+   // Labels for board members profile custom post type
 	$obf_board_labels = array(
 		'name' => _x("Board", "post type general name"),
 		'singular_name' => _x("Board", "post type singular name"),
@@ -92,6 +103,7 @@ function obf_post_type() {
 		'parent_item_colon' => ''
 	);
     
+    // Labels for OBF projects custom post type
     $obf_projects_labels = array(
 		'name' => _x("Projects", "post type general name"),
 		'singular_name' => _x("Project", "post type singular name"),
@@ -107,6 +119,7 @@ function obf_post_type() {
 		'parent_item_colon' => ''
 	);
     
+    // Labels for OBF related events custom post type
     $obf_events_labels = array(
 		'name' => _x("Events", "post type general name"),
 		'singular_name' => _x("Event", "post type singular name"),
@@ -122,7 +135,7 @@ function obf_post_type() {
 		'parent_item_colon' => ''
 	);
 	
-	// Register post type
+	// Register post types
 	register_post_type('obf-board' , array(
 		'labels' => $obf_board_labels,
 		'public' => true,
@@ -149,10 +162,10 @@ function obf_post_type() {
 }
 add_action( 'init', 'obf_post_type', 0 );
 
-// Register taxonomy
+// Register taxonomies
 function obf_post_taxonomy() {
 	
-	// Labels
+	// Labels taxonomy of board member profiles
 	$obf_board_singular = 'Member-Type';
 	$obf_board_plural = 'Member-Types';
 	$obf_board_labels = array(
@@ -168,6 +181,7 @@ function obf_post_taxonomy() {
 		'new_item_name' => __("New $obf_board_singular Name"),
 	);
     
+    // Labels taxonomy of OBF projects
     $obf_projects_singular = 'Project-Type';
 	$obf_projects_plural = 'Project-Types';
 	$obf_projects_labels = array(
@@ -209,7 +223,9 @@ function obf_post_taxonomy() {
 add_action( 'init', 'obf_post_taxonomy', 0 );
 
 
-// Offset the main query on the home page 
+/*
+ * Offset the main query on the home page 
+ */
 function obf_offset_main_query ( $query ) {
      if ( $query->is_home() && $query->is_main_query() && !$query->is_paged() ) {
          $query->set( 'offset', '2' );
@@ -217,7 +233,9 @@ function obf_offset_main_query ( $query ) {
  }
 add_action( 'pre_get_posts', 'obf_offset_main_query' );
 
-// Move comment field from default top position to bottom
+/*
+ * Move comment field from default top position to bottom of comment form
+ */
 function obf_move_comment_field_to_bottom( $fields ) {
     $comment_field = $fields['comment'];
     unset( $fields['comment'] );
@@ -227,8 +245,118 @@ function obf_move_comment_field_to_bottom( $fields ) {
   
 add_filter( 'comment_form_fields', 'obf_move_comment_field_to_bottom' );
 
-// Change excerpt length to 20 words
+/*
+ * Change excerpt length to 20 words
+ */
 function obf_custom_excerpt_length( $length ) {
         return 20;
     }
     add_filter( 'excerpt_length', 'obf_custom_excerpt_length', 10 );
+
+/*
+ * Function for post duplication. Dups appear as drafts. User is redirected to the edit screen
+ */
+function rd_duplicate_post_as_draft(){
+	global $wpdb;
+	if (! ( isset( $_GET['post']) || isset( $_POST['post'])  || ( isset($_REQUEST['action']) && 'rd_duplicate_post_as_draft' == $_REQUEST['action'] ) ) ) {
+		wp_die('No post to duplicate has been supplied!');
+	}
+ 
+	/*
+	 * Nonce verification
+	 */
+	if ( !isset( $_GET['duplicate_nonce'] ) || !wp_verify_nonce( $_GET['duplicate_nonce'], basename( __FILE__ ) ) )
+		return;
+ 
+	/*
+	 * get the original post id
+	 */
+	$post_id = (isset($_GET['post']) ? absint( $_GET['post'] ) : absint( $_POST['post'] ) );
+	/*
+	 * and all the original post data then
+	 */
+	$post = get_post( $post_id );
+ 
+	/*
+	 * if you don't want current user to be the new post author,
+	 * then change next couple of lines to this: $new_post_author = $post->post_author;
+	 */
+	$current_user = wp_get_current_user();
+	$new_post_author = $current_user->ID;
+ 
+	/*
+	 * if post data exists, create the post duplicate
+	 */
+	if (isset( $post ) && $post != null) {
+ 
+		/*
+		 * new post data array
+		 */
+		$args = array(
+			'comment_status' => $post->comment_status,
+			'ping_status'    => $post->ping_status,
+			'post_author'    => $new_post_author,
+			'post_content'   => $post->post_content,
+			'post_excerpt'   => $post->post_excerpt,
+			//'post_name'      => $post->post_name,
+			'post_parent'    => $post->post_parent,
+			'post_password'  => $post->post_password,
+			'post_status'    => 'draft',
+			'post_title'     => $post->post_title,
+			'post_type'      => $post->post_type,
+			'to_ping'        => $post->to_ping,
+			'menu_order'     => $post->menu_order
+		);
+ 
+		/*
+		 * insert the post by wp_insert_post() function
+		 */
+		$new_post_id = wp_insert_post( $args );
+ 
+		/*
+		 * get all current post terms ad set them to the new post draft
+		 */
+		$taxonomies = get_object_taxonomies($post->post_type); // returns array of taxonomy names for post type, ex array("category", "post_tag");
+		foreach ($taxonomies as $taxonomy) {
+			$post_terms = wp_get_object_terms($post_id, $taxonomy, array('fields' => 'slugs'));
+			wp_set_object_terms($new_post_id, $post_terms, $taxonomy, false);
+		}
+ 
+		/*
+		 * duplicate all post meta just in two SQL queries
+		 */
+		$post_meta_infos = $wpdb->get_results("SELECT meta_key, meta_value FROM $wpdb->postmeta WHERE post_id=$post_id");
+		if (count($post_meta_infos)!=0) {
+			$sql_query = "INSERT INTO $wpdb->postmeta (post_id, meta_key, meta_value) ";
+			foreach ($post_meta_infos as $meta_info) {
+				$meta_key = $meta_info->meta_key;
+				if( $meta_key == '_wp_old_slug' ) continue;
+				$meta_value = addslashes($meta_info->meta_value);
+				$sql_query_sel[]= "SELECT $new_post_id, '$meta_key', '$meta_value'";
+			}
+			$sql_query.= implode(" UNION ALL ", $sql_query_sel);
+			$wpdb->query($sql_query);
+		}
+ 
+		/*
+		 * finally, redirect to the edit post screen for the new draft
+		 */
+		wp_redirect( admin_url( 'post.php?action=edit&post=' . $new_post_id ) );
+		exit;
+	} else {
+		wp_die('Post creation failed, could not find original post: ' . $post_id);
+	}
+}
+add_action( 'admin_action_rd_duplicate_post_as_draft', 'rd_duplicate_post_as_draft' );
+ 
+/*
+ * Add the duplicate link to action list for post_row_actions
+ */
+function rd_duplicate_post_link( $actions, $post ) {
+	if (current_user_can('edit_posts')) {
+		$actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=rd_duplicate_post_as_draft&post=' . $post->ID, basename(__FILE__), 'duplicate_nonce' ) . '" title="Duplicate this item" rel="permalink">Duplicate</a>';
+	}
+	return $actions;
+}
+ 
+add_filter( 'page_row_actions', 'rd_duplicate_post_link', 10, 2 );

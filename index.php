@@ -38,7 +38,7 @@
             <div class="col-sm-7">
                 <div class="about-background-image">
                     <!--Photo by Egor Kamelev from Pexels-->
-                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/abstract-animal-aquarium-753266.jpg">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/nomi_harris_talk.jpg">
                 </div>
             </div>
         </div>

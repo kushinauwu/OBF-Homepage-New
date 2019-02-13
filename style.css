@@ -57,7 +57,7 @@ h6 {
 
 h1 {
     font-size: 48px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /*new*/
@@ -277,6 +277,10 @@ button.navbar-toggler {
     text-decoration: none;
     background-color: transparent;
     outline: 0;
+}
+
+.dropdown-menu .current-menu-item {
+    background-color: transparent;
 }
 
 i {
@@ -771,7 +775,6 @@ join-list {
 .board-section {
     margin-top: 20px;
     background-color: #1b2e25;
-    /*bord of directorsa section  bgcolor*/
     margin-left: 0;
     margin-right: 0;
     height: 100%;
@@ -787,9 +790,24 @@ join-list {
 
 .board-section .board-head-wrapper h1 {
     color: #88eef7;
-    /*projects section heading*/
 }
 
+.members {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.member-photo {
+    border: 1px solid ghostwhite;
+    border-radius: 250px;
+    height: 250px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .member-list {
     list-style: none;
@@ -804,12 +822,12 @@ join-list {
 .board-section .member-list .member-details img {
     padding: 10px;
     margin-bottom: 20px;
-    height: 250px;
-    width: 250px;
+    height: 100%;
+    width: 100%;
     border: 1px solid whitesmoke;
-    /*event icon border*/
-    border-radius: 180px;
+    border-radius: 250px;
     transition: 0.3s ease-in-out;
+    object-fit: contain;
 }
 
 
@@ -847,14 +865,12 @@ join-list {
     font-size: 20px;
     border-radius: 25px;
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-    /*project button bg color*/
     transition: 0.5s ease-in-out;
 }
 
 .board-button .button:hover {
     background-position: right center;
     background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
-    /* project buutton bg color hover*/
     color: dimgray;
 }
 
@@ -1365,6 +1381,10 @@ input#submit:active {
         background-color: transparent;
     }
 
+    button.navbar-toggler:active {
+        top: 0%;
+    }
+
     .fa-bars {
         border: none;
         border-width: 0;
@@ -1854,6 +1874,19 @@ input#submit:active {
         /*projects section heading*/
     }
 
+    .members {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .member-photo {
+        border: 1px solid ghostwhite;
+        border-radius: 150px;
+        height: 150px;
+        width: 150px;
+    }
 
     .member-list {
         list-style: none;
@@ -1869,9 +1902,8 @@ input#submit:active {
     .board-section .member-list .member-details img {
         padding: 1vh;
         margin-bottom: 2vh;
-        height: auto;
+        height: 100%;
         width: 100%;
-        border: 1px solid whitesmoke;
         /*event icon border*/
         border-radius: 50%;
         transition: 0.3s ease-in-out;

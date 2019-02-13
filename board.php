@@ -14,8 +14,10 @@ Template Name:board
                 <p>The board can be contacted via email at <a href="mailto:board@open-bio.org">board@open-bio.org</a> (or in case of mailing list problems, try <a href="mailto:obf-board@googlegroups.com">obf-board@googlegroups.com</a> as a fall back), and can be reached via Twitter @<a href="https://twitter.com/OBF_news">OBF_News</a>. The minutes of the previous meetings can be found <a href="http://localhost/obf-new/board/meeting-minutes/">here</a>.</p>
             </div>
 
-            <ul class="list-inline row members-list">
-                <?php
+            <ul class="list-inline members-list">
+                <div class="current-members-grid">
+
+                    <?php
                                 $args = array(
                                                 'post_type' => 'obf-board',
                                                 'tax_query' => array(
@@ -28,9 +30,8 @@ Template Name:board
                                             );
                                 $present_member = new WP_Query( $args );
                             ?>
-                <?php if ( $present_member->have_posts() ) : while ( $present_member->have_posts() ) : $present_member->the_post(); ?>
+                    <?php if ( $present_member->have_posts() ) : while ( $present_member->have_posts() ) : $present_member->the_post(); ?>
 
-                <div class="col-sm-4 col-xs-4">
                     <li class="member-details">
                         <?php $member_url = get_post_meta( get_the_ID(), 'external_url', true ); ?>
                         <a href="<?php echo $member_url; ?>" target="_blank">
@@ -47,22 +48,23 @@ Template Name:board
                             <?php the_content(); ?>
                         </div>
                     </li>
-                </div>
-                <?php endwhile; else : ?>
-                <p>
-                    <?php __('No post found'); ?>
-                </p>
-                <?php endif;
+                    <?php endwhile; else : ?>
+                    <p>
+                        <?php __('No post found'); ?>
+                    </p>
+                    <?php endif;
                                 wp_reset_postdata(); ?>
+                </div>
             </ul>
         </div>
     </section>
-    
+
     <section class="past-members">
         <div class="container-fluid">
             <h1>Past board members</h1>
-            <ul class="list-inline row members-list">
-                <?php
+            <ul class="list-inline members-list">
+                <div class="past-members-grid">
+                    <?php
                                 $args = array(
                                                 'post_type' => 'obf-board',
                                                 'tax_query' => array(
@@ -75,8 +77,7 @@ Template Name:board
                                             );
                                 $past_member = new WP_Query( $args );
                             ?>
-                <?php if ( $past_member->have_posts() ) : while ( $past_member->have_posts() ) : $past_member->the_post(); ?>
-                <div class="col-sm-4 col-xs-4">
+                    <?php if ( $past_member->have_posts() ) : while ( $past_member->have_posts() ) : $past_member->the_post(); ?>
                     <li class="member-details">
                         <?php $member_url = get_post_meta( get_the_ID(), 'external_url', true ); ?>
                         <a href="<?php echo $member_url; ?>" target="_blank">
@@ -93,13 +94,12 @@ Template Name:board
                             <?php the_content(); ?>
                         </div>
                     </li>
+                    <?php endwhile; else : ?>
+                    <p>
+                        <?php __('No post found'); ?>
+                    </p>
+                    <?php endif;    wp_reset_postdata(); ?>
                 </div>
-                <?php endwhile; else : ?>
-                <p>
-                    <?php __('No post found'); ?>
-                </p>
-                <?php endif;    wp_reset_postdata(); ?>
-
             </ul>
         </div>
     </section>
