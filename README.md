@@ -27,6 +27,16 @@
 
 **Details**
 
+*Update 18/02/2019*
+
+-- Fixed navbar added that stays at the top of the screen when scrolling. Used some JS to make it slightly transparent when scrolling and to fix the issue of navbar overlapping the content.
+
+-- Added breadcrumbs making use of a fucntion from 
+
+-- Created page for BOSC abstract submissions. If schedule is taken from Google Sheets, only the embed link has to be copied in the WP editor.
+
+-- Fixed issue of images getting stretched out.
+
 *Update 13/02/2019*
 
 -- Page duplication option added, for replicating BOSC pages. This option can be used to duplicate any page! :) Credits for the duplication function go to [Hostinger](https://www.hostinger.in/tutorials/how-to-duplicate-wordpress-page-post).
