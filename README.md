@@ -27,7 +27,38 @@
 
 **Details**
 
-*Update 31/01/2018*
+*Update 13/02/2019*
+
+-- Page duplication option added, for replicating BOSC pages. This option can be used to duplicate any page! :) Credits for the duplication function go to [Hostinger](https://www.hostinger.in/tutorials/how-to-duplicate-wordpress-page-post).
+
+-- replaced Board member bootstrap columns with CSS grid, the content was overlapping. Made the past members' list with smaller picture sizes. :)
+
+-- Updated pictures on the homepage with BOSC pictures, except the fellowships section. That is to be replaced by a grid of awardees' photos.
+
+
+*Update 09/02/2019*
+
+-- Created a BOSC template. This template can be used for all BOSC pages, including the homepage and child pages, as loong as the template selected is the bosc template
+
+-- Made a separate BOSC header and navbar, which has the BOSC and oBF logo. I have to fix this still, adding breadcrumbs so as to provide easier access.
+
+-- Fixed issue of footer items not being centered.
+
+
+*Update 07/02/2019*
+
+-- Created Donate page and OBF Membership pages.Removed the temporary posts made as placeholders for these pages.
+
+-- Added Bylaws menu item which links to the OBF Bylaws on Github.
+
+-- Created folders within the images folder for making it better sorted.
+
+-- Fixed some wordings on the homepage.
+
+-- Fixed dropdown issue of GSoC overview overlapping the BOSC menu
+
+
+*Update 31/01/2019*
 
 -- Added GSoC menu page, overview and guidelines page. Made a gsoc page template so more pages and content can be added and styles will be maintained. 
 
