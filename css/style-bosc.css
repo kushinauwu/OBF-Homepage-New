@@ -8,18 +8,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
-/*navbar*/
+/*NAVIGATION*/
 .navbar {
     margin-top: 0px;
-    padding-top: 25px;
+    padding-top: 10px;
     margin-bottom: 0px;
-    padding-bottom: 20px;
-    background-color: transparent;
-
-}
-
-.navbar .navbar-header {
-    margin-left: 5%;
+    padding-bottom: 10px;
+    background-color: whitesmoke;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: transparent;
 }
 
 .navbar .navbar-logo {
@@ -28,7 +26,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .navbar-header .navbar-logo img {
-    max-height: 15vh;
+    max-height: 100px;
     width: auto;
     vertical-align: middle;
     border: 0;
@@ -37,16 +35,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .navbar ul {
     list-style: none;
     margin-bottom: auto;
-    border-radius: 25px 0 0 25px;
-    background-color: ghostwhite;
-    width: 75%;
-    padding-left: 12px;
+    margin-top: 10px;
+    text-align: right;
 }
 
 #menu-bosc-menu .menu-item {
-    padding: 10px 15px;
-    text-align: center;
-    display: block;
+    padding: 10px 0;
+    text-align: left;
+    display: inline-block;
     transition: 0.5s ease;
     font-family: 'K2D', sans-serif;
 }
@@ -64,7 +60,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     color: darkslateblue;
     font-weight: normal;
     font-style: normal;
-    border-bottom: 2px solid transparent;
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 22px;
@@ -81,11 +76,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 22px;
-    padding: 0;
-}
-
-button.navbar-toggler {
-    display: none;
 }
 
 .active {
@@ -94,10 +84,20 @@ button.navbar-toggler {
     text-decoration: none;
 }
 
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-menu > .active > a {
+    text-decoration: none;
+    background-image: none;
+    background-color: transparent;
+    outline: 0;
+}
+
 #menu-bosc-menu .menu-item-has-children:hover {
     border-radius: 25px 25px 0 0;
 }
-
 
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -110,6 +110,51 @@ button.navbar-toggler {
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 22px;
+    background-color: transparent;
+}
+
+.navbar-collapse .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(196, 245, 198, 0.9);
+    width: auto;
+    height: auto;
+    box-shadow: 8px 8px 16px 0 rgba(128, 0, 128, 0.2);
+    z-index: 1;
+    text-align: left;
+    left: 0;
+    border-radius: 0 25px 25px 25px;
+    margin-top: 0;
+}
+
+
+
+.dropdown .dropdown-menu li a {
+    color: darkslategray;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: transparent;
+    background-image: none;
+    border-radius: 10px;
+
+}
+
+.dropdown:hover .dropdown-menu {
+    display: inline-grid;
+}
+
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+    color: darkslateblue;
+    text-decoration: none;
+    background-color: transparent;
+    outline: 0;
+}
+
+.dropdown-menu .current-menu-item {
     background-color: transparent;
 }
 
@@ -129,6 +174,8 @@ p {
     font-family: 'Slabo 27px';
     font-size: 20px;
     color: darkslategray;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 /*bosc homepage*/
@@ -194,7 +241,7 @@ p.bosc-overview {
     margin-bottom: 10px;
 }
 
-.bosc-registration .wp-block-button__link {
+.wp-block-button__link {
     color: darkslategray;
     text-shadow: 1px 1px 2px #a6a6a6;
     font-weight: bold;
@@ -205,7 +252,7 @@ p.bosc-overview {
     transition: 0.3s ease-in-out;
 }
 
-.bosc-registration .wp-block-button__link:hover {
+.wp-block-button__link:hover {
     background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 99%);
     color: grey;
 }
@@ -213,7 +260,6 @@ p.bosc-overview {
 .bosc-summary {
     background-color: whitesmoke;
     margin-bottom: 0;
-
 }
 
 p.bosc-summary {
@@ -234,7 +280,6 @@ ul.bosc-summary {
 
 
 /*about BOSC*/
-
 
 .previous-bosc-meetings h1 {
     margin-bottom: 0;
@@ -337,6 +382,65 @@ p.sponsors {
     height: auto;
 }
 
+iframe {
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    border: 1px solid gray;
+}
+
+/*BOSC abstract submission*/
+
+.bosc-pear-submit {
+    margin-right: 3%;
+}
+
+.bosc-abstract-formatting .wp-block-column {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 2% 2% 2%;
+}
+
+.bosc-abstract-formatting .wp-block-column:nth-child(odd) {
+    background-color: #e2ffb9;
+}
+
+.bosc-abstract-formatting .wp-block-column:nth-child(even) {
+    background-color: #fffcb9;
+}
+
+.submission-instructions li {
+    padding-bottom: 10px;
+    margin-left: 3%;
+    margin-right: 2%;
+}
+
+.bosc-fellowship-license {
+    margin-top: 30px;
+    background-color: ghostwhite;
+}
+
+h1.bosc-fellowship-license {
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+p.bosc-fellowship-license {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul.bosc-fellowship-license {
+    padding-left: 4%;
+    padding-right: 2%;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+
 @media only screen and (max-width: 1024px) {
     .container {
         padding-left: 15px;
@@ -346,32 +450,16 @@ p.sponsors {
     .navbar-header .navbar-logo img {
         max-height: 10vh;
     }
-
-    #menu-bosc-menu .menu-item {
-        padding: 10px 1.2vh;
-    }
-
-    .navbar ul li a {
-        font-size: 18px;
-    }
 }
 
-@media only screen and (max-width: 991px) {
-    .navbar ul li a {
-        font-size: 18px;
-    }
 
-    .navbar-ul {
-        width: 79%;
-    }
-}
+@media only screen and (max-width: 767px) {
 
-@media only screen and (max-width: 769px) {
     .navbar {
         margin-top: 0px;
-        padding-top: 3%;
+        padding-top: 10px;
         margin-bottom: 0px;
-        padding-bottom: 3%;
+        padding-bottom: 10px;
     }
 
     .navbar .navbar-header .icon-bar {
@@ -381,8 +469,12 @@ p.sponsors {
         border-radius: 1vh;
     }
 
+    .navbar-header {
+        float: none;
+    }
+
     .navbar .navbar-logo {
-        margin-left: 2vh;
+        margin-left: 0;
     }
 
     .navbar .navbar-header .navbar-logo img {
@@ -392,14 +484,14 @@ p.sponsors {
         max-width: 50%;
     }
 
-    nav#navigation-bar {
-        padding-right: 3vh;
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        max-height: 100%;
     }
 
     .navbar ul {
-        padding-top: 3vh;
+        list-style: none;
         width: 100%;
-        padding-right: 10%;
     }
 
     .navbar ul li {
@@ -421,7 +513,6 @@ p.sponsors {
         color: darkslateblue;
         font-weight: normal;
         font-style: normal;
-        border-bottom: 2px solid transparent;
         padding-bottom: 0px;
         margin-bottom: 0px;
         font-size: 4vh;
@@ -433,8 +524,61 @@ p.sponsors {
         font-size: 4vh;
     }
 
+    #menu-bosc-menu .dropdown-menu .active {
+        border-radius: 0;
+    }
+
     #menu-bosc-menu .menu-item {
-        margin-top: 1.5vh 1vh;
+        margin-top: 5px;
+        display: block;
+    }
+
+    #menu-bosc-menu .dropdown-menu .menu-item {
+        margin-top: 0px;
+    }
+
+    .navbar-collapse .dropdown .dropdown-menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        z-index: 1;
+        border-radius: 0;
+        margin-top: 0;
+        transition: 0.5s ease;
+    }
+
+    .dropdown-menu {
+        padding: 0;
+    }
+
+    .dropdown-menu li {
+        display: block;
+    }
+
+    .dropdown .dropdown-menu li a {
+        color: darkslategray;
+        font-size: 2.7vh;
+        transition: 0.5s ease;
+    }
+
+    .navbar .dropdown .dropdown-menu li:hover {
+        background-color: transparent;
+    }
+
+    #menu-bosc-menu .dropdown-menu .menu-item:hover {
+        border-radius: 0;
+    }
+
+    .dropdown-menu li a:hover {
+        background-image: none;
+        border-radius: 0;
+
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 1.5vh;
     }
 
     i {
@@ -450,24 +594,17 @@ p.sponsors {
         transform: rotate(45deg) translateY(-5px);
     }
 
-    button.navbar-toggler {
-        display: block;
-        border: none;
-        position: absolute;
-        top: 10%;
-        right: 5%;
-        background-image: none;
-        background-color: transparent;
+    i {
+        border: solid darkslateblue;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-left: 0px;
+        margin-right: 10px
     }
 
-    button.navbar-toggler:active {
-        top: 0%;
-    }
-
-    .fa-bars {
-        border: none;
-        border-width: 0;
-        color: darkslateblue;
+    .down {
+        transform: rotate(45deg) translateY(-5px);
     }
 
     .bosc-introduction-image {
@@ -494,8 +631,6 @@ p.sponsors {
     }
 
     /*about BOSC*/
-
-
     .previous-bosc-meetings h1 {
         margin-bottom: 0;
         padding: 20px;

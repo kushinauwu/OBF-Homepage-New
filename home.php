@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <div class="showcase-wrapper">
+    <?php custom_breadcrumbs(); ?>
+
     <div class="container-fluid">
         <div class="navigation-wrapper">
             <div class="posts-navigation">

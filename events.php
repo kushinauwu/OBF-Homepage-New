@@ -8,6 +8,7 @@ Template Name:events
 
 
 <div class="showcase-wrapper">
+    <?php custom_breadcrumbs(); ?>
 
     <?php
     /* Check today's date and find events that start on or before today and end on or after today. */
@@ -50,25 +51,27 @@ Template Name:events
                     <div class="card-img">
                         <?php the_post_thumbnail(); ?>
                     </div>
-                    
+
                     <div class="card-body">
                         <h2 class="card-title">
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_title(); ?></a>
                         </h2>
 
                         <p class="card-text card-date"><i class="fas fa-calendar-day fa-lg"></i>
-                            <?php the_field('start_date'); ?> to <?php the_field('end_date'); ?>
+                            <?php the_field('start_date'); ?> to
+                            <?php the_field('end_date'); ?>
                         </p>
-                        
+
                         <?php if( get_field('location') ) : ?>
                         <p class="card-text card-location"><i class="fas fa-map-marked-alt"></i>
                             <?php the_field('location'); ?>
                         </p>
-                        
+
                         <?php endif; ?>
                     </div>
                 </div>
-                
+
                 <div class="card-footer card-info">
                     <?php if ( has_excerpt() ) : the_excerpt();
                         else : the_content(); 
@@ -124,11 +127,12 @@ Template Name:events
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?></a>
                         </h2>
-                        
+
                         <p class="card-text card-date"><i class="fas fa-calendar-day fa-lg"></i>
-                            <?php the_field('start_date'); ?> to <?php the_field('end_date'); ?>
+                            <?php the_field('start_date'); ?> to
+                            <?php the_field('end_date'); ?>
                         </p>
-                        
+
                         <?php if( get_field('location') ) : ?>
                         <p class="card-text card-location"><i class="fas fa-map-marked-alt"></i>
                             <?php the_field('location'); ?>
@@ -151,7 +155,7 @@ Template Name:events
         </div>
     </div>
 
-    
+
     <div class="past-events">
         <div class="container-fluid">
             <div class="row">
@@ -186,12 +190,12 @@ Template Name:events
                         <li>
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?></a>
-                            
+
                             <p class="info-past">
                                 <?php the_field('start_date'); ?> to
                                 <?php the_field('end_date');
                                 if( get_field('location') ) : ?>
-                                , 
+                                ,
                                 <?php the_field('location'); endif; ?>.</p>
                         </li>
                         <?php endwhile; else : ?>

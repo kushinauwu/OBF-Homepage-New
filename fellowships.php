@@ -7,6 +7,8 @@ Template Name:fellowships
 <?php get_header(); ?>
 <!--main content-->
 <div class="showcase-wrapper">
+    <?php custom_breadcrumbs(); ?>
+
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
     <?php the_content(); ?>
     <?php endwhile; else : ?>
@@ -16,5 +18,5 @@ Template Name:fellowships
     <?php endif;
         wp_reset_postdata(); ?>
 </div>
-    <!--footer -->
-    <?php get_footer(); ?>
+<!--footer -->
+<?php get_footer(); ?>

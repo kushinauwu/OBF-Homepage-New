@@ -16,12 +16,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .history-section .history-text-wrapper {
     position: relative;
-    height: 600px;
 }
 
 .history-section .history-text-wrapper .history-content {
     position: relative;
-    top: 10%;
 }
 
 .history-content-wrapper {
@@ -513,10 +511,11 @@ p {
 
     /*HISTORY*/
 
-    .history-section .history-text-wrapper .history-content {
+    .history-section .history-text-wrapper {
         position: relative;
-        top: 2vh;
+        height: 400px;
     }
+
 
     .history-section h1 {
         margin-bottom: 0;

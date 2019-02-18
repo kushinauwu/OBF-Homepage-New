@@ -37,7 +37,7 @@
             </div>
             <div class="col-sm-7">
                 <div class="about-background-image">
-                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/hilmar_lapp_talk.jpg">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/attendees_checking_boards.jpg">
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
     <!-- about OBF end -->
 
     <section class="news-section">
-        <div class="news-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/page-photos/attendees_checking_boards.jpg);">
+        <div class="news-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/page-photos/hilmar_lapp_talk.jpg);">
         </div>
         <div class="container">
             <div class="row">
@@ -334,7 +334,7 @@
                         <div class="col-sm-4 col-xs-4">
                             <li class="join-details">
                                 <a href="donate">
-                                    <img src="<?php echo get_bloginfo('template_url') ?>/img/icons/heart.png">
+                                    <div class="join-image"><img src="<?php echo get_bloginfo('template_url') ?>/img/icons/heart.png"></div>
                                     <div class="join-title">
                                         Support / Donate!
                                     </div>
@@ -345,7 +345,7 @@
                         <div class="col-sm-4 col-xs-4">
                             <li class="join-details">
                                 <a href="">
-                                    <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/Pear.png">
+                                    <div class="join-image"><img src="<?php echo get_bloginfo('template_url') ?>/img/logos/pear-transparent.png"></div>
                                     <div class="join-title">
                                         Volunteer for BOSC!
                                     </div>
@@ -356,7 +356,9 @@
                         <div class="col-sm-4 col-xs-4">
                             <li class="join-details">
                                 <a href="membership">
-                                    <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/obf_logo_icon-circle-tr.png">
+                                    <div class="join-image">
+                                        <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/obf_logo_icon-circle-tr.png">
+                                    </div>
                                     <div class="join-title">
                                         Join the OBF!
                                     </div>

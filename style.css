@@ -50,14 +50,12 @@ h6 {
     text-transform: uppercase;
     padding: 0;
     text-align: left;
-    margin-top: 30px;
 }
 
 /**/
 
 h1 {
     font-size: 48px;
-    margin-bottom: 20px;
 }
 
 /*new*/
@@ -118,11 +116,13 @@ p {
 /*NAVIGATION*/
 .navbar {
     margin-top: 0px;
-    padding-top: 20px;
+    padding-top: 10px;
     margin-bottom: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     background-color: whitesmoke;
-
+    padding-left: 15px;
+    padding-right: 15px;
+    border: transparent;
 }
 
 .navbar .navbar-logo {
@@ -141,13 +141,14 @@ p {
 .navbar ul {
     list-style: none;
     margin-bottom: auto;
-
+    margin-top: 10px;
+    text-align: right;
 }
 
 #menu-main-menu .menu-item {
     padding: 10px 0;
     text-align: left;
-    display: block;
+    display: inline-block;
     transition: 0.5s ease;
     font-family: 'K2D', sans-serif;
 }
@@ -167,7 +168,6 @@ p {
     /* navbar link text color */
     font-weight: normal;
     font-style: normal;
-    border-bottom: 2px solid transparent;
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 22px;
@@ -184,10 +184,6 @@ p {
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 22px;
-}
-
-button.navbar-toggler {
-    display: none;
 }
 
 .active {
@@ -217,7 +213,6 @@ button.navbar-toggler {
     display: block;
     padding-top: 0px;
     color: darkslateblue;
-    /* navbar link text color */
     font-weight: normal;
     font-style: normal;
     border-bottom: 2px solid transparent;
@@ -225,11 +220,6 @@ button.navbar-toggler {
     margin-bottom: 0px;
     font-size: 22px;
     background-color: transparent;
-}
-
-.dropdown {
-    display: inline-block;
-    position: relative;
 }
 
 .navbar-collapse .dropdown .dropdown-menu {
@@ -268,7 +258,7 @@ button.navbar-toggler {
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block;
+    display: inline-grid;
 }
 
 .dropdown-menu > .active > a:focus,
@@ -318,6 +308,30 @@ i {
 
 }
 
+#breadcrumbs {
+    list-style: none;
+    overflow: hidden;
+    margin: 10px 0;
+    padding-left: 2%;
+}
+
+#breadcrumbs li {
+    display: inline-block;
+    padding: 0;
+    margin-right: 0 1% 0 0;
+    font-family: 'K2D', sans-serif;
+}
+
+#breadcrumbs li a {
+    font-family: 'K2D', sans-serif;
+}
+
+#breadcrumbs .separator {
+    font-size: 18px;
+    font-weight: 100;
+    color: #bbb;
+}
+
 /*ABOUT SECTION // SoOME FELLOWSHIP SECTION COMMONS*/
 .about-section,
 .fellowships-section {
@@ -338,6 +352,7 @@ i {
     width: 100%;
     max-height: 480px;
     border-radius: 100px 0 0 100px;
+    object-fit: cover;
 }
 
 /*.col-sm-6 {
@@ -444,7 +459,7 @@ i {
     height: 80%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     transition: 1.25s ease-in-out;
 }
 
@@ -480,7 +495,7 @@ i {
     color: whitesmoke;
     /* mid section text color*/
     display: block;
-    padding 20px 0px;
+    padding: 0px 0px;
     background-color: transparent;
     text-decoration: none;
     font-family: 'Slabo 27px', serif;
@@ -665,7 +680,7 @@ i {
     color: whitesmoke;
     /*project titles*/
     display: block;
-    padding 20px 0px;
+    padding: 10px 0px;
     background-color: transparent;
     text-decoration: none;
     font-size: 26px;
@@ -736,7 +751,7 @@ join-list {
     height: 250px;
     width: 250px;
     border: 5px skyblue;
-    /*event icon border*/
+    object-fit: contain;
     border-radius: 50%;
     border-style: dashed;
     transition: 0.3s ease-in-out;
@@ -754,7 +769,6 @@ join-list {
     font-family: 'Slabo 27px', serif;
     font-weight: bold;
     text-decoration: none;
-    padding: 20px 0 0;
     font-size: 26px;
     letter-spacing: 0.7px;
     transition: 0.3s ease;
@@ -887,7 +901,7 @@ join-list {
     height: 250px;
     width: 250px;
     border: 3px grey;
-    /*event icon border*/
+    object-fit: contain;
     border-radius: 180px;
     border-style: solid;
     transition: 0.3s ease-in-out;
@@ -1120,7 +1134,9 @@ input#submit:active {
 }
 
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 767px) {
+
+
 
     h1,
     h2,
@@ -1231,8 +1247,6 @@ input#submit:active {
         padding-top: 3%;
         margin-bottom: 0px;
         padding-bottom: 3%;
-        background-color: whitesmoke;
-
     }
 
     .navbar .navbar-header .icon-bar {
@@ -1242,8 +1256,13 @@ input#submit:active {
         border-radius: 1vh;
     }
 
+    .navbar-header {
+        float: none;
+    }
+
     .navbar .navbar-logo {
         margin-left: 0;
+        float: left;
     }
 
     .navbar .navbar-header .navbar-logo img {
@@ -1251,6 +1270,11 @@ input#submit:active {
         padding-bottom: 0;
         display: inline;
         max-width: 50%;
+    }
+
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        max-height: 100%;
     }
 
     .navbar ul {
@@ -1279,7 +1303,6 @@ input#submit:active {
         /* navbar link text color */
         font-weight: normal;
         font-style: normal;
-        border-bottom: 2px solid transparent;
         padding-bottom: 0px;
         margin-bottom: 0px;
         font-size: 4vh;
@@ -1297,22 +1320,15 @@ input#submit:active {
 
     #menu-main-menu .menu-item {
         margin-top: 5px;
+        display: block;
     }
 
     #menu-main-menu .dropdown-menu .menu-item {
         margin-top: 0px;
     }
 
-
-    .dropdown {
-        display: inline-block;
-        position: relative;
-    }
-
     .navbar-collapse .dropdown .dropdown-menu {
         position: relative;
-        background-color: rgba(196, 245, 198, 0.8);
-        /* main link navbar dropdown hover bg color*/
         width: 100%;
         height: auto;
         box-shadow: none;
@@ -1371,24 +1387,24 @@ input#submit:active {
         transform: rotate(45deg) translateY(-5px);
     }
 
-    button.navbar-toggler {
-        display: block;
-        border: none;
+    /*change this for lvl 3 menu*/
+    .dropdown-menu .dropdown .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown-menu .dropdown:hover .dropdown-menu {
         position: absolute;
-        top: 10%;
-        right: 5%;
-        background-image: none;
-        background-color: transparent;
-    }
-
-    button.navbar-toggler:active {
+        display: inline-block;
+        left: 100%;
         top: 0%;
+        border-radius: 0 25px 25px 25px;
+        z-index: -1;
+        border: transparent;
     }
 
-    .fa-bars {
-        border: none;
-        border-width: 0;
-        color: darkslateblue;
+    #menu-main-menu .dropdown .dropdown-menu .dropdown:hover {
+        border-radius: 0;
+        background-color: rgb(186, 196, 188);
     }
 
     /* ABOUT */
@@ -1535,7 +1551,7 @@ input#submit:active {
         color: whitesmoke;
         /* mid section text color*/
         display: block;
-        padding 2% 0px;
+        padding: 2% 0px;
         background-color: transparent;
         text-decoration: none;
         font-family: 'Lato', serif;
@@ -1794,8 +1810,7 @@ input#submit:active {
         padding-top: 1vh;
     }
 
-    .events-section .events-head-wrapper,
-        {
+    .events-section .events-head-wrapper {
         height: auto;
         transform: none;
     }

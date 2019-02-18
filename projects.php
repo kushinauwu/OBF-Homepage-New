@@ -7,6 +7,9 @@ Template Name:projects
 <?php get_header(); ?>
 
 <div class="showcase-wrapper" id="main">
+    <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
+    </div>
     <section class="main-projects" id="main-projects-section">
         <div class="container-fluid">
             <div class="row">

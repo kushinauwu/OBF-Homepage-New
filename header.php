@@ -22,35 +22,32 @@
 
 <body>
     <div class="wrapper" id="main">
-
-        <!--navigation bar start -->
-        <div class="navbar navbar-expand-md">
-            <div class="container">
-                <!--OBF logo -->
-                <div class="navbar-header">
-                    <a class="navbar-logo" href="<?php echo home_url(); ?>">
-                        <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/obf-logo-header.png">
-                    </a>
-                </div>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'obf-new' ); ?>">
-                    <span class="sr-only navbar-toggler-icon"></span>
-                    <i class="fas fa-bars fa-4x"></i>
-
+        <nav class="navbar navbar-fixed-top" id="navigation-bar" role="navigation" aria-label="Main Menu">
+            <div class="navbar-header">
+                <a class="navbar-logo" href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/obf.svg">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <nav class="collapse navbar-collapse" id="navigation-bar" role="navigation" aria-label="Main Menu">
-                    <span class="sr-only">
-                        <?php esc_html_e( 'Main Menu', 'obf-new' ); ?></span>
-                    <?php 
-                            wp_nav_menu( array(
-	'theme_location'  => 'primary',
-	'depth'	          => 3, // 1 = no dropdowns, 2 = with dropdowns.
-	'container'       => 'false',
-	'menu_class'      => 'navbar nav navbar-nav mr-auto pull-right',
-	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-	'walker'          => new WP_Bootstrap_Navwalker(),
-) );
-                            ?>
-                </nav>
             </div>
-        </div>
+            <div class="collapse navbar-collapse">
+                <span class="sr-only">
+                    <?php esc_html_e( 'Main Menu', 'obf-new' ); ?></span>
+                <?php 
+                            wp_nav_menu( array(
+                            'theme_location'  => 'primary',
+                            'depth'	          => 3, // 1 = no dropdowns, 2 = with dropdowns.
+                            'container'       => false,
+                            'menu_class'      => 'nav',
+                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'          => new WP_Bootstrap_Navwalker(),
+                        ) );
+                     ?>
+            </div>
+        </nav>
+
         <!--navigation bar end -->

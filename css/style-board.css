@@ -8,195 +8,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
-* {
-    margin: 0;
-    padding: 0;
-
-}
-
-body {
-    font-family: 'K2D', sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    letter-spacing: 0.7px;
-    padding: 0px;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: auto;
-}
-
-.container-fluid {
-    padding-left: 30px;
-    padding-right: 30px;
-    height: auto;
-}
-
-img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-section {
-    display: block;
-}
-
-h1 {
-    font-size: 48px;
-    margin-bottom: 30px;
-    color: #275aa1;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    padding: 0;
-    text-align: left;
-}
-
-a {
-    transition: color 0.2s;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/*NAVIGATION*/
-.navbar {
-    margin-top: 0px;
-    padding-top: 20px;
-    margin-bottom: 0px;
-    padding-bottom: 20px;
-    background-color: whitesmoke;
-
-}
-
-.navbar .nav-logo {
-    padding: 0;
-    margin-left: 0;
-}
-
-.navbar-header .nav-logo img {
-    margin-top: 30px;
-    padding-top: 38px;
-    display: block;
-    height: auto;
-    max-width: 200px;
-    vertical-align: middle;
-    border: 0;
-}
-
-.navbar ul {
-    list-style: none;
-    margin-bottom: auto;
-
-}
-
-#menu-main-menu .menu-item {
-    padding: 10px 0;
-    text-align: right;
-    display: inline-block;
-    transition: 0.5s ease;
-}
-
-#menu-main-menu .menu-item:hover {
-    background-color: rgba(128, 0, 128, 0.2);
-    border-radius: 25px;
-    text-decoration: none;
-}
-
-#menu-main-menu .nav-link:hover,
-#menu-main-menu .nav-link:focus {
-    display: block;
-    padding-top: 0px;
-    color: darkslateblue;
-    font-weight: normal;
-    font-style: normal;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-size: 22px;
-}
-
-.navbar ul li a {
-    display: block;
-    padding-top: 0px;
-    color: darkslateblue;
-    font-weight: normal;
-    font-style: normal;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-size: 22px;
-}
-
-.nav > li > a:hover,
-.nav > li > a:focus {
-    display: block;
-    padding-top: 0px;
-    color: darkslateblue;
-    font-weight: normal;
-    font-style: normal;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-size: 22px;
-    background-color: transparent;
-}
-
-.dropdown {
-    display: inline-block;
-    position: relative;
-}
-
-.navbar-collapse .dropdown .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: rgba(196, 245, 198, 0.9);
-    width: auto;
-    height: auto;
-    box-shadow: 8px 8px 16px 0 rgba(128, 0, 128, 0.2);
-    z-index: 1;
-    text-align: left;
-    left: 0;
-    border-radius: 20px;
-    margin-top: 0;
-}
-
-.dropdown .dropdown-menu li a {
-    color: darkslategray;
-    font-size: 18px;
-    transition: 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-    background-color: transparent;
-    background-image: none;
-    border-radius: 10px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-i {
-    border: solid darkslateblue;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-left: 3px;
-}
-
-.down {
-    transform: rotate(45deg) translateY(-5px);
-}
-
 /*Members list*/
 .current-members {
     margin-bottom: 40px;
@@ -228,8 +39,8 @@ i {
     transition: 0.3s ease-in-out;
 }
 
-.members-list .member-details .member-name {
-    font-family: 'Montserrat', serif;
+.members-list .member-details .member-name a {
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-decoration: none;
     font-size: 22px;
@@ -237,17 +48,21 @@ i {
 }
 
 .members-list .member-details .member-position {
-    font-family: 'Montserrat', serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: dimgray;
     font-size: 20px;
 
 }
 
-.members-list .member-details .member-info {
-    font-family: 'Slabo 27px', serif;
+.members-list .member-details .member-info p {
+    font-family: 'Montserrat', sans-serif;
     color: dimgray;
     font-size: 18px;
+}
+
+.members-list .member-details .member-info a {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .members-contact p {
@@ -288,7 +103,8 @@ i {
 .past-members .members-list .member-details {
     margin-bottom: 30px;
     text-align: center;
-
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .past-members h1 {
@@ -296,7 +112,7 @@ i {
     margin-top: 40px;
 }
 
-.past-members .members-list .member-info,
+.past-members .members-list .member-info p,
 .past-members .members-list .member-position {
     color: whitesmoke;
 }
@@ -331,11 +147,11 @@ i {
     padding: 0 0 1% 0;
     text-align: justify;
     text-transform: uppercase;
-    font-family: K2D;
 }
 
 .expectations-text-wrapper ul {
     list-style: none;
+    margin: 1% 2%;
 }
 
 .expectations-text-wrapper ul li {
@@ -355,82 +171,6 @@ i {
 .expectations-text-wrapper ul li:nth-child(even) {
     background-color: #cccccf;
 }
-
-
-/*FOOTER SECTION*/
-.footer-section {
-    padding: 30px 0;
-    background-color: whitesmoke;
-    margin-top: 0;
-}
-
-.footer-section h3 {
-    margin-bottom: 30px;
-    color: #275aa1;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-size: 34px;
-}
-
-.footer-section p {
-    margin-bottom: 30px;
-    color: darkslategray;
-    font-family: 'Slabo 27px', serif;
-    font-size: 22px;
-}
-
-.footer-section input {
-    text-align: center;
-    border-radius: 20px;
-    background-color: rgba(147, 112, 219, 0.3);
-    padding: 5px 5px 5px 5px;
-}
-
-.footer-section button {
-    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-    position: relative;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 18px;
-    padding-right: 18px;
-    border-radius: 20px;
-    margin-left: 5px;
-    font-family: 'Montserrat', serif;
-    font-weight: bold;
-    border: none;
-    box-shadow: 2px 2px 12px purple;
-    transition: 0.2s ease-in-out;
-}
-
-.footer-section button:hover {
-    color: whitesmoke;
-}
-
-.footer-section .org-menu {
-    list-style: none;
-
-}
-
-.footer-section .org-menu .org-menu-item a {
-    color: darkslategray;
-    transition: color 0.2s;
-    font-family: 'Slabo 27px', serif;
-    padding: 20px;
-    font-size: 24px;
-}
-
-.footer-section .org-menu .org-menu-item a:hover {
-    color: dodgerblue;
-}
-
-.footer-section .network-item {
-    margin: 12px;
-}
-
-.footer-logo {
-    padding: 20px;
-}
-
 
 
 /*mobile display*/
@@ -500,22 +240,27 @@ i {
         height: 150px;
     }
 
-    .members-list .member-details .member-name {
+    .members-list .member-details .member-name a {
         font-size: 3vh;
     }
 
     .members-list .member-details .member-position {
-        font-size: 2.5vh;
+        font-size: 2.8vh;
     }
 
-    .members-list .member-details .member-info {
+    .members-list .member-details .member-info p {
         font-family: 'Lato', serif;
-        font-size: 2vh;
+        font-size: 2.5vh;
         letter-spacing: normal;
         text-align: justify;
         padding: 0 10px;
         word-break: break-word;
     }
+
+    .members-list .member-details .member-info a {
+        font-size: 2.5vh;
+    }
+
 
     .current-members .members-contact p {
         padding: 0;
@@ -528,12 +273,6 @@ i {
         font-size: 5vh;
         margin-bottom: 2vh;
     }
-
-    .past-members .members-list .member-details {
-        height: 55vh;
-        margin-bottom: 3vh;
-    }
-
 
     .join-board .joining-text {
         font-family: 'Lato', serif;
@@ -597,6 +336,16 @@ i {
 
     .footer-logo {
         padding: 2vh;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .current-members-grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    .past-members-grid {
+        grid-template-columns: 50% 50%;
     }
 }
 
