@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:fellowships
+Template Name:travel awards
 */
 ?>
 

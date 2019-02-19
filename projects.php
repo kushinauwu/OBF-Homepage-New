@@ -15,7 +15,7 @@ Template Name:projects
             <div class="row">
                 <div class="col-xs-12">
                     <div class="main-projects-head">
-                        <h1>Main Projects</h1>
+                        <h1>Member Projects</h1>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@ Template Name:projects
                                                             array (
                                                                 'taxonomy' => 'project-type',
                                                                 'field' => 'slug',
-                                                                'terms' => 'main-projects',
+                                                                'terms' => 'member-projects',
                                                             )
                                                         ),
                                             );
@@ -243,7 +243,7 @@ Template Name:projects
             <div class="row">
                 <div class="col-xs-12">
                     <div class="in-memoriam-heading">
-                        <h1>In Memoriam</h1>
+                        <h1>Retired Projects</h1>
                     </div>
                 </div>
             </div>
@@ -258,7 +258,7 @@ Template Name:projects
                                                             array (
                                                                 'taxonomy' => 'project-type',
                                                                 'field' => 'slug',
-                                                                'terms' => 'in-memoriam',
+                                                                'terms' => 'retired-projects',
                                                             )
                                                         ),
                                             );

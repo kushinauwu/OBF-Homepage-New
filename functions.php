@@ -10,8 +10,8 @@ function obf_scripts_styles() {
     if ( is_page( 'about' ) ) {
         wp_enqueue_style('style-about.css', get_template_directory_uri().'/css/style-about.css',false,'1.0','all');
     }
-    else if ( is_page( 'fellowships' ) ) {
-        wp_enqueue_style('style-fellowships.css', get_template_directory_uri().'/css/style-fellowships.css',false,'5.0.1','all');
+    else if ( is_page( 'travel-awards' ) ) {
+        wp_enqueue_style('style-travel-awards.css', get_template_directory_uri().'/css/style-travel-awards.css',false,'5.0.1','all');
     }
     else if ( is_page( 'board' ) ) {
         wp_enqueue_style('style-board.css', get_template_directory_uri().'/css/style-board.css',false,'5.0.7','all');

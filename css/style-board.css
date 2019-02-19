@@ -177,56 +177,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 @media only screen and (max-width: 769px) {
 
-    * {
-        margin: 0;
-        padding: 0;
-
-    }
-
-    body {
-        font-family: 'K2D', sans-serif;
-        font-size: 15px;
-        line-height: 1.5;
-        letter-spacing: 0.7px;
-        padding: 0px;
-        margin: 0;
-        overflow-x: hidden
-    }
-
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-    }
-
-    section {
-        display: block;
-    }
-
-    h1 {
-        font-size: 5vh;
-        margin-bottom: 1vh;
-        color: #275aa1;
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        padding: 0;
-        text-align: left;
-    }
-
-    a {
-        transition: color 0.2s;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
-
     /*Members list*/
     .current-members {
         margin-bottom: 4vh;
         margin-top: 2vh;
         padding-top: 0;
+    }
+
+    .current-members-grid {
+        grid-template-columns: 50% 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .current-members h1 {
@@ -252,13 +213,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         font-family: 'Lato', serif;
         font-size: 2.5vh;
         letter-spacing: normal;
-        text-align: justify;
+        text-align: center;
         padding: 0 10px;
         word-break: break-word;
     }
 
     .members-list .member-details .member-info a {
         font-size: 2.5vh;
+        word-break: break-word;
     }
 
 
@@ -272,6 +234,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         margin-top: 4vh;
         font-size: 5vh;
         margin-bottom: 2vh;
+    }
+
+    .past-members-grid {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .past-members-grid .member-details img {
+        height: 100px;
     }
 
     .join-board .joining-text {
