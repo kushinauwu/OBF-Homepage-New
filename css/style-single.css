@@ -46,7 +46,7 @@ span.author-date {
     margin-right: 0;
 }
 
-img {
+.showcase-wrapper img {
     display: block;
     margin-left: 30%;
     margin-right: 30%;
@@ -145,4 +145,6 @@ figure {
     .nav-previous {
         display: block;
     }
+
+
 }

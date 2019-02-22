@@ -146,7 +146,7 @@ p {
 }
 
 #menu-main-menu .menu-item {
-    padding: 10px 0;
+    padding: 10px;
     text-align: left;
     display: inline-block;
     transition: 0.5s ease;
@@ -158,19 +158,6 @@ p {
     /* navbar hover bg color */
     border-radius: 25px;
     text-decoration: none;
-}
-
-#menu-main-menu .nav-link:hover,
-#menu-main-menu .nav-link:focus {
-    display: block;
-    padding-top: 0px;
-    color: darkslateblue;
-    /* navbar link text color */
-    font-weight: normal;
-    font-style: normal;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-size: 22px;
 }
 
 .navbar ul li a {
@@ -186,40 +173,23 @@ p {
     font-size: 22px;
 }
 
+#menu-main-menu .nav-link:hover,
+#menu-main-menu .nav-link:focus {
+    display: block;
+    padding-top: 0px;
+    color: darkslateblue;
+    background-color: transparent;
+    font-weight: normal;
+    font-style: normal;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 22px;
+}
+
 .active {
     background-color: #c4dff5;
     border-radius: 25px;
     text-decoration: none;
-}
-
-.dropdown-menu {
-    padding: 0;
-}
-
-.dropdown-menu > .active > a {
-    text-decoration: none;
-    background-image: none;
-    background-color: transparent;
-    outline: 0;
-}
-
-#menu-main-menu .menu-item-has-children:hover {
-    border-radius: 25px 25px 0 0;
-}
-
-
-.nav > li > a:hover,
-.nav > li > a:focus {
-    display: block;
-    padding-top: 0px;
-    color: darkslateblue;
-    font-weight: normal;
-    font-style: normal;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-size: 22px;
-    background-color: transparent;
 }
 
 .navbar-collapse .dropdown .dropdown-menu {
@@ -237,17 +207,20 @@ p {
     margin-top: 0;
 }
 
+.dropdown:hover .dropdown-menu {
+    display: inline-grid;
+}
 
+#menu-main-menu .menu-item-has-children:hover {
+    border-radius: 25px 25px 0 0;
+}
 
 .dropdown .dropdown-menu li a {
     color: darkslategray;
-    /* navbar dropdown text color */
     font-size: 18px;
     transition: 0.3s ease;
+    padding-left: 2px;
 }
-
-
-
 
 .dropdown-menu li a:hover {
     background-color: transparent;
@@ -257,8 +230,11 @@ p {
 
 }
 
-.dropdown:hover .dropdown-menu {
-    display: inline-grid;
+.dropdown-menu > .active > a {
+    text-decoration: none;
+    background-image: none;
+    background-color: transparent;
+    outline: 0;
 }
 
 .dropdown-menu > .active > a:focus,
@@ -271,19 +247,6 @@ p {
 
 .dropdown-menu .current-menu-item {
     background-color: transparent;
-}
-
-i {
-    border: solid darkslateblue;
-    /* navbar arrow color */
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-left: 3px;
-}
-
-.down {
-    transform: rotate(45deg) translateY(-5px);
 }
 
 /*change this for lvl 3 menu*/
@@ -305,7 +268,19 @@ i {
 #menu-main-menu .dropdown .dropdown-menu .dropdown:hover {
     border-radius: 0;
     background-color: rgb(186, 196, 188);
+}
 
+i {
+    border: solid darkslateblue;
+    /* navbar arrow color */
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 3px;
+}
+
+.down {
+    transform: rotate(45deg) translateY(-5px);
 }
 
 #breadcrumbs {
@@ -318,7 +293,7 @@ i {
 #breadcrumbs li {
     display: inline-block;
     padding: 0;
-    margin-right: 0 1% 0 0;
+    margin: 0 1% 0 0;
     font-family: 'K2D', sans-serif;
 }
 
@@ -1133,6 +1108,24 @@ input#submit:active {
     top: 1px;
 }
 
+.errorpage-wrapper h5 {
+    text-transform: inherit;
+}
+
+.errorpage-wrapper a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .dropdown:hover .dropdown-menu {
+        width: 120%;
+    }
+
+    .dropdown .dropdown-menu li a {
+        white-space: normal;
+    }
+}
 
 @media only screen and (max-width: 767px) {
 
@@ -1262,7 +1255,6 @@ input#submit:active {
 
     .navbar .navbar-logo {
         margin-left: 0;
-        float: left;
     }
 
     .navbar .navbar-header .navbar-logo img {
@@ -1291,7 +1283,6 @@ input#submit:active {
 
     .navbar ul li:hover {
         background-color: rgba(196, 245, 198, 0.9);
-        /* navbar hover bg color */
         border-radius: 0;
         text-decoration: none;
     }
@@ -1300,7 +1291,6 @@ input#submit:active {
         display: block;
         padding-top: 0px;
         color: darkslateblue;
-        /* navbar link text color */
         font-weight: normal;
         font-style: normal;
         padding-bottom: 0px;
@@ -1321,6 +1311,10 @@ input#submit:active {
     #menu-main-menu .menu-item {
         margin-top: 5px;
         display: block;
+        padding: 3px 0;
+        text-align: left;
+        transition: 0.5s ease;
+        font-family: 'K2D', sans-serif;
     }
 
     #menu-main-menu .dropdown-menu .menu-item {
@@ -1348,7 +1342,6 @@ input#submit:active {
 
     .dropdown .dropdown-menu li a {
         color: darkslategray;
-        /* navbar dropdown text color */
         font-size: 2.7vh;
         transition: 0.5s ease;
     }
@@ -1375,7 +1368,6 @@ input#submit:active {
 
     i {
         border: solid darkslateblue;
-        /* navbar arrow color */
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;
@@ -1891,7 +1883,7 @@ input#submit:active {
 
     .members {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 50% 50%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1899,8 +1891,8 @@ input#submit:active {
     .member-photo {
         border: 1px solid ghostwhite;
         border-radius: 150px;
-        height: 150px;
-        width: 150px;
+        height: 130px;
+        width: 130px;
     }
 
     .member-list {

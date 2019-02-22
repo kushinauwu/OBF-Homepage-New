@@ -161,7 +161,7 @@
                                                             array (
                                                                 'taxonomy' => 'project-type',
                                                                 'field' => 'slug',
-                                                                'terms' => 'main-projects',
+                                                                'terms' => 'member-projects',
                                                             )
                                                         ),
                                             );

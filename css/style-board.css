@@ -10,18 +10,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /*Members list*/
 .current-members {
-    margin-bottom: 40px;
-    margin-top: 2vh;
+    margin-bottom: 30px;
     padding-top: 0;
 }
 
 .current-members-grid {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-}
-
-.members-list {
-    margin-top: 0px;
 }
 
 .current-members .members-list .member-details {
@@ -55,6 +50,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 }
 
+.member-details .member-info {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .members-list .member-details .member-info p {
     font-family: 'Montserrat', sans-serif;
     color: dimgray;
@@ -74,6 +74,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .past-members {
+    padding-top: 30px;
     background-color: #1b2e25;
 }
 
@@ -109,7 +110,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .past-members h1 {
     color: #88eef7;
-    margin-top: 40px;
 }
 
 .past-members .members-list .member-info p,
@@ -149,12 +149,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     text-transform: uppercase;
 }
 
-.expectations-text-wrapper ul {
+ul.expectations-list {
     list-style: none;
     margin: 1% 2%;
+    padding-left: 0;
 }
 
-.expectations-text-wrapper ul li {
+ul.expectations-list li {
     font-family: 'Slabo 27px', serif;
     font-size: 20px;
     padding: 10px 15px;
@@ -163,12 +164,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     text-align: justify;
 }
 
-.expectations-text-wrapper ul li:nth-child(odd) {
+ul.expectations-list li:nth-child(odd) {
     background-color: #cfffff;
 
 }
 
-.expectations-text-wrapper ul li:nth-child(even) {
+ul.expectations-list li:nth-child(even) {
     background-color: #cccccf;
 }
 
@@ -244,13 +245,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         height: 100px;
     }
 
-    .join-board .joining-text {
+    .joining-text {
         font-family: 'Lato', serif;
         font-size: 3vh;
-    }
-
-    .join-board {
-        margin-bottom: 0;
     }
 
     /*Board Expectations*/
@@ -263,7 +260,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         font-size: 3.6vh;
     }
 
-    .expectations-text-wrapper ul li {
+    ul.expectations-list li {
         font-family: 'Lato', serif;
         font-size: 2.5vh;
         padding: 2vh 2.5vh;

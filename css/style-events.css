@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*ongoing events*/
 
 .ongoing-events {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .container-grid {
@@ -82,16 +82,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /*upcoming events*/
 .upcoming-events {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 /*past events*/
 
 .past-events {
     background-color: #1b2e25;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .past-events h1 {

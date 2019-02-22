@@ -531,6 +531,7 @@ ul.bosc-fellowship-license {
     #menu-bosc-menu .menu-item {
         margin-top: 5px;
         display: block;
+        padding: 3px 0;
     }
 
     #menu-bosc-menu .dropdown-menu .menu-item {

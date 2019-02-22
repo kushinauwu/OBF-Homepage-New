@@ -59,8 +59,13 @@ Template Name:events
                         </h2>
 
                         <p class="card-text card-date"><i class="fas fa-calendar-day fa-lg"></i>
-                            <?php the_field('start_date'); ?> to
-                            <?php the_field('end_date'); ?>
+                            <?php $custom_start_date = get_field('start_date', false, false);
+                            $custom_start_date = new DateTime($custom_start_date);
+                            $custom_end_date = get_field('end_date', false, false);
+                            $custom_end_date = new DateTime($custom_end_date);
+                            ?>
+                            <?php echo $custom_start_date->format('Y-m-d'); ?> to
+                            <?php echo $custom_end_date->format('Y-m-d'); ?>
                         </p>
 
                         <?php if( get_field('location') ) : ?>
@@ -129,8 +134,13 @@ Template Name:events
                         </h2>
 
                         <p class="card-text card-date"><i class="fas fa-calendar-day fa-lg"></i>
-                            <?php the_field('start_date'); ?> to
-                            <?php the_field('end_date'); ?>
+                            <?php $custom_start_date = get_field('start_date', false, false);
+                            $custom_start_date = new DateTime($custom_start_date);
+                            $custom_end_date = get_field('end_date', false, false);
+                            $custom_end_date = new DateTime($custom_end_date);
+                            ?>
+                            <?php echo $custom_start_date->format('Y-m-d'); ?> to
+                            <?php echo $custom_end_date->format('Y-m-d'); ?>
                         </p>
 
                         <?php if( get_field('location') ) : ?>
@@ -192,8 +202,13 @@ Template Name:events
                                 <?php the_title(); ?></a>
 
                             <p class="info-past">
-                                <?php the_field('start_date'); ?> to
-                                <?php the_field('end_date');
+                                <?php $custom_start_date = get_field('start_date', false, false);
+                            $custom_start_date = new DateTime($custom_start_date);
+                            $custom_end_date = get_field('end_date', false, false);
+                            $custom_end_date = new DateTime($custom_end_date);
+                            ?>
+                                <?php echo $custom_start_date->format('Y-m-d'); ?> to
+                                <?php echo $custom_end_date->format('Y-m-d');
                                 if( get_field('location') ) : ?>
                                 ,
                                 <?php the_field('location'); endif; ?>.</p>

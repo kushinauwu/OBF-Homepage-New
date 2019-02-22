@@ -14,8 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .main-projects,
 .affiliated-projects,
 .related-projects {
-    margin-bottom: 40px;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .projects-details {
@@ -93,7 +92,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .in-memoriam {
     background-color: #1b2e25;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .ontologies-definitions-heading h1,

@@ -63,6 +63,10 @@ function obf_enqueue_page_template_styles() {
         wp_enqueue_style( 'style-test.css', get_template_directory_uri() . '/css/style-test.css' );
     }
     
+    else if ( is_page_template( 'about.php' ) ) {
+        wp_enqueue_style( 'style-about.css', get_template_directory_uri() . '/css/style-about.css' );
+    }
+    
 }
 add_action( 'wp_enqueue_scripts', 'obf_enqueue_page_template_styles' );
 

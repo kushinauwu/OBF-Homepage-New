@@ -106,25 +106,16 @@ Template Name:board
         </div>
     </section>
 
-    <section class="join-board">
-        <div class="container-fluid">
-            <?php if (have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <div class="row">
-                <div class="joining-text">
-                    <div class="col-md-12">
-                        <p>
-                            <?php the_content(); ?>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <?php endwhile; else : ?>
-            <p>
-                <?php __('No post found'); ?>
-            </p>
-            <?php endif;    wp_reset_postdata(); ?>
-        </div>
-    </section>
+    <div class="container-fluid">
+        <?php if (have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php the_content(); ?>
+
+        <?php endwhile; else : ?>
+        <p>
+            <?php __('No post found'); ?>
+        </p>
+        <?php endif;    wp_reset_postdata(); ?>
+    </div>
 </div>
 
 <?php get_footer(); ?>
