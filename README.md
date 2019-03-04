@@ -18,15 +18,15 @@
   * ***Theme Installation***
 1. Download the data folder from the repo. 
 2. In the admin dashboard, go to *All-in-One WP Migration menu* and select the *Import* option.
-2. In the Import page that shows up, click on Import and import from **'File'**. Navigate to the '*data*' folder. Select the file with the .WPRESS extension as the file to load. 
-3. A dialog box that notifies that the previous theme will be erased might show up. Click on Proceed. 
-4. A dialog box that notifies that the data has been imported successfully will show up. Click on the **Permalink Settings** link and login to the WP-admin dashboard through the window that opens up.
-5. Use the same login credentials as the ones that have been used for logging in to the dev site before, as the database is imported as well.
-5. Go to the bottom of the window and click on *Save Changes*. Do this twice.
-6. Go back to the original window and close the dialog box.
+3. In the Import page that shows up, click on Import and import from **'File'**. Navigate to the '*data*' folder. Select the file with the .WPRESS extension as the file to load. 
+4. A dialog box that notifies that the previous theme will be erased might show up. Click on Proceed. 
+5. A dialog box that notifies that the data has been imported successfully will show up. Click on the **Permalink Settings** link and login to the WP-admin dashboard through the window that opens up.
+6. Use the same login credentials as the ones that have been used for logging in to the dev site before, as the database is imported as well.
+7. Go to the bottom of the window and click on *Save Changes*. Do this twice.
+8. Go back to the original window and close the dialog box.
 7. Go to the **Custom Fields** menu and select the Tools sub-menu.
-8. On the right side, click on *Choose file* and navigate to the '*data*' directory again. Choose the .JSON file and click on *Import File*.
-9. Visit the site, it should be working now and the posts with custom fields should have the respective custom fields in the edit options. 
+9. On the right side, click on *Choose file* and navigate to the '*data*' directory again. Choose the .JSON file and click on *Import File*.
+10. Visit the site, it should be working now and the posts with custom fields should have the respective custom fields in the edit options. 
  
 
 **Details**
