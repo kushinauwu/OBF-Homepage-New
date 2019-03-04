@@ -15,21 +15,39 @@
 6. Go back to the **Plugins menu-> Add New**. Select '*Upload Plugin*' beside the *Add Plugins* heading. Choose the file extension .zip file that was downloaded from [Import WP Migration](https://import.wp-migration.com/) and click on *Install Now*.
 7. Once it is installed, click on '*Activate Plugin*' to activate the extension.
 
-  * ***Theme Installation***
-1. Download the data folder from the repo. 
-2. In the admin dashboard, go to *All-in-One WP Migration menu* and select the *Import* option.
-3. In the Import page that shows up, click on Import and import from **'File'**. Navigate to the '*data*' folder. Select the file with the .WPRESS extension as the file to load. 
-4. A dialog box that notifies that the previous theme will be erased might show up. Click on Proceed. 
-5. A dialog box that notifies that the data has been imported successfully will show up. Click on the **Permalink Settings** link and login to the WP-admin dashboard through the window that opens up.
-6. Use the same login credentials as the ones that have been used for logging in to the dev site before, as the database is imported as well.
-7. Go to the bottom of the window and click on *Save Changes*. Do this twice.
-8. Go back to the original window and close the dialog box.
-7. Go to the **Custom Fields** menu and select the Tools sub-menu.
-9. On the right side, click on *Choose file* and navigate to the '*data*' directory again. Choose the .JSON file and click on *Import File*.
-10. Visit the site, it should be working now and the posts with custom fields should have the respective custom fields in the edit options. 
+***Theme Export***
+
+1. Go to the '*All-in-one WP Migration*' tab in the menu, and click on export.
+2. Click on the *EXPORT* TO dropdown and select '*File*'.
+3. Once the export is finished, download the file from the dialog box that shows up.
+
+
+  * ***Theme Import***
+ 
+1. In the admin dashboard, go to *All-in-One WP Migration menu* and select the *Import* option.
+2. In the Import page that shows up, click on Import and import from **'File'**. Select the export file that was downloaded when exporting the theme. It will have a .WPRESS extension.
+3. A dialog box that notifies that the previous theme will be erased might show up. Click on Proceed. 
+4. A dialog box that notifies that the data has been imported successfully will show up. Click on the **Permalink Settings** link and login to the WP-admin dashboard through the window that opens up.
+5. Use the same login credentials as the ones that have been used for logging in to the dev site before, as the database is imported as well.
+6. Go to the bottom of the window and click on *Save Changes*. Do this twice.
+7. Go back to the original window and close the dialog box.
+8. Visit the site, it should be working now and the posts with custom fields should have the respective custom fields in the edit options. 
  
 
 **Details**
+
+*Update 04/03/2019*
+
+-- Added widgets and then added categories and tags to navigate through the news posts. They show up as a category dropdown and tag cloud on single posts, right after the comments section. :)
+
+-- Changed the colors for the blog page.
+
+-- Metabox for ABout page editing instructions.
+
+-- Added BOSC pages for keynotes, panel, Sponsors, and edited the OBF and BOSC footers.
+
+-- Added the rest of the members' pictures :)
+
 
 *Update 18/02/2019*
 
