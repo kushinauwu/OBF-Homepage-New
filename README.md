@@ -4,6 +4,8 @@
 
 *Note:* So far the Wordpress version we've used was 5.0.3. The latest update is 5.1, and when importing, it might give a warning mentioning that you're importing from a site using PHP 5 to a site using PHP 7. I have tried importing to a local installation that is using WordPress 5.1, and the import was successful. It **should** work the same even when moving from the dev site to the live site.
 
+*Note 2:* The email address in Settings -> General needs to be changed back to an OBF email!
+
 
   * ***Setup and Plugin Installation***
 
