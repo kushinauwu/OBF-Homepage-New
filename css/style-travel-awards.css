@@ -8,29 +8,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
-.introduction {
-    position: relative;
-    height: auto;
-    margin-top: 2vh;
-    margin-bottom: 3vh;
+.fellowships-introduction {
+    margin-bottom: 1em;
 }
 
-.col-xs-3 {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.col-xs-3 .introduction-icon {
-    width: 100%;
-}
-
-.introduction-icon img {
-    padding-left: 25%;
-    padding-right: 25%;
-    position: relative;
-    bottom: 5vh;
-    height: 100%;
-    width: 100%;
+.fellowships-introduction img {
+    border-radius: 25px;
 }
 
 .introduction-text-wrapper {
@@ -38,16 +21,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     width: 100%;
 }
 
-.introduction-text {
-    padding-right: 40px;
-    margin-left: 0px;
+.fellowships-introduction p {
     font-size: 24px;
-    /* color: #2d95b5;*/
-    color: rgb(001, 017, 032);
-    /* about and felloship text color */
-    text-align: justify;
     font-family: 'Slabo 27px', serif;
-    letter-spacing: 0.7px;
 }
 
 .selection-criteria,
@@ -59,13 +35,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     opacity: 1;
     transition: 1s ease;
     height: auto;
-    padding: 30px 0 10px 0;
 }
 
 .selection-criteria h1,
 .coverage h1 {
     color: #88eef7;
-    text-align: justify;
     margin-bottom:
 }
 
@@ -93,14 +67,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     color: lightblue;
     margin-top: 30px;
     padding: 0 0 1% 0;
-    text-align: justify;
     text-transform: uppercase;
 }
 
 .criterion-text p {
     color: whitesmoke;
     position: relative;
-    text-align: justify;
     display: block;
     margin-left: 7%;
     top: 2%;
@@ -145,7 +117,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .coverage-text li {
-    text-align: justify;
     color: whitesmoke;
     margin-bottom: 0;
     margin-left: 2%;
@@ -173,7 +144,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     opacity: 1;
     transition: 1s ease;
     height: auto;
-    padding: 30px 0 50px 0;
 }
 
 .applicant-requirements p {
@@ -214,11 +184,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .applications-heading h2 {
-    margin-top: 30px;
-    padding: 0 0 1% 0;
-    text-align: justify;
     text-transform: uppercase;
-    color: #275aa1
+    color: #275aa1;
 }
 
 .applications .applications-text {
@@ -419,51 +386,28 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
     /*Introduction  info */
 
-    .introduction {
-        position: relative;
-        height: auto;
-        margin-top: 2vh;
+    .fellowships-introduction {
+        display: block;
+        padding: 0;
     }
 
-    .col-xs-3 {
+    .fellowships-introduction img {
+        padding: 3%;
+    }
+
+    .fellowships-introduction p {
+        padding-right: 0;
         padding-left: 0;
-        padding-right: 0;
-    }
-
-    .col-xs-3 .introduction-icon {
-        width: 100%;
-    }
-
-    .introduction-icon img {
-        padding-left: 0;
-        padding-right: 0;
-        margin-top: 20%;
-        padding-bottom: 20%;
-        position: relative;
-        bottom: 0;
-    }
-
-    .introduction-text-wrapper {
-        position: relative;
-        width: 100%;
-    }
-
-    .introduction-text {
-        padding-right: 0;
         margin-left: 0px;
         font-size: 3vh;
         /* color: #2d95b5;*/
         color: rgb(001, 017, 032);
-        /* about and felloship text color */
-        text-align: justify;
         font-family: 'Lato', serif;
         letter-spacing: normal;
     }
 
     .selection-criteria,
     .coverage {
-        /*margin-top: 5%;*/
-        /*float: left;*/
         background-color: #1b2e25;
         /*projects section  bgcolor*/
         margin-left: 0;
@@ -511,7 +455,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         color: lightblue;
         margin-top: 0px;
         padding: 0;
-        text-align: justify;
         text-transform: uppercase;
         font-size: 3.6vh;
     }
@@ -519,7 +462,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .criterion-text p {
         color: whitesmoke;
         position: relative;
-        text-align: justify;
         display: block;
         margin-left: 2%;
         top: 0%;
@@ -536,7 +478,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         letter-spacing: normal;
         margin-left: 0;
         margin-top: 1%;
-        text-align: justify;
         margin-bottom: 4vh;
     }
 
@@ -572,7 +513,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     }
 
     .coverage-text li {
-        text-align: justify;
         color: whitesmoke;
         margin-bottom: 1vh;
         margin-left: 2%;
@@ -638,7 +578,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .applications-heading h2 {
         margin-top: 3vh;
         padding: 0;
-        text-align: justify;
         text-transform: uppercase;
         color: #275aa1;
         font-size: 3.6vh;

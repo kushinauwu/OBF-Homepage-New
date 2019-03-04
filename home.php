@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 
 <div class="showcase-wrapper">
-    <?php custom_breadcrumbs(); ?>
-
     <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
         <div class="navigation-wrapper">
             <div class="posts-navigation">
                 <?php // Previous/next page navigation.
@@ -36,22 +35,24 @@
                  if ( is_paged() == false ) { ?>
             <article id="post-<?php the_ID(); ?>">
                 <div class="post-display">
-                    <div class="row">
-                        <div class="latest-post-wrapper">
-                            <div class="col-sm-12">
+                    <div class="latest-post-wrapper">
 
-                                <div class="latest-post-content">
-                                    <h1><a href="<?php the_permalink(); ?>">
-                                            <?php the_title(); ?></a></h1>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail(); ?>
+                            <div class="latest-post-content">
+
+                                <h1>
+                                    <?php the_title(); ?>
+                                </h1>
+                                <p class="date"> [
+                                    <?php the_date(); ?> ]</p>
+                                <p>
                                     <?php the_excerpt(); ?>
-                                </div>
-                                <div class="latest-post-background">
-                                    <img src="<?php the_post_thumbnail_url(); ?>">
-                                </div>
-
-
+                                </p>
                             </div>
-                        </div>
+                        </a>
+
+
                     </div>
                 </div>
             </article>
@@ -92,20 +93,29 @@
             <div class="post-display">
                 <article>
 
-                    <div class="recent-posts-wrapper">
-                        <div class="recent-posts-content">
-
+                    <div class="recent-post-wrapper">
+                        <div class="recent-post-photo">
                             <a href="<?php the_permalink(); ?>">
-                                <h3>
-                                    <?php the_title(); ?>
-                                </h3>
+                                <?php if ( has_post_thumbnail() ) {
+the_post_thumbnail();
+} else { ?>
+                                <img src="<?php bloginfo('template_directory'); ?>/img/logos/obf-logo.png" alt="<?php the_title(); ?>" />
+                                <?php } ?></a></div>
+                        <div class="recent-post-content">
+                            <a href="<?php the_permalink(); ?>">
+                                <h1>
+                                    <?php echo wp_trim_words( get_the_title(), 5 ); ?>
+                                </h1>
+                                <p class="date"> [
+                                    <?php the_date(); ?> ]</p>
+                                <p>
+                                    <?php the_excerpt(); ?>
+                                </p>
                             </a>
-                            <?php the_excerpt(); ?>
+                        </div>
 
-                        </div>
-                        <div class="recent-posts-background">
-                            <img src="<?php the_post_thumbnail_url(); ?>">
-                        </div>
+
+
                     </div>
                 </article>
             </div>

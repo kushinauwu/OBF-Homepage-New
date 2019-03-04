@@ -2,9 +2,9 @@
 
 <!--main content start -->
 <div class="showcase-wrapper">
-    <?php custom_breadcrumbs(); ?>
 
     <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
         <div class="navigation-wrapper">
             <div class="posts-navigation">
                 <?php the_post_navigation(

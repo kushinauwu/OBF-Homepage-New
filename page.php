@@ -2,8 +2,8 @@
 
 <!--main content start -->
 <div class="showcase-wrapper">
-    <?php custom_breadcrumbs(); ?>
     <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
         <?php if(have_posts()) : ?>
         <?php while(have_posts()) : the_post(); ?>
 

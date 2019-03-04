@@ -2,159 +2,26 @@
 
 <!--main content start -->
 <div class="showcase-wrapper">
-    <!--about OBF -->
-    <!-- Search for post tagged accordingly -->
-    <?php $query0 = new WP_Query( array( 'tag' => 'index-about' ) ); ?>
-    <!-- if exists -->
-    <?php if($query0->have_posts()) : ?>
-    <?php while($query0->have_posts()) : $query0->the_post(); ?>
-    <section class="about-section">
 
-
-        <div class="row">
-            <div class="col-sm-5">
-                <div class="about-text-wrapper">
-                    <div class="about-content">
-                        <h1>
-                            <?php the_title(); ?>
-                        </h1>
-                        <div class="about-content-wrapper">
-                            <div class="about-content-info">
-
-                                <?php the_content(); ?>
-                                <div class="about-content-button">
-                                    <a href="about" class="button">
-                                        <span>
-                                            Learn More </span>
-                                    </a>
-                                </div>
-                                <!--button class end -->
-                            </div> <!-- actual content info end -->
-                        </div>
-                        <!--content wrapper end -->
-                    </div>
-                </div> <!-- text wrapper end -->
-            </div>
-            <div class="col-sm-7">
-                <div class="about-background-image">
-                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/attendees_checking_boards.jpg">
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
-    <?php else : ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php the_content(); ?>
+    <?php endwhile; else : ?>
     <p>
         <?php __('No post found'); ?>
     </p>
-    <?php endif; ?>
-    <!-- about OBF end -->
-
-    <section class="news-section">
-        <div class="news-image" style="background-image: url(<?php echo get_bloginfo('template_url') ?>/img/page-photos/hilmar_lapp_talk.jpg);">
-        </div>
-        <div class="container">
-            <div class="row">
-                <!--move content by 5 columns -->
-                <div class="col-md-7 col-md-offset-5">
-                    <h1>
-                        Latest News
-                    </h1>
-
-
-                    <ul class="blog-list">
-                        <?php 
-        $obf_exclude = get_cat_ID('home');
-        $q = '-'.$obf_exclude;
-        $query = new WP_query ( array(
-            'cat' => $q,
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'posts_per_page' => 5,
-        ) );
-        
-        if ( $query->have_posts() ) { ?>
-                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                        <li class="list-post">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?></a></li>
-                        <?php endwhile;
-                wp_reset_postdata(); 
-                                    } ?>
-                    </ul>
-
-                    <!--blog post links end -->
-                    <div class="news-button">
-                        <a href="blog" class="button">
-                            <span>Read More</span>
-                        </a>
-                    </div> <!-- news button end -->
-                </div>
-            </div>
-        </div>
-    </section> <!-- news section end -->
-
-
-    <!--fellowships section -->
-
-    <section class="fellowships-section">
-
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="fellowships-text-wrapper">
-                    <div class="fellowships-content">
-                        <h1>
-                            Travel Fellowships
-                        </h1>
-                        <div class="fellowships-content-wrapper">
-                            <div class="fellowships-content-info">
-                                The OBF Travel Fellowship program aims at increasing diverse participation at events promoting open source bioinformatics software development and open science in the biological research community.
-                                <!-- questions list -->
-
-                                <ul class="fellowship-info-list list-unstyled">
-                                    <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-selection-criteria" data-wplink-url-error="true">What are the selection criteria?</a></li>
-                                    <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-coverage" data-wplink-url-error="true">What does the fellowship cover?</a></li>
-                                    <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-requirements" data-wplink-url-error="true">What do you require of applicants?</a></li>
-                                    <li class="list-question"><a href="http://localhost/obf-new/fellowships#fellowships-applications" data-wplink-url-error="true">Who will review the applicants?</a></li>
-                                </ul>
-                                <div class="fellowships-apply-button">
-                                    <a href="fellowships#fellowships-applications" class="button">
-                                        <span>
-                                            Apply </span>
-                                    </a>
-                                </div> <!-- apply button end -->
-                            </div> <!-- text content ends -->
-                        </div> <!-- content wrapper end -->
-                    </div>
-                </div> <!-- text wrappper end -->
-            </div>
-            <div class="col-sm-6">
-                <div class="fellowships-background-image">
-                    <!--Photo by Hiếu Hoàng from Pexels-->
-                    <img src="<?php echo get_bloginfo('template_url') ?>/img/page-photos/biology-blur-close-up-760184.jpg">
-                </div>
-            </div>
-        </div>
-    </section> <!-- fellowships section end -->
-
-
+    <?php endif;
+        wp_reset_postdata(); ?>
 
     <!-- Projects Section -->
-
     <section class="projects-section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="projects-text-wrapper">
-                        <h1>
-                            Associated Projects
-                        </h1>
-                    </div>
+            <h1>
+                Associated Projects
+            </h1>
 
-                    <!-- list of linked projects -->
-                    <ul class="list-inline row projects-list">
-                        <?php
+            <!-- list of linked projects -->
+            <ul class="list-inline projects-list">
+                <?php
                                 $args = array(
                                                 'post_type' => 'obf-projects',
                                                 'tax_query' => array(
@@ -167,54 +34,41 @@
                                             );
                                 $main_projects = new WP_Query( $args );
                             ?>
-                        <?php if ( $main_projects->have_posts() ) : while ( $main_projects->have_posts() ) : $main_projects->the_post(); ?>
-                        <div class="col-sm-3 col-xs-6">
-                            <li class="project-name">
-                                <?php $project_url = get_post_meta( get_the_ID(), 'project_url', true ); ?>
-                                <a href="<?php echo $project_url; ?>">
-                                    <?php the_post_thumbnail(); ?>
-
-                                    <div class="project-title">
-
-                                        <a href="<?php echo $project_url; ?>" target="_blank">
-                                            <?php the_title(); ?></a>
-                                    </div>
-                                </a>
-                            </li>
+                <?php if ( $main_projects->have_posts() ) : while ( $main_projects->have_posts() ) : $main_projects->the_post(); ?>
+                <li class="project-name">
+                    <?php $project_url = get_post_meta( get_the_ID(), 'project_url', true ); ?>
+                    <a href="<?php echo $project_url; ?>" target="_blank">
+                        <?php the_post_thumbnail(); ?>
+                        <div class="project-title">
+                            <?php the_title(); ?>
                         </div>
-                        <?php endwhile; else : ?>
-                        <p>
-                            <?php __('No post found'); ?>
-                        </p>
-                        <?php endif;
+                    </a>
+                </li>
+                <?php endwhile; else : ?>
+                <p>
+                    <?php __('No post found'); ?>
+                </p>
+                <?php endif;
                                 wp_reset_postdata(); ?>
 
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 projects-button">
-                    <a href="projects" class="button">
-                        <span> See more projects</span>
-                    </a>
-                </div>
+            </ul>
+            <div class="projects-button">
+                <a href="projects" class="button">
+                    <span> See more projects</span>
+                </a>
             </div>
         </div>
-    </section> <!-- projects section end -->
+    </section>
 
 
     <!--EVENTS SECTION -->
     <section class="events-section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="events-head-wrapper">
-                        <h1>Upcoming events</h1>
-                    </div>
 
+            <h1>Upcoming events</h1>
 
-                    <ul class="list-inline row events-list">
-                        <?php
+            <ul class="list-inline events-list">
+                <?php
                                 $args = array(
                                                 'post_type' => 'obf-events',
                                                 
@@ -226,38 +80,59 @@
                                             );
                                 $present_member = new WP_Query( $args );
                             ?>
-                        <?php if ( $present_member->have_posts() ) : while ( $present_member->have_posts() ) : $present_member->the_post(); ?>
-                        <div class="col-sm-4 col-xs-4">
-                            <li class="event-details">
-                                <a href="#">
-                                    <?php if ( has_post_thumbnail() ) :
-                                    the_post_thumbnail();
-                                    else : ?>
-                                    <img src="" />
-                                    <?php endif; ?>
-                                    <div class="event-name">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php the_title(); ?></a>
-                                    </div>
-                                    <div class="event-date">
-                                        <?php the_field('start_date'); ?> to
-                                        <?php the_field('end_date'); ?>
-                                    </div>
-                                    <div class="event-location">
-                                        <?php the_field('location'); ?>
-                                    </div>
-                                </a>
-                            </li>
-                        </div>
-                        <?php endwhile; else : ?>
-                        <p>
-                            <?php __('No post found'); ?>
-                        </p>
-                        <?php endif;
+                <?php if ( $present_member->have_posts() ) : while ( $present_member->have_posts() ) : $present_member->the_post(); ?>
+                <li class="event-details">
+                    <?php $event_url = get_post_meta( get_the_ID(), 'event_url', true ); ?>
+                    <?php if($event_url) : { ?>
+                    <a href="<?php echo $event_url; ?>" target="_blank">
+
+                        <?php if ( has_post_thumbnail() ) : the_post_thumbnail();
+                                            else : ?>
+
+                        <img src="">
+                        <?php endif; ?>
+                    </a>
+                    <?php } else : { ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if ( has_post_thumbnail() ) : the_post_thumbnail();
+                                            else : ?>
+
+                        <img src="">
+                        <?php endif; ?>
+                    </a>
+                    <?php } endif; ?>
+
+                    <div class="event-name">
+                        <?php if($event_url) : { ?>
+                        <a href="<?php echo $event_url; ?>" target="_blank">
+                            <?php the_title(); ?></a>
+                        <?php } else : { ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?></a>
+                        <?php } endif; ?>
+                    </div>
+                    <div class="event-date">
+                        <?php $custom_start_date = get_field('start_date', false, false);
+                            $custom_start_date = new DateTime($custom_start_date);
+                            $custom_end_date = get_field('end_date', false, false);
+                            $custom_end_date = new DateTime($custom_end_date);
+                            ?>
+                        <?php echo $custom_start_date->format('Y-m-d'); ?> to
+                        <?php echo $custom_end_date->format('Y-m-d'); ?>
+                    </div>
+                    <div class="event-location">
+                        <?php the_field('location'); ?>
+                    </div>
+
+                </li>
+                <?php endwhile; else : ?>
+                <p>
+                    <?php __('No post found'); ?>
+                </p>
+                <?php endif;
                                 wp_reset_postdata(); ?>
-                    </ul>
-                </div>
-            </div>
+            </ul>
+
         </div>
     </section>
 
@@ -265,14 +140,8 @@
 
     <section class="board-section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
+            <h1>Board of directors</h1>
 
-                    <div class="board-head-wrapper">
-                        <h1>Board of directors</h1>
-                    </div>
-                </div>
-            </div>
             <ul class="list-inline member-list">
                 <div class="members">
                     <?php
@@ -311,12 +180,10 @@
                 </div>
             </ul>
         </div>
-        <div class="row">
-            <div class="col-xs-12 board-button">
-                <a href="board" class="button">
-                    <span> See all members</span>
-                </a>
-            </div>
+        <div class="board-button">
+            <a href="board" class="button">
+                <span>More about the OBF board</span>
+            </a>
         </div>
     </section>
 
@@ -324,51 +191,40 @@
     <!-- Join section -->
     <section class="join-section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="join-head-wrapper">
-                        <h1>Join Us!</h1>
-                    </div>
-                    <ul class="list-inline row join-list">
 
-                        <div class="col-sm-4 col-xs-4">
-                            <li class="join-details">
-                                <a href="donate">
-                                    <div class="join-image"><img src="<?php echo get_bloginfo('template_url') ?>/img/icons/heart.png"></div>
-                                    <div class="join-title">
-                                        Support / Donate!
-                                    </div>
+            <h1>Join Us!</h1>
+            <ul class="list-inline join-list">
 
-                                </a>
-                            </li>
-                        </div>
-                        <div class="col-sm-4 col-xs-4">
-                            <li class="join-details">
-                                <a href="">
-                                    <div class="join-image"><img src="<?php echo get_bloginfo('template_url') ?>/img/logos/pear-transparent.png"></div>
-                                    <div class="join-title">
-                                        Volunteer for BOSC!
-                                    </div>
-
-                                </a>
-                            </li>
-                        </div>
-                        <div class="col-sm-4 col-xs-4">
-                            <li class="join-details">
-                                <a href="membership">
-                                    <div class="join-image">
-                                        <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/obf_logo_icon-circle-tr.png">
-                                    </div>
-                                    <div class="join-title">
-                                        Join the OBF!
-                                    </div>
-                                </a>
-                            </li>
+                <li class="join-details">
+                    <a href="donate">
+                        <div class="join-image"><img src="<?php echo get_bloginfo('template_url') ?>/img/icons/heart.png"></div>
+                        <div class="join-title">
+                            Support / Donate!
                         </div>
 
-                    </ul>
-                </div>
-            </div>
+                    </a>
+                </li>
+                <li class="join-details">
+                    <a href="events/bosc/about#get-involved">
+                        <div class="join-image"><img src="<?php echo get_bloginfo('template_url') ?>/img/logos/pear-transparent.png"></div>
+                        <div class="join-title">
+                            Volunteer for BOSC!
+                        </div>
+
+                    </a>
+                </li>
+                <li class="join-details">
+                    <a href="membership">
+                        <div class="join-image">
+                            <img src="<?php echo get_bloginfo('template_url') ?>/img/logos/obf_logo_icon-circle-tr.png">
+                        </div>
+                        <div class="join-title">
+                            Join the OBF!
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
         </div>
     </section>
 

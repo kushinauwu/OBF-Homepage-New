@@ -12,13 +12,11 @@ p {
     font-size: 22px;
     font-family: 'Slabo 27px', serif;
     letter-spacing: 0.7px;
-    text-align: justify;
 }
 
 .h3 {
     font-size: 30px;
     font-family: 'Montserrat', serif;
-    text-align: justify;
 }
 
 span.author-date {
@@ -48,8 +46,8 @@ span.author-date {
 
 .showcase-wrapper img {
     display: block;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 figure {
@@ -88,20 +86,17 @@ figure {
     font-size: 22px;
     font-family: 'Slabo 27px', serif;
     letter-spacing: 0.7px;
-    text-align: justify;
 }
 
 .single-content h3 {
     font-size: 30px;
     font-family: 'Montserrat', serif;
-    text-align: justify;
     color: #275aa1;
 }
 
 .single-content h4 {
     font-size: 26px;
     font-family: 'Montserrat', serif;
-    text-align: justify;
     color: #275aa1;
 }
 
@@ -110,8 +105,26 @@ figure {
     margin-left: 3%;
     font-size: 22px;
     font-family: 'Slabo 27px', serif;
-    text-align: justify;
     letter-spacing: 0.7px;
+}
+
+div#widgetized-area div {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 3%;
+}
+
+div#widgetized-area {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+div#widgetized-area {
+    text-align: center;
+}
+
+div#widgetized-area h4 {
+    text-align: center;
 }
 
 /*mobile display*/

@@ -7,9 +7,10 @@ Template Name: meeting minutes
 <?php get_header(); ?>
 
 <div class="showcase-wrapper">
-    <?php custom_breadcrumbs(); ?>
+
 
     <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
         <article>
             <?php $query2 = new WP_Query( array( 'category_name' => 'meeting-minutes' ) ); ?>
             <?php if($query2->have_posts()) : ?>

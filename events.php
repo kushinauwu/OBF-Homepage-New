@@ -8,7 +8,10 @@ Template Name:events
 
 
 <div class="showcase-wrapper">
-    <?php custom_breadcrumbs(); ?>
+    <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
+    </div>
+
 
     <?php
     /* Check today's date and find events that start on or before today and end on or after today. */
@@ -54,8 +57,14 @@ Template Name:events
 
                     <div class="card-body">
                         <h2 class="card-title">
+                            <?php $event_url = get_post_meta( get_the_ID(), 'event_url', true ); ?>
+                            <?php if($event_url) : { ?>
+                            <a href="<?php echo $event_url; ?>" target="_blank">
+                                <?php the_title(); ?></a>
+                            <?php } else : { ?>
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?></a>
+                            <?php } endif; ?>
                         </h2>
 
                         <p class="card-text card-date"><i class="fas fa-calendar-day fa-lg"></i>
@@ -120,7 +129,7 @@ Template Name:events
                 </div>
             </div>
 
-            <?php while ( $upcoming_events->have_posts() ) : $upcoming_events->the_post(); ?>
+            <?php while ( $upcoming_events->have_posts() ) : $upcoming_events->the_post();  ?>
             <div class="card container mb-4">
                 <div class="card-data container-grid">
                     <div class="card-img">
@@ -129,8 +138,14 @@ Template Name:events
 
                     <div class="card-body">
                         <h2 class="card-title">
+                            <?php $event_url = get_post_meta( get_the_ID(), 'event_url', true ); ?>
+                            <?php if($event_url) : { ?>
+                            <a href="<?php echo $event_url; ?>" target="_blank">
+                                <?php the_title(); ?></a>
+                            <?php } else : { ?>
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?></a>
+                            <?php } endif; ?>
                         </h2>
 
                         <p class="card-text card-date"><i class="fas fa-calendar-day fa-lg"></i>
@@ -198,8 +213,14 @@ Template Name:events
                         if ( $past_events->have_posts() ) : while ( $past_events->have_posts() ) : $past_events->the_post();
                         ?>
                         <li>
+                            <?php $event_url = get_post_meta( get_the_ID(), 'event_url', true ); ?>
+                            <?php if($event_url) : { ?>
+                            <a href="<?php echo $event_url; ?>" target="_blank">
+                                <?php the_title(); ?></a>
+                            <?php } else : { ?>
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?></a>
+                            <?php } endif; ?>
 
                             <p class="info-past">
                                 <?php $custom_start_date = get_field('start_date', false, false);

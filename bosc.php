@@ -7,8 +7,9 @@ Template Name:bosc
 <?php get_header('bosc'); ?>
 
 <div class="showcase-wrapper">
-    <?php custom_breadcrumbs(); ?>
     <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
+
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>
@@ -21,4 +22,4 @@ Template Name:bosc
     </div>
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer('bosc'); ?>

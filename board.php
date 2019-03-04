@@ -7,8 +7,9 @@ Template Name:board
 <?php get_header(); ?>
 
 <div class="showcase-wrapper">
-    <?php custom_breadcrumbs(); ?>
-
+    <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
+    </div>
     <section class="current-members">
         <div class="container-fluid">
             <h1>Board of Directors</h1>
