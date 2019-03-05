@@ -19,14 +19,14 @@
 
 ***Theme Export***
 
-1. Go to the '*All-in-one WP Migration*' tab in the menu, and click on export.
+1. On the dev site, go to the '*All-in-one WP Migration*' tab in the menu, and click on export.
 2. Click on the *EXPORT* TO dropdown and select '*File*'.
 3. Once the export is finished, download the file from the dialog box that shows up.
 
 
   * ***Theme Import***
  
-1. In the admin dashboard, go to *All-in-One WP Migration menu* and select the *Import* option.
+1. In the admin dashboard of the actual live site, go to *All-in-One WP Migration menu* and select the *Import* option.
 2. In the Import page that shows up, click on Import and import from **'File'**. Select the export file that was downloaded when exporting the theme. It will have a .WPRESS extension.
 3. A dialog box that notifies that the previous theme will be erased might show up. Click on Proceed. 
 4. A dialog box that notifies that the data has been imported successfully will show up. Click on the **Permalink Settings** link and login to the WP-admin dashboard through the window that opens up.
