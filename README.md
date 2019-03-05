@@ -2,30 +2,54 @@
 
 **Installation Guidelines**
 
+*Note:* So far the Wordpress version we've used was 5.0.3. The latest update is 5.1, and when importing, it might give a warning mentioning that you're importing from a site using PHP 5 to a site using PHP 7. I have tried importing to a local installation that is using WordPress 5.1, and the import was successful. It **should** work the same even when moving from the dev site to the live site.
+
+*Note 2:* The email address in Settings -> General needs to be changed back to an OBF email!
+
+
   * ***Setup and Plugin Installation***
 
-1. Download/clone repository. Unzip and open *OBF-Homepage-New-master* folder and move all files inside the folder to the local WordPress theme directory, in wp-content->Themes.
-2. Login to wordpress local installation.
-3. Go to **Plugins->Add New**
-4. Search for '*Advanced Custom Fields*' and install plugin. Activate plugin.
-5. Go to **Plugins->Add new** again and search for '*All-in-One WP Migration'* plugin and install. Activate plugin.
-6. We're importing from file, and it is above 2 MB, but WP only allows files below that limit. So we will download and install the file extension. Go to [Import WP Migration](https://import.wp-migration.com/) and download the **Basic** version in any folder.
-7. Go back to the **Plugins menu-> Add New**. Select '*Upload Plugin*' beside the *Add Plugins* heading. Choose the file extension .zip file that was downloaded from [Import WP Migration](https://import.wp-migration.com/) and click on *Install Now*.
-8. Once it is installed, click on '*Activate Plugin*' to activate the extension.
+1. Login to wordpress installation.
+2. Go to **Plugins->Add New** In case *Advanced Custom Fields* and *All-in-one WP Migration* plugins are already installed, skip to theme installation steps.
+3. Search for '*Advanced Custom Fields*' and install plugin. Activate plugin.
+4. Go to **Plugins->Add new** again and search for '*All-in-One WP Migration'* plugin and install. Activate plugin.
+5. We're importing from file, and it is above 2 MB, but WP only allows files below that limit. So we will download and install the file extension. Go to [Import WP Migration](https://import.wp-migration.com/) and download the **Basic** version in any folder.
+6. Go back to the **Plugins menu-> Add New**. Select '*Upload Plugin*' beside the *Add Plugins* heading. Choose the file extension .zip file that was downloaded from [Import WP Migration](https://import.wp-migration.com/) and click on *Install Now*.
+7. Once it is installed, click on '*Activate Plugin*' to activate the extension.
 
-  * ***Theme Installation***
-1. In the admin dashboard, go to *All-in-One WP Migration menu* and select the *Import* option.
-2. In the Import page that shows up, click on Import and import from **'File'**. Navigate to the folder that has the unzipped OBF-Homepage-New theme and then to the '*data*' folder. Select the file with the .WPRESS extension as the file to load. 
+***Theme Export***
+
+1. On the dev site, go to the '*All-in-one WP Migration*' tab in the menu, and click on export.
+2. Click on the *EXPORT* TO dropdown and select '*File*'.
+3. Once the export is finished, download the file from the dialog box that shows up.
+
+
+  * ***Theme Import***
+ 
+1. In the admin dashboard of the actual live site, go to *All-in-One WP Migration menu* and select the *Import* option.
+2. In the Import page that shows up, click on Import and import from **'File'**. Select the export file that was downloaded when exporting the theme. It will have a .WPRESS extension.
 3. A dialog box that notifies that the previous theme will be erased might show up. Click on Proceed. 
 4. A dialog box that notifies that the data has been imported successfully will show up. Click on the **Permalink Settings** link and login to the WP-admin dashboard through the window that opens up.
-5. Go to the bottom of the window and click on *Save Changes*. Do this twice.
-6. Go back to the original window and close the dialog box.
-7. Go to the **Custom Fields** menu and select the Tools sub-menu.
-8. On the right side, click on *Choose file* and navigate to the '*data*' directory again. Choose the .JSON file and click on *Import File*.
-9. Visit the site, it should be working now and the posts with custom fields should have the respective custom fields in the edit options. 
+5. Use the same login credentials as the ones that have been used for logging in to the dev site before, as the database is imported as well.
+6. Go to the bottom of the window and click on *Save Changes*. Do this twice.
+7. Go back to the original window and close the dialog box.
+8. Visit the site, it should be working now and the posts with custom fields should have the respective custom fields in the edit options. 
  
 
 **Details**
+
+*Update 04/03/2019*
+
+-- Added widgets and then added categories and tags to navigate through the news posts. They show up as a category dropdown and tag cloud on single posts, right after the comments section. :)
+
+-- Changed the colors for the blog page.
+
+-- Metabox for ABout page editing instructions.
+
+-- Added BOSC pages for keynotes, panel, Sponsors, and edited the OBF and BOSC footers.
+
+-- Added the rest of the members' pictures :)
+
 
 *Update 18/02/2019*
 

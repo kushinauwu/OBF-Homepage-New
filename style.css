@@ -8,8 +8,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
-
-
 body {
     font-family: 'K2D', sans-serif;
     font-size: 15px;
@@ -18,6 +16,7 @@ body {
     padding: 0px;
     margin: 0;
     overflow-x: hidden;
+    word-break: break-word;
 }
 
 .container {
@@ -38,7 +37,6 @@ section {
     display: block;
 }
 
-/*new*/
 h1,
 h2,
 h3,
@@ -52,13 +50,11 @@ h6 {
     text-align: left;
 }
 
-/**/
 
 h1 {
     font-size: 48px;
 }
 
-/*new*/
 h2 {
     font-size: 42px;
 }
@@ -93,9 +89,6 @@ li li {
 li li li {
     margin-left: 1%;
 }
-
-/**/
-
 
 a {
     transition: color 0.2s;
@@ -155,7 +148,6 @@ p {
 
 #menu-main-menu .menu-item:hover {
     background-color: rgba(128, 0, 128, 0.2);
-    /* navbar hover bg color */
     border-radius: 25px;
     text-decoration: none;
 }
@@ -224,10 +216,13 @@ p {
 
 .dropdown-menu li a:hover {
     background-color: transparent;
-    /* navbar dropdown hover bg color*/
     background-image: none;
     border-radius: 10px;
 
+}
+
+#menu-main-menu .dropdown ul li {
+    padding: 5px;
 }
 
 .dropdown-menu > .active > a {
@@ -249,7 +244,6 @@ p {
     background-color: transparent;
 }
 
-/*change this for lvl 3 menu*/
 .dropdown-menu .dropdown .dropdown-menu {
     display: none;
 }
@@ -272,7 +266,6 @@ p {
 
 i {
     border: solid darkslateblue;
-    /* navbar arrow color */
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -287,7 +280,9 @@ i {
     list-style: none;
     overflow: hidden;
     margin: 10px 0;
-    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 #breadcrumbs li {
@@ -307,63 +302,34 @@ i {
     color: #bbb;
 }
 
-/*ABOUT SECTION // SoOME FELLOWSHIP SECTION COMMONS*/
-.about-section,
-.fellowships-section {
-    /*background-position: left 42vh, right top;
-    background-size: 35% 50% 600px;
-    max-width: 500px;*/
-    margin-top: 3%;
+/*ABOUT SECTION */
+
+.container-fluid {
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
-.about-section .about-background-image,
-.fellowships-section .fellowships-background-image {}
-
-.about-background-image img,
-.fellowships-section .fellowships-background-image img {
-    position: absolute;
-    max-width: 786px;
-    right: 0%;
-    width: 100%;
-    max-height: 480px;
+.about-section img {
+    /*max-height: 480px;*/
     border-radius: 100px 0 0 100px;
-    object-fit: cover;
 }
 
-/*.col-sm-6 {
-    width: 50%;
-    float: left;
-    position: relative;
-    padding-left: 40px;
-    padding-right: 30px;
-}*/
-
-.about-section .about-text-wrapper,
-.fellowships-section .fellowships-text-wrapper {
-    /* position: relative;
-    height: 600px;
-    left: 7%;*/
-    margin-bottom: 5%;
-}
-
-.about-section .about-text-wrapper .about-content,
-.fellowships-section .fellowships-text-wrapper .fellowships-content {
-    /*position: relative;
-    top: 20%;*/
-    /* transform: translateY(-50%);*/
-    margin-left: 15%;
-    margin-right: 5%;
-    margin-top: 15%;
-    margin-bottom: 0;
-}
-
-.about-section .about-text-wrapper .about-content-info,
-.fellowships-section .fellowships-text-wrapper .fellowships-content-info {
+.about-section p {
     font-size: 22px;
     color: rgb(001, 017, 032);
     margin-bottom: 10px;
     font-family: 'Slabo 27px', serif;
-    letter-spacing: 0.7px;
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about-section h1 {
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .container-fluid {
@@ -371,7 +337,14 @@ i {
     margin-right: 2%;
 }
 
-.about-content-button .button {
+.about-content-button {
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about-content-button a {
     position: relative;
     top: 30px;
     display: inline-block;
@@ -382,167 +355,123 @@ i {
     font-family: 'Montserrat', serif;
     border-radius: 0 25px 25px 0;
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-    /* about button bg color*/
     transition: 0.5s ease-in-out;
-}
-
-.about-content-button .button:hover {
-    background-position: right center;
-    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
-    /* about button hover bg color */
-    color: grey;
-}
-
-.about-content-button .button span {
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    z-index: 10;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     font-weight: bold;
 }
 
-/*NEWS SECTION and some FELLOWSHIP SECTION COMMMONS*/
+.about-content-button a:hover {
+    background-position: right center;
+    background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
+    color: grey;
+}
+
+/*news*/
+
 .news-section {
-    /*background-color: #d6f6c6;*/
     background-color: #1b2e25;
-    /* mid section bgcolor*/
-    margin-top: 100px;
-    padding: 55px 20px 70px 0;
-    position: relative;
-    margin-bottom: 30px;
+    margin-top: 3%;
+    padding: 3% 2% 0 0;
     transition: 1s ease;
 }
 
 .news-section h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
     color: #88eef7;
-    /*mid section heading*/
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    padding: 0;
 }
 
-.news-section .news-image {
-    max-width: 586px;
-    max-height: 480px;
-    position: absolute;
+.news-section img {
     border-radius: 0 100px 100px 0;
-
-    width: 40%;
-    height: 80%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: 1.25s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
-.col-md-7 {
-    position: relative;
-    padding-left: 30px;
-    padding-right: 30px;
-    float: left;
-    width: 65%;
-}
-
-.col-md-offset-5 {
-    margin-left: 43%;
-}
-
-.news-section .blog-list {
-    margin-top: 20px;
+.news-section ul {
     list-style: none;
     padding-left: 0;
     display: block;
-    margin-right: 5%;
 }
 
-.blog-list .list-post,
-.fellowship-info-list .list-question {
+.blog-list li {
     border-bottom: 1px solid gray;
-    padding: 15px 0 15px 0;
-    border-bottom-right-radius: 0px;
-    text-align: justify;
+    padding: 10px 0;
+
 }
 
-.blog-list .list-post a {
+.news-section ul li a {
     color: whitesmoke;
-    /* mid section text color*/
-    display: block;
-    padding: 0px 0px;
-    background-color: transparent;
-    text-decoration: none;
     font-family: 'Slabo 27px', serif;
-    font-size: 26px;
-    letter-spacing: 0.7px;
-    transition: 0.3s ease;
+    font-size: 22px;
 }
 
-.blog-list .list-post a:hover {
+.blog-list li a:hover {
     color: skyblue;
 
 }
 
-.news-button .button {
-    position: relative;
-    top: 30px;
-    display: inline-block;
+.latest-news-button a {
     color: darkslategray;
     text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 15px 10px 25px;
-    font-style: normal;
     font-size: 22px;
     font-family: 'Montserrat', serif;
     font-weight: bold;
     border-radius: 25px 0 0 25px;
     background-image: linear-gradient(to left, #84fab0 0%, #8fd3f4 51%);
-    /*  mid section button bg color*/
-    margin-bottom: 30px;
+    margin-top: 3%;
     transition: 0.5s ease-in-out;
-}
-
-.news-button .button:hover {
-    background-position: right center;
-    background-image: linear-gradient(to left, #8fd3f4 0%, #84fab0 51%);
-    /*  mid section button bg color */
-    color: grey;
-}
-
-.news-button .button a {
+    font-size: 20px;
     text-decoration: none;
 }
 
-.news-button .button span {
-    position: relative;
-    z-index: 10;
-    font-size: 18px;
-    text-align: center;
+.latest-news-button a:hover {
+    background-position: right center;
+    background-image: linear-gradient(to left, #8fd3f4 0%, #84fab0 51%);
+    color: grey;
 }
 
-/*FELLOWSHIPS SECTION*/
+/*fellowships*/
 
-.fellowships-section .fellowships-text-wrapper .fellowships-content {
-    /*position: relative;
-    top: 20%;*/
-    /* transform: translateY(-50%);*/
-    margin-left: 10%;
-    margin-right: 5%;
-    margin-top: 0%;
-    margin-bottom: 0;
+
+.fellowships-section {
+    margin-top: 3%;
 }
 
+.fellowships-section h1 {
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
-.fellowship-info-list .list-question {
+.fellowships-section p {
+    font-size: 22px;
+    font-family: 'Slabo 27px', serif;
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fellowships-section ul {
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fellowships-section img {
+    border-radius: 100px 0 0 100px;
+}
+
+.fellowships-section ul li {
     border-bottom: 1px solid grey;
     padding: 15px 0 5px 0;
-    width: 90%;
-    border-bottom-right-radius: 0px;
-    text-align: justify;
     list-style: none;
 }
 
-.fellowship-info-list .list-question a {
+.fellowships-section ul li a {
     display: block;
     padding: 0;
     color: #2d95b5;
@@ -550,88 +479,74 @@ i {
     text-decoration: none;
     font-size: 22px;
     font-family: 'Slabo 27px', serif;
-
     transition: 0.3s ease;
 }
 
-.fellowship-info-list .list-question a:hover {
+.fellowships-section ul li a:hover {
     color: purple;
 
 }
 
-.fellowships-apply-button .button {
-    position: relative;
-    top: 40px;
-    display: inline-block;
+.fellowships-apply-button {
+    margin-left: 6%;
+    margin-right: 6%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fellowships-apply-button a {
     color: darkslategray;
     text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 25px 10px 25px;
-    margin-bottom: 50px;
     font-weight: bold;
     font-family: 'Montserrat', serif;
     border-radius: 0 25px 25px 0;
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
+    font-size: 20px;
+    margin-top: 3%;
+
 
 }
 
-.fellowships-apply-button .button:hover {
+.fellowships-apply-button a:hover {
     background-position: right center;
     background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
     color: grey;
 }
 
-.fellowships-apply-button .button span {
-    position: relative;
-    z-index: 10;
-    font-size: 18px;
-    text-align: center;
-}
-
 /*PROJECTS SECTION*/
 
-
 .projects-section {
-    margin-top: 100px;
-    /*float: left;*/
+    margin-top: 3%;
     background-color: #1b2e25;
-    /*projects section  bgcolor*/
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 1;
     transition: 1s ease;
-    height: 100%;
-    padding: 55px 0 0 0;
 }
 
-.projects-section .projects-text-wrapper {
-    height: auto;
-
-}
-
-.projects-section .projects-text-wrapper h1 {
+.projects-section h1 {
     color: #88eef7;
-    /*projects section heading*/
 }
 
 .projects-list {
     list-style: none;
-    margin-top: 40px;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
-.projects-list .project-name {
-    margin-bottom: 40px;
+.projects-list li {
+    margin-bottom: 6%;
     text-align: center;
-
-
 }
 
-.projects-list .project-name img {
-    padding: 10px;
-    margin-bottom: 20px;
+.projects-section ul li a img {
+    padding: 8px;
+    /* margin-bottom: 20px; */
     border: 3px solid;
     border-bottom-color: rebeccapurple;
-    /*project icon border colors */
     border-top-color: deepskyblue;
     border-left-color: rebeccapurple;
     border-right-color: deepskyblue;
@@ -641,14 +556,14 @@ i {
     width: 150px;
 }
 
-.projects-list .project-name img:hover {
+.projects-section ul li a img:hover {
     border-bottom-color: deepskyblue;
     border-top-color: rebeccapurple;
     border-left-color: deepskyblue;
     border-right-color: rebeccapurple;
 }
 
-.project-title a {
+.projects-section ul li a {
     margin-top: 0;
     font-family: 'Slabo 27px', serif;
     font-weight: bold;
@@ -663,39 +578,37 @@ i {
     transition: 0.3s ease;
 }
 
-.project-title a:hover {
+.projects-section ul li a:hover {
     color: skyblue;
-    /*project title hover text color*/
+}
+
+.projects-button {
+    text-align: center;
 }
 
 .projects-button .button {
-    position: relative;
-    left: 40%;
     display: inline-block;
     color: darkslategray;
     text-shadow: 1px 1px 2px #a6a6a6;
     padding: 15px 25px 15px 25px;
-    margin-bottom: 50px;
+    margin-bottom: 1em;
     font-weight: bold;
     font-family: 'Montserrat', serif;
     font-size: 20px;
-    border-radius: 0 25px 25px 0;
+    border-radius: 25px;
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-    /*project button bg color*/
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out
 }
 
 .projects-button .button:hover {
     background-position: right center;
     background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
-    /* project buutton bg color hover*/
     color: grey;
 }
 
 /*EVENTS SECTION*/
 .events-section,
 .join-section {
-    margin-top: 50px;
     margin-left: 0;
     margin-right: 0;
     height: 100%;
@@ -704,19 +617,19 @@ i {
     transition: 1s ease;
 }
 
-.events-section .events-head-wrapper {
-    height: auto;
-}
 
 .events-list,
 join-list {
     list-style: none;
-    margin-top: 40px;
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .events-list .event-details,
 .join-list .join-details {
-    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -755,35 +668,27 @@ join-list {
     font-family: 'Slabo 27px', serif;
     font-weight: bold;
     color: dimgray;
-    /* event TBA */
     font-size: 22px;
 
 }
 
 /*Board of Directors*/
 .board-section {
-    margin-top: 20px;
     background-color: #1b2e25;
     margin-left: 0;
     margin-right: 0;
-    height: 100%;
-    width: 100%;
     opacity: 1;
-    padding: 55px 0 0 0;
     transition: 1s ease;
 }
 
-.board-section .board-head-wrapper {
-    height: auto;
-}
 
-.board-section .board-head-wrapper h1 {
+.board-section h1 {
     color: #88eef7;
 }
 
 .members {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -791,20 +696,20 @@ join-list {
 
 .member-photo {
     border: 1px solid ghostwhite;
-    border-radius: 250px;
-    height: 250px;
-    width: 250px;
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .member-list {
     list-style: none;
-    margin-top: 40px;
+    margin-top: 1em;
 }
 
 .board-section .member-list .member-details {
-    margin-bottom: 40px;
+    margin-bottom: 1em;
     text-align: center;
 }
 
@@ -814,87 +719,104 @@ join-list {
     height: 100%;
     width: 100%;
     border: 1px solid whitesmoke;
-    border-radius: 250px;
+    border-radius: 200px;
     transition: 0.3s ease-in-out;
     object-fit: contain;
 }
 
 
 .member-list .member-details .member-name a {
-    margin-top: 0;
     font-family: 'Slabo 27px', serif;
     font-weight: bold;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 0.7px;
     transition: 0.3s ease;
     color: whitesmoke;
 }
 
 .member-list .member-details .member-position {
-    margin-top: 0;
     font-family: 'Slabo 27px', serif;
     font-weight: bold;
     color: lightblue;
-    /* event TBA */
     font-size: 22px;
+}
 
+.board-button {
+    text-align: center;
 }
 
 .board-button .button {
-    position: relative;
-    left: 40%;
     display: inline-block;
     color: darkslategray;
     text-shadow: 1px 1px 2px #a6a6a6;
     padding: 15px 25px 15px 25px;
-    margin-bottom: 50px;
+    margin-bottom: 1em;
     font-weight: bold;
     font-family: 'Montserrat', serif;
     font-size: 20px;
     border-radius: 25px;
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out
 }
 
 .board-button .button:hover {
     background-position: right center;
     background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
-    color: dimgray;
+    color: grey;
 }
 
 
 /*JOIN SECTION*/
 
-.join-section .join-head-wrapper {
-    height: auto;
+.join-section {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1em;
+    transition: 0.3s ease;
+}
+
+
+.join-list {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.join-list .join-image {
+    height: 205px;
+    width: 205px;
+    border: 3px solid grey;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.2s ease-in-out;
+}
+
+.join-image:hover {
+    border-radius: 10%;
 }
 
 .join-list .join-details img {
-    padding: 30px;
+    padding: 15px;
     margin-bottom: 20px;
-    height: 250px;
-    width: 250px;
-    border: 3px grey;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
-    border-radius: 180px;
-    border-style: solid;
+    border-radius: 205px;
     transition: 0.3s ease-in-out;
 }
 
-
 /*FOOTER SECTION*/
 .footer-section {
-    padding: 30px 0;
+    padding: 10px 0;
     background-color: whitesmoke;
-    /* footer bg color */
     margin-top: 0;
 }
 
 .footer-section h3 {
-    margin-bottom: 30px;
     color: #275aa1;
-    /* footer heading color */
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 34px;
@@ -903,47 +825,32 @@ join-list {
 .footer-section p {
     margin-bottom: 30px;
     color: darkslategray;
-    /* footer text color */
-    font-family: 'Slabo 27px', serif;
+    margin-left: 2%;
+    font-family: 'Slabo 27px',
+        serif;
     font-size: 22px;
+    text-align: left;
 }
 
-.footer-section input {
-    text-align: center;
-    border-radius: 20px;
-    background-color: rgba(147, 112, 219, 0.3);
-    padding: 5px 5px 5px 5px;
+.footer-sub-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-.footer-section button {
-    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-    /* footer section button bg color */
-    position: relative;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 18px;
-    padding-right: 18px;
-    border-radius: 20px;
-    margin-left: 5px;
-    font-family: 'Montserrat', serif;
-    font-weight: bold;
-    border: none;
-    box-shadow: 2px 2px 12px purple;
-    transition: 0.2s ease-in-out;
-}
-
-.footer-section button:hover {
-    color: whitesmoke;
+.organization,
+.connect {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .footer-section .org-menu {
     list-style: none;
-
+    padding-left: 0;
 }
 
 .footer-section .org-menu .org-menu-item a {
     color: darkslategray;
-    /* footer organisation text color */
     transition: color 0.2s;
     font-family: 'Slabo 27px', serif;
     padding: 20px;
@@ -952,20 +859,15 @@ join-list {
 
 .footer-section .org-menu .org-menu-item a:hover {
     color: dodgerblue;
-    /* footer link hover text color */
 }
 
 .networks {
     display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-.footer-section .network-item {
-    margin: 12px;
+    grid-template-columns: 20% 20% 20% 20%;
 }
 
 .footer-logo {
-    padding: 20px;
+    padding: 10px;
 }
 
 .credits {
@@ -983,9 +885,6 @@ join-list {
 }
 
 /* Highlight active form field */
-
-
-
 h2.screen-reader-text {
     display: none;
 }
@@ -1108,6 +1007,10 @@ input#submit:active {
     top: 1px;
 }
 
+.page-numbers {
+    font-family: 'K2D', sans-serif;
+}
+
 .errorpage-wrapper h5 {
     text-transform: inherit;
 }
@@ -1127,9 +1030,25 @@ input#submit:active {
     }
 }
 
+@media only screen and (max-width: 900px) {
+
+
+    .news-section {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .members {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .events-list .event-details img {
+        height: 24vw;
+        width: 24vw;
+    }
+}
+
 @media only screen and (max-width: 767px) {
-
-
 
     h1,
     h2,
@@ -1145,8 +1064,6 @@ input#submit:active {
         margin-top: 3vh;
     }
 
-
-    /*new*/
     h2 {
         font-size: 4.8vh;
     }
@@ -1222,6 +1139,7 @@ input#submit:active {
         font-family: 'Lato', serif;
         font-size: inherit;
         letter-spacing: inherit;
+        word-break: break-word;
     }
 
     a:hover {
@@ -1379,7 +1297,6 @@ input#submit:active {
         transform: rotate(45deg) translateY(-5px);
     }
 
-    /*change this for lvl 3 menu*/
     .dropdown-menu .dropdown .dropdown-menu {
         display: none;
     }
@@ -1399,612 +1316,12 @@ input#submit:active {
         background-color: rgb(186, 196, 188);
     }
 
-    /* ABOUT */
 
-    .about-section {
-        /*background-position: left 42vh, right top;
-    background-size: 35% 50% 600px;
-    max-width: 500px;*/
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-bottom: 0vh;
-    }
-
-    .about-section .about-background-image {}
-
-    .about-background-image img {
-        display: none;
-    }
-
-
-    .about-section .about-text-wrapper,
-    .fellowships-section .fellowships-text-wrapper {
-
-        margin-left: 4%;
-        margin-right: 4%;
-
-    }
-
-    .about-section .about-text-wrapper .about-content,
-    .fellowships-section .fellowships-text-wrapper .fellowships-content {
-        margin-left: 2%;
-        padding-left: 2%;
-        padding-right: 2%;
-        margin-top: 0;
-    }
-
-    .about-section .about-text-wrapper .about-content-info {
-        /* padding-right: 40px;*/
-        font-size: 3vh;
-        /* color: #2d95b5;*/
-        color: rgb(001, 017, 032);
-        /* about and felloship text color */
-        margin-bottom: 10px;
-        text-align: justify;
-        font-family: 'Lato', serif;
-        letter-spacing: normal;
-    }
-
-    .container-fluid {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-    .about-content-button .button {
-        position: relative;
-        top: 3vh;
-        left: 30%;
-        display: inline-block;
-        color: darkslategray;
-        /* about button text color*/
-        padding: 1vh 2vh 1vh 2vh;
-        font-weight: normal;
-        font-style: normal;
-        font-family: 'Montserrat', serif;
-        border-radius: 0 25px 25px 0;
-        background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-        /* about button bg color*/
-        transition: 0.5s ease-in-out;
-    }
-
-    .about-content-button .button:hover {
-        background-position: right center;
-        background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
-        /* about button hover bg color */
-        color: grey;
-    }
-
-    .about-content-button .button span {
-        position: relative;
-        font-family: 'Montserrat', sans-serif;
-        z-index: 10;
-        font-size: 2.5vh;
-        text-align: center;
-        font-weight: bold;
-        vertical-align: text-top;
-    }
-
-    /*NEWS SECTION and some FELLOWSHIP SECTION COMMMONS*/
-    .news-section {
-        /*background-color: #d6f6c6;*/
-        background-color: #1b2e25;
-        /* mid section bgcolor*/
-        margin-top: 3vh;
-        padding: 2%;
-        position: relative;
-        margin-bottom: 3vh;
-        transition: 1s ease;
-
-    }
-
-    .news-section h1 {
-        font-size: 5vh;
-        margin-bottom: 1vh;
-        color: #88eef7;
-        /*mid section heading*/
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        padding: 0;
-    }
-
-    .news-section .news-image {
-        display: none;
-    }
-
-    .col-md-7 {
-        position: relative;
-        padding-left: 0;
-        padding-right: 0;
-        float: left;
-        width: 100%;
-    }
-
-    .col-md-offset-5 {
-        margin-left: 0;
-    }
-
-    .news-section .blog-list,
-    .fellowships-section .fellowship-info-list {
-        margin-top: 2vh;
-        list-style: none;
-        padding-left: 0;
-        display: block;
-    }
-
-    .blog-list .list-post,
-    .fellowship-info-list .list-question {
-        border-bottom: 1px solid gray;
-        padding: 1% 0;
-        border-bottom-right-radius: 0px;
-        text-align: justify;
-    }
-
-    .blog-list .list-post a {
-        color: whitesmoke;
-        /* mid section text color*/
-        display: block;
-        padding: 2% 0px;
-        background-color: transparent;
-        text-decoration: none;
-        font-family: 'Lato', serif;
-        font-size: 3vh;
-        letter-spacing: normal;
-        transition: 0.3s ease;
-    }
-
-    .blog-list .list-post a:hover {
-        color: skyblue;
-
-    }
-
-    .news-button .button {
-        position: relative;
-        top: 3vh;
-        left: 30%;
-        display: inline-block;
-        color: darkslategray;
-        padding: 1vh 2vh 1vh 2vh;
-        font-weight: normal;
-        text-shadow: 1px 1px 2px gray;
-        font-style: normal;
-        font-size: 2.5vh;
-        font-family: 'Montserrat', serif;
-        font-weight: bold;
-        border-radius: 25px 0 0 25px;
-        background-image: linear-gradient(to left, #84fab0 0%, #8fd3f4 51%);
-        /*  mid section button bg color*/
-        margin-bottom: 4vh;
-        transition: 0.5s ease-in-out;
-    }
-
-    .news-button .button:hover {
-        background-position: right center;
-        background-image: linear-gradient(to left, #8fd3f4 0%, #84fab0 51%);
-        /*  mid section button bg color */
-        color: grey;
-    }
-
-    .news-button .button a {
-        text-decoration: none;
-    }
-
-    .news-button .button span {
-        position: relative;
-        z-index: 10;
-        font-size: 2.5vh;
-        text-align: center;
-        vertical-align: text-top;
-    }
-
-    /*FELLOWSHIPS SECTION*/
-    .fellowships-section {
-        height: 100%;
-        width: 100%;
-        transition: 1s ease;
-        margin-top: 0;
-        margin-bottom: 3vh;
-        padding-bottom: 3vh;
-    }
-
-    .fellowships-section .fellowships-text-wrapper {
-        position: relative;
-        top: 0;
-        height: auto;
-    }
-
-    .fellowships-section .fellowships-background-image {
-        display: none;
-    }
-
-
-    .fellowships-section .fellowships-text-wrapper .fellowships-content-info p {
-        /* padding-right: 40px;*/
-        font-size: 3vh;
-        /* color: #2d95b5;*/
-        color: rgb(001, 017, 032);
-        /* about and felloship text color */
-        margin-bottom: 1vh;
-        text-align: justify;
-        font-family: 'Lato', serif;
-        letter-spacing: normal;
-    }
-
-    .fellowship-info-list .list-question a {
-        display: block;
-        padding: 0;
-        color: #2d95b5;
-        /* fellowship link text color */
-        background-color: transparent;
-        text-decoration: none;
-        padding: 1% 0;
-        font-size: 3vh;
-        transition: 0.3s ease;
-        font-family: 'Lato', serif;
-        font-weight: normal;
-    }
-
-    .fellowship-info-list .list-question a:hover {
-        color: purple;
-
-    }
-
-    .fellowships-apply-button .button {
-        position: relative;
-        top: 3vh;
-        left: 30%;
-        display: inline-block;
-        color: darkslategray;
-        text-shadow: 1px 1px 2px gray;
-        padding: 1vh 2vh 1vh 2vh;
-        margin-bottom: 0;
-        font-weight: bold;
-        font-family: 'Montserrat', serif;
-        border-radius: 0 25px 25px 0;
-        background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-        /* fellowshups button bgcolor*/
-        transition: 0.5s ease-in-out;
-    }
-
-    .fellowships-apply-button .button:hover {
-        background-position: right center;
-        background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
-        color: grey;
-    }
-
-    .fellowships-apply-button .button span {
-        position: relative;
-        z-index: 10;
-        font-size: 2.5vh;
-        text-align: center;
-        vertical-align: text-top;
-    }
-
-
-    .projects-section {
-        margin-top: 0;
-        /*float: left;*/
-        background-color: #1b2e25;
-        /*projects section  bgcolor*/
-        margin-left: auto;
-        margin-right: 0;
-        transition: 1s ease;
-        height: 100%;
-        width: auto;
-        padding-top: 2vh;
-        padding-bottom: 5vh;
-        opacity: 1;
-    }
-
-    .projects-section .projects-text-wrapper {
-        height: auto;
-        transform: translateX(0%);
-
-    }
-
-    .projects-section .projects-text-wrapper h1 {
-        color: #88eef7;
-        /*projects section heading*/
-    }
-
-    .projects-list {
-        list-style: none;
-        margin-top: 3vh;
-    }
-
-    .projects-list .project-name {
-        margin-bottom: 2vh;
-        text-align: center;
-    }
-
-    .projects-list .project-name img {
-        padding: 1vh;
-        margin-bottom: 0.5vh;
-        border: 3px solid;
-        border-bottom-color: rebeccapurple;
-        /*project icon border colors */
-        border-top-color: deepskyblue;
-        border-left-color: rebeccapurple;
-        border-right-color: deepskyblue;
-        border-radius: 25%;
-        transition: 0.5s ease-in-out;
-    }
-
-    .projects-list .project-name img:hover {
-        border-bottom-color: deepskyblue;
-        border-top-color: rebeccapurple;
-        border-left-color: deepskyblue;
-        border-right-color: rebeccapurple;
-    }
-
-    .project-title a {
-        margin-top: 0;
-        font-family: 'Lato', serif;
-        font-weight: bold;
-        color: whitesmoke;
-        /*project titles*/
-        display: block;
-        padding: 0;
-        background-color: transparent;
-        text-decoration: none;
-        font-size: 3vh;
-        letter-spacing: normal;
-        transition: 0.3s ease;
-    }
-
-    .project-title a:hover {
-        color: skyblue;
-        /*project title hover text color*/
-    }
-
-    .projects-button .button {
-        position: relative;
-        left: 30%;
-        display: inline-block;
-        margin-bottom: 5vh;
-        font-weight: bold;
-        transition: 0.5s ease-in-out;
-        text-shadow: 1px 1px 2px gray;
-        top: 3vh;
-        color: darkslategray;
-        /* about button text color*/
-        padding: 1% 3%;
-        border-radius: 3vh;
-        background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 99%);
-        /* about button bg color*/
-        transition: 0.5s ease-in-out;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2vh;
-    }
-
-    .projects-button .button span {
-        font-size: 2.5vh;
-        font-family: 'Montserrat', serif;
-    }
-
-    .projects-button .button:hover {
-        background-position: right center;
-        background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
-        /* project buutton bg color hover*/
-        color: grey;
-    }
-
-    /*EVENTS SECTION*/
-    .events-section,
-    .board-section {
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-        transition: 1s ease;
-        padding-top: 1vh;
-    }
-
-    .events-section .events-head-wrapper {
-        height: auto;
-        transform: none;
-    }
-
-    .events-list {
-        list-style: none;
-        margin-top: 3vh;
-    }
-
-    .events-list .event-details {
-        margin-bottom: 2vh;
-        text-align: center;
-    }
-
-    .events-list .event-details img {
-        padding: 0.5vh;
-        margin-bottom: 1vh;
-        height: auto;
-        width: 100%;
-        border: 0.5vh skyblue;
-        /*event icon border*/
-        border-radius: 50%;
-        border-style: dashed;
-        transition: 0.3s ease-in-out;
-    }
-
-    .events-list .event-details img:hover {
-        background-color: skyblue;
-        /*event icon border hover bg color*/
-        border-radius: 10%;
-    }
-
-    .events-list .event-details .event-name {
-        margin-top: 0;
-        font-family: 'Lato', sans-serif;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 0;
-        font-size: 3vh;
-        line-height: 1.1;
-        letter-spacing: 0.7px;
-        transition: 0.3s ease;
-    }
-
-    .events-list .event-details .event-date {
-        margin-top: 0;
-        font-family: 'Lato', sans-serif;
-        font-weight: bold;
-        color: dimgray;
-        /* event TBA */
-        font-size: 2vh;
-
-    }
-
-
-    /*Board of Directors*/
-    .board-section {
-        margin-top: 0px;
-        background-color: #1b2e25;
-        /*bord of directorsa section  bgcolor*/
-        margin-left: 0;
-        margin-right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-        padding: 3vh 0 0 0;
-        transition: 1s ease;
-    }
-
-    .board-section .board-head-wrapper {
-        height: auto;
-    }
-
-    .board-section .board-head-wrapper h1 {
-        color: #88eef7;
-        /*projects section heading*/
-    }
-
-    .members {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .member-photo {
-        border: 1px solid ghostwhite;
-        border-radius: 150px;
-        height: 130px;
-        width: 130px;
-    }
-
-    .member-list {
-        list-style: none;
-        margin-top: 4vh;
-    }
-
-    .board-section .member-list .member-details {
-        margin-top: 2vh;
-        margin-bottom: 3vh;
-        text-align: center;
-    }
-
-    .board-section .member-list .member-details img {
-        padding: 1vh;
-        margin-bottom: 2vh;
-        height: 100%;
-        width: 100%;
-        /*event icon border*/
-        border-radius: 50%;
-        transition: 0.3s ease-in-out;
-    }
-
-
-    .member-list .member-details .member-name a {
-        margin-top: 0;
-        font-family: 'Montserrat', serif;
-        font-weight: normal;
-        text-decoration: none;
-        font-size: 3vh;
-        letter-spacing: normal;
-        transition: 0.3s ease;
-        color: whitesmoke;
-    }
-
-    .member-list .member-details .member-position {
-        margin-top: 0;
-        font-family: 'Lato', serif;
-        font-weight: normal;
-        color: lightblue;
-        font-size: 2.5vh;
-
-    }
-
-    .board-button .button {
-        position: relative;
-        left: 25%;
-        display: inline-block;
-        color: darkslategray;
-        padding: 1% 3%;
-        text-shadow: 1px 1px 2px gray;
-        margin-bottom: 50px;
-        font-weight: bold;
-        font-family: 'Montserrat', serif;
-        font-size: 2.5vh;
-        border-radius: 25px;
-        background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%);
-        /*project button bg color*/
-        transition: 0.5s ease-in-out;
-    }
-
-    .board-button .button:hover {
-        background-position: right center;
-        background-image: linear-gradient(to right, #8fd3f4 0%, #84fab0 51%);
-        /* project buutton bg color hover*/
-        color: dimgray;
-    }
-
-    /*JOIN SECTION*/
-
-    .join-section .join-head-wrapper {
-        height: auto;
-    }
-
-    .join-list .join-details img {
-        padding: 2vh;
-        margin-bottom: 2vh;
-        height: auto;
-        width: 100%;
-        border: 3px grey;
-        /*event icon border*/
-        border-radius: 50%;
-        border-style: solid;
-        transition: 0.3s ease-in-out;
-        margin-left: 0%;
-        margin-right: auto;
-        margin-top: 2vh;
-    }
-
-    .join-title {
-        margin-top: 0;
-        margin-left: 0;
-        font-family: 'Lato', serif;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 0;
-        font-size: 3vh;
-        transition: 0.3s ease;
-        text-align: center;
-        letter-spacing: normal;
-    }
-
-    /*FOOTER SECTION*/
     .footer-section {
         padding-top: 4vh;
         background-color: whitesmoke;
         /* footer bg color */
         margin-top: 0;
-        text-align: center;
-    }
-
-    .footer-sub-section {
         text-align: center;
     }
 
@@ -2016,6 +1333,13 @@ input#submit:active {
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
         font-size: 4vh;
+        word-break: break-word;
+    }
+
+    .organization,
+    .connect {
+        padding-left: 4%;
+        padding-right: 4%;
     }
 
     .footer-section p {
@@ -2024,7 +1348,6 @@ input#submit:active {
         /* footer text color */
         font-family: 'Lato', sans-serif;
         font-size: 3vh;
-        text-align: justify;
     }
 
     .footer-section input {
@@ -2057,7 +1380,7 @@ input#submit:active {
 
     .footer-section .org-menu {
         list-style: none;
-
+        text-align: left;
     }
 
     .footer-section .org-menu .org-menu-item a {
@@ -2074,8 +1397,13 @@ input#submit:active {
         /* footer link hover text color */
     }
 
+    .networks {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
     .footer-section .network-item {
-        margin: 1.5vh;
+        margin: 5px;
     }
 
     .footer-section .netwok-item img {
@@ -2104,5 +1432,327 @@ input#submit:active {
         font-family: 'Lato', serif;
         font-size: 3vh;
         letter-spacing: normal;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .about-section,
+    .news-section,
+    .fellowships-section {
+        flex-wrap: wrap;
+    }
+
+    .about-section h1 {
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about-section img {
+        display: none;
+    }
+
+    .about-section p {
+        font-family: 'Lato', sans-serif;
+        font-size: 3vh;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about-section figure {
+        margin-bottom: 0;
+    }
+
+    .about-content-button {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .about-content-button a {
+        top: 1.5vh;
+        color: darkslategray;
+        padding: 1vh 2vh 1vh 2vh;
+        font-size: 2.8vh
+    }
+
+    /*NEWS SECTION*/
+
+    .news-section {
+        padding-top: 1%;
+    }
+
+    .news-section h1 {
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 5vh;
+        color: #88eef7;
+    }
+
+    .news-section img {
+        display: none;
+    }
+
+
+    .wp-block-media-text.alignwide.has-media-on-the-right.fellowships-section {
+        grid-template-columns: 100%;
+    }
+
+    .news-section ul,
+    .fellowships-section ul {
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-top: 2vh;
+        list-style: none;
+    }
+
+    .news-section ul li a {
+        color: whitesmoke;
+        display: block;
+        padding: 0;
+        font-family: 'Lato', sans-serif;
+        font-size: 3vh;
+        letter-spacing: normal;
+    }
+
+    .latest-news-button {
+        text-align: center;
+    }
+
+    .latest-news-button a {
+        top: 3vh;
+        padding: 1vh 2vh 1vh 2vh;
+        font-size: 2.5vh;
+        font-family: 'Montserrat', serif;
+        margin-bottom: 3vh;
+    }
+
+    /*FELLOWSHIPS SECTION*/
+
+    .fellowships-section h1 {
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .fellowships-section img {
+        display: none;
+    }
+
+    .fellowships-section ul {
+        margin-top: 0;
+    }
+
+    .fellowships-section p {
+        font-size: 3vh;
+        font-family: 'Lato', sans-serif;
+        letter-spacing: normal;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .fellowships-section ul li {
+        padding: 5px 0;
+    }
+
+    .fellowships-section ul li a {
+        padding: 1% 0;
+        font-size: 3vh;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .fellowships-section ul li a:hover {
+        color: purple;
+
+    }
+
+    .fellowships-section figure {
+        margin-bottom: 0;
+    }
+
+    .fellowships-apply-button {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .fellowships-apply-button a {
+        top: 3vh;
+        padding: 1vh 2vh 1vh 2vh;
+    }
+
+    /*projects*/
+    .projects-section {
+
+        padding-top: 2vh;
+    }
+
+    .projects-list {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .projects-list .li {
+        margin-bottom: 2vh;
+    }
+
+    .projects-section ul li a img {
+        padding: 1vh;
+        margin-bottom: 0.5vh;
+        width: 100px;
+        height: 100px;
+    }
+
+    .projects-section ul li a {
+        font-family: 'Lato', serif;
+
+        padding: 0;
+        font-size: 3vh;
+        letter-spacing: normal;
+    }
+
+    .projects-button .button {
+        margin-bottom: 1em;
+        padding: 1% 3%;
+        border-radius: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2vh;
+    }
+
+    /*EVENTS SECTION*/
+    .events-section,
+        {
+        transition: 1s ease;
+        padding-top: 1vh;
+    }
+
+    .events-list {
+        margin-top: 3vh;
+    }
+
+    .events-list .event-details,
+    .join-list .join-details {
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    .events-list .event-details img {
+        padding: 0.5vh;
+        margin-bottom: 1vh;
+        border: 0.5vh dashed skyblue;
+        border-radius: 50%;
+    }
+
+    .events-list .event-details img:hover {
+        background-color: skyblue;
+        border-radius: 10%;
+    }
+
+    .events-list .event-details .event-name,
+    .join-list .join-details .join-title {
+        margin-top: 0;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0;
+        font-size: 3vh;
+        line-height: 1.1;
+        letter-spacing: 0.7px;
+        transition: 0.3s ease;
+    }
+
+    .events-list .event-details .event-date {
+        font-family: 'Lato', sans-serif;
+        font-size: 2vh;
+    }
+
+    .event-location {
+        font-size: 2vh;
+    }
+
+    /*Board of Directors*/
+    .board-section {
+
+        padding: 3vh 0 0 0;
+        transition: 1s ease;
+    }
+
+    .members {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .member-photo {
+        border-radius: 150px;
+        height: 130px;
+        width: 130px;
+    }
+
+    .member-list {
+        margin-top: 4vh;
+    }
+
+    .board-section .member-list .member-details {
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+
+    .board-section .member-list .member-details img {
+        padding: 1vh;
+        margin-bottom: 2vh;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+    }
+
+    .member-list .member-details .member-name a {
+        margin-top: 0;
+        font-family: 'Montserrat', serif;
+        font-weight: normal;
+        font-size: 3vh;
+        letter-spacing: normal;
+    }
+
+    .member-list .member-details .member-position {
+        margin-top: 0;
+        font-family: 'Lato', serif;
+        font-weight: normal;
+        font-size: 2.5vh;
+    }
+
+    .board-button .button {
+        padding: 1% 3%;
+        font-size: 2.5vh;
+    }
+
+    /*JOIN SECTION*/
+    .join-title {
+        margin-top: 0;
+        margin-left: 0;
+        font-family: 'Lato', serif;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0;
+        font-size: 3vh;
+        transition: 0.3s ease;
+        text-align: center;
+        letter-spacing: normal;
+    }
+
+    .join-list .join-image {
+        width: 100px;
+        height: 100px;
     }
 }

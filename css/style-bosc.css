@@ -174,8 +174,7 @@ p {
     font-family: 'Slabo 27px';
     font-size: 20px;
     color: darkslategray;
-    padding-left: 3%;
-    padding-right: 3%;
+
 }
 
 /*bosc homepage*/
@@ -258,7 +257,6 @@ p.bosc-overview {
 }
 
 .bosc-summary {
-    background-color: whitesmoke;
     margin-bottom: 0;
 }
 
@@ -266,18 +264,14 @@ p.bosc-summary {
     padding: 0 3% 10px 3%;
 }
 
-ul.bosc-summary {
-    padding-bottom: 30px;
-}
-
-.bosc-summary li {
-    margin-left: 3%;
-}
-
 .bosc-sponsors-images {
     margin-top: 5%;
 }
 
+p.bosc-registration {
+    padding-left: 0;
+    margin-left: 0;
+}
 
 /*about BOSC*/
 
@@ -337,15 +331,19 @@ ul.bosc-timeline li a {
 }
 
 .get-involved {
-    padding: 0 3%;
+    padding: 1% 3%;
     margin-bottom: 20px;
 }
 
-div.get-involved:nth-child(odd) {
+.get-involved h2 {}
+
+.get-involved p {}
+
+.get-involved:nth-child(odd) {
     border: 2px solid #fffcb9;
 }
 
-div.get-involved:nth-child(even) {
+.get-involved:nth-child(even) {
     border: 2px solid #e2ffb9;
 }
 
@@ -440,6 +438,195 @@ ul.bosc-fellowship-license {
     margin-top: 0;
 }
 
+/*keynote speakers */
+
+.keynote-speakers {
+    padding: 10px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.keynote-speakers figure {
+    text-align: center;
+}
+
+.keynote-speakers > figure > img {
+    margin-top: 3vh;
+    max-width: 300px;
+    height: auto;
+}
+
+.keynote-speakers:nth-child(even) {
+    border: 2px solid #fffcb9;
+}
+
+.keynote-speakers:nth-child(odd) {
+    border: 2px solid #e2ffb9;
+}
+
+.keynote-speakers h2 {
+    text-align: center;
+}
+
+/* panel */
+
+
+.panel {
+    padding: 10px;
+}
+
+.panel figure {
+    text-align: center;
+}
+
+.keynote-speakers .wp-block-media-text__content,
+.panel .wp-block-media-text__content {
+    padding: 0;
+}
+
+.panel h4 {
+    text-align: center;
+}
+
+.panel > figure > img {
+    width: 180px;
+    height: auto;
+}
+
+.panel:nth-child(odd) {
+    border: 2px solid #e2ffb9;
+}
+
+.panel:nth-child(even) {
+    border: 2px solid #fffcb9;
+}
+
+/*sponsors page*/
+.sponsors-introduction img,
+.bosc-participants img {
+    border-radius: 20px;
+}
+
+.bosc-participants {
+    background-color: ghostwhite;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+}
+
+tr:nth-child(1) {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.wp-block-table.bosc-participants-table tr:nth-child(odd) {
+    background-color: #e2ffb9;
+}
+
+.bosc-participants-table tr:nth-child(even) {
+    background-color: #fffcb9;
+}
+
+.wp-block-table.bosc-participants-table td {
+    border: 1px solid lightgray;
+    padding: 10px 15px;
+}
+
+.bosc-sponsorship-help ul {
+    list-style: none;
+}
+
+.bosc-sponsorship-help ul li {
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.bosc-sponsorship-help ul li:nth-child(odd) {
+    background: #e2ffb9;
+}
+
+.bosc-sponsorship-help ul li:nth-child(even) {
+    background: #fffcb9;
+}
+
+.bosc-sponsors-gallery .wp-block-column {
+    padding: 1% 2%;
+}
+
+.bosc-sponsors-gallery .wp-block-column:nth-child(odd) {
+    border: 2px solid #e2ffb9;
+
+}
+
+.bosc-sponsors-gallery .wp-block-column:nth-child(even) {
+    border: 2px solid #fffcb9;
+}
+
+.bosc-sponsors-gallery .blocks-gallery-item {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.bosc-sponsors-gallery figure {
+    max-width: 100px;
+}
+
+.bosc-sponsorship-benefits {
+    list-style: none;
+}
+
+.bosc-sponsorship-benefits li {
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.bosc-sponsorship-benefits li:nth-child(odd) {
+    background: #e2ffb9;
+}
+
+.bosc-sponsorship-benefits li:nth-child(even) {
+    background: #fffcb9;
+}
+
+
+.bosc-footer-sub-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bosc-footer-sub-section p {
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.bosc-footer-sub-section .org-menu .org-menu-item a {
+    color: dodgerblue;
+    text-align: left;
+    padding: 0;
+}
+
+.bosc-footer-sub-section .networks {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.network-item {
+    text-align: center;
+}
 
 @media only screen and (max-width: 1024px) {
     .container {
@@ -450,6 +637,21 @@ ul.bosc-fellowship-license {
     .navbar-header .navbar-logo img {
         max-height: 10vh;
     }
+
+    .sponsors-introduction,
+    .bosc-sponsors-gallery {
+        flex-wrap: nowrap;
+    }
+
+    .sponsors-introduction .wp-block-column .has-2-columns {
+        flex-wrap: nowrap;
+    }
+
+    .bosc-sponsorship-help {
+        display: block;
+    }
+
+
 }
 
 
@@ -615,6 +817,47 @@ ul.bosc-fellowship-license {
     .bosc-sponsors {
         display: block;
     }
+
+    .keynote-speakers {
+        display: block;
+        padding: 0;
+        align-items: start;
+        margin-bottom: 30px;
+
+    }
+
+    .keynote-speakers figure {
+        text-align: center;
+    }
+
+    .keynote-speakers > figure > img {
+        margin-top: 2vh;
+        width: 60vw;
+    }
+
+    .panel {
+        display: block;
+    }
+
+    .get-involved h2 {
+        margin-left: 0px;
+        padding-left: 2%;
+    }
+
+    .sponsors-introduction,
+    .bosc-sponsors-gallery {
+        display: block;
+    }
+
+    .sponsors-introduction .has-2-columns figure {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .bosc-participants {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -687,14 +930,6 @@ ul.bosc-fellowship-license {
         margin-bottom: 2vh;
     }
 
-    div.get-involved:nth-child(odd) {
-        border: 2px solid #fffcb9;
-    }
-
-    div.get-involved:nth-child(even) {
-        border: 2px solid #e2ffb9;
-    }
-
     .sponsors {
         background-color: ghostwhite;
         margin-bottom: 0;
@@ -733,5 +968,33 @@ ul.bosc-fellowship-license {
         margin: auto;
         width: 100px;
         height: auto;
+    }
+
+    table {
+        font-family: 'Lato', sans-serif;
+        font-size: 2.7vh;
+    }
+
+    tr:nth-child(1) {
+        font-size: 2.7vh;
+    }
+
+    .wp-block-table.bosc-participants-table td {
+        padding: 2px;
+    }
+
+    .bosc-sponsorship-help ul,
+    .bosc-sponsorship-benefits {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .bosc-sponsorship-help ul li,
+    .bosc-sponsorship-benefits li {
+        padding: 5px;
+    }
+
+    .bosc-footer-sub-section {
+        grid-template-columns: 100%;
     }
 }

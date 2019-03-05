@@ -2,9 +2,9 @@
 
 <!--main content start -->
 <div class="showcase-wrapper">
-    <?php custom_breadcrumbs(); ?>
 
     <div class="container-fluid">
+        <?php custom_breadcrumbs(); ?>
         <div class="navigation-wrapper">
             <div class="posts-navigation">
                 <?php the_post_navigation(
@@ -52,6 +52,19 @@
                 <?php __('No post found'); ?>
             </p>
             <?php endif; ?>
+        </div>
+
+        <div id="widgetized-area">
+
+            <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('widgetized-area')) : else : ?>
+
+            <div class="pre-widget">
+                <p><strong>Widgetized Area</strong></p>
+                <p>This panel is active and ready for you to add some widgets via the WP Admin</p>
+            </div>
+
+            <?php endif; ?>
+
         </div>
     </div>
 </div>

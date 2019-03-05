@@ -9,143 +9,74 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 .latest-post-wrapper {
-    position: relative;
-    height: 250px;
-    width: 93.5%;
-    z-index: 1;
-    margin: 1% 2%;
-
+    background-color: rgb(27, 46, 37);
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 1px 7px 3px darkgrey;
+    margin-bottom: 4vh;
 }
 
 .latest-post-content {
-    text-align: center;
-    padding: 40px 50px;
-    position: relative;
-    z-index: 100;
+    padding: 10px;
 }
 
 .latest-post-content h1 {
-    background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    width: 70%;
-    margin-left: 15%;
-    padding: 0px 20px;
-
-}
-
-.latest-post-content h1 a {
-    font-family: 'Montserrat', sans-serif;
+    color: #88eef7;
 }
 
 .latest-post-content p {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: darkslategray;
-    width: 70%;
-    text-align: center;
-    margin-left: 15%;
+    font-size: 20px;
+    color: ghostwhite;
+}
+
+.latest-post-content .date {
     font-size: 18px;
-    padding: 10px 20px;
-    font-family: 'Slabo 27px', serif;
-}
-
-.latest-post-content a {
-    color: darkslategray;
-}
-
-.latest-post-background {
-    position: absolute;
-    height: 250px;
-    width: 100%;
-    background-color: rgba(100, 100, 100, 0.5);
-    left: 0%;
-    top: 0;
-    z-index: -100;
-}
-
-.latest-post-background img {
-    filter: blur(3px) sepia(50%) brightness(50%);
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    margin: 0 0;
-
 }
 
 .recent-posts {
-    margin-top: 3%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% 33% 33%;
 }
 
-/*.recent-posts .post-display {
-    width: 32.5%;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin-bottom: 3%;
+.recent-posts .post-display {
+    margin: 20px;
+    background-color: rgb(27, 46, 37);
     position: relative;
-}*/
 
-.recent-posts-wrapper {
-    background-color: rgba(100, 100, 100, 0.5);
-    margin: 1% 0%;
-    padding: 1% 3%;
-    height: 240px;
-    width: 400px;
-    /*new*/
-    position: relative;
-    z-index: 1;
 }
 
-.recent-posts-background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(100, 100, 100, 0.5);
-    left: 0%;
-    top: 0;
-    z-index: -100;
+.recent-post-wrapper {
+    margin: 1px;
 }
 
-.recent-posts-background img {
-    filter: blur(2px) brightness(50%);
-    max-height: 100%;
-    margin: 0 0;
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+.recent-post-wrapper hr {
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: rgb(27, 46, 37);
 }
 
-.recent-posts-content {
-    position: relative;
-    z-index: 100;
-}
-
-.recent-posts-content h3 {
-    font-family: 'Montserrat', serif;
+.recent-post-content h1 {
+    font-size: 36px;
     text-align: center;
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1% 2%;
-    font-size: 24px;
-    text-transform: none;
+    word-break: break-word;
+    color: #88eef7;
 }
 
-.recent-posts-content p {
-    font-family: 'Slabo 27px', serif;
-    text-align: justify;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1% 2%;
-    font-size: 15px;
+.recent-post-content .date {
+    text-align: center;
+    font-size: 18px;
 }
+
+.recent-post-content p {
+    color: whitesmoke;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
 
 .navigation-wrapper {
     text-align: center;
@@ -167,40 +98,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-size: 16px;
 }
 
-@media only screen and (min-width: 1025px) {
-    /*.recent-posts .post-display {
-        width: 49%;
-    }*/
+.recent-post-photo {
+    height: 200px;
+    background: white;
 
-    .latest-post-content {
-        padding: 5px;
-    }
-
-    .latest-post-content p {
-        width: 80%;
-        margin-left: 10%;
-    }
+    text-align: center;
+    position: relative;
 }
 
-@media only screen and (max-width: 1024px) {
-
-    /*.recent-posts .post-display {
-        width: 49%;
-    }*/
-
-    .recent-posts {
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-
-    .latest-post-content {
-        padding: 0 30px;
-    }
-
-    .latest-post-content h1 {
-        font-size: 40px;
-    }
-
+.recent-post-photo img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 /*Mobile display */
@@ -208,7 +124,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
     .recent-posts {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 50% 50%;
     }
 
     .recent-posts-wrapper {
@@ -218,46 +134,61 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         height: 300px;
     }
 
-    .latest-post-content h1 {
-        width: 100%;
-        margin-left: 0;
-        padding: 0;
-    }
-
-    .latest-post-content p {
-        width: 100%;
-        margin-left: 0;
+    .latest-post-actual {
+        background-color: rgb(27, 46, 37);
+        background-color: rgba(27, 46, 37, 0.2);
+        color: white;
+        font-weight: bold;
+        border: 2px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 0px;
+        text-align: center;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .latest-post-wrapper {
-        margin: 1% 3%;
-        height: auto;
-        border: 3px solid #8ffab0;
-    }
-
-    .latest-post-content {
         width: 100%;
-        margin-left: 0;
-        padding: 10px 0;
-        font-size: 5vh;
-    }
-
-    .latest-post-content h1 {
-        width: 100%;
-        margin-left: 0;
-        padding: 1vh;
-        font-size: 5vh;
-
     }
 
     .latest-post-content p {
+        font-size: 2.8vh;
+    }
+
+    .latest-post-content .date {
+        font-size: 2.2vh;
+    }
+
+
+    .latest-post-actual {
+        background-color: rgb(27, 46, 37);
+        background-color: rgba(27, 46, 37, 0.2);
+        color: white;
+        font-weight: bold;
+        border: 2px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
         width: 100%;
-        text-align: justify;
-        margin-left: 0;
-        font-size: 3vh;
-        padding: 1vh;
+        padding: x;
+        text-align: center;
+    }
+
+    .latest-post-actual h1 {
+        font-size: 5vh;
+
+    }
+
+    .latest-post-actual p {
+
+        font-size: 2.5vh;
         font-family: 'Lato', serif;
     }
 
@@ -283,12 +214,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
     .recent-posts {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 100%;
     }
 
-    .recent-posts-content p {
-        font-family: 'Lato', serif;
-        font-size: 3vh;
+    .recent-post-content h1 {
+        font-size: 4.8vh;
+    }
+
+    .recent-post-content p {
+        font-family: 'Lato', sans-serif;
+        font-size: 2.8vh;
+    }
+
+    .recent-post-content .date {
+        font-size: 2.2vh;
     }
 
     .recent-posts-background {

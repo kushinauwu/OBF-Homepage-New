@@ -89,9 +89,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .past-events {
     background-color: #1b2e25;
-    margin-top: 30px;
+    margin-top: 10px;
     padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 .past-events h1 {
@@ -236,7 +235,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .card-info p {
         font-family: 'Lato', serif;
         font-size: 3vh;
-        text-align: justify;
     }
 
     /*past events*/

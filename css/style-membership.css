@@ -21,7 +21,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .membership-introduction-text p {
     font-family: 'Slabo 27px', sans-serif;
     font-size: 20px;
-    text-align: justify;
 }
 
 .membership-image {
@@ -103,7 +102,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .membership-introduction-text p {
         font-family: 'Lato', sans-serif;
         font-size: 3vh;
-        text-align: justify;
     }
 
     .membership-eligibility,
@@ -125,6 +123,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .join-obf-button {
         text-align: center;
     }
+
     .join-obf-button .button {
         padding: 2vh 3vh;
         margin-top: 3vh;

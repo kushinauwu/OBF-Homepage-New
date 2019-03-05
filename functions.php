@@ -36,7 +36,7 @@ function obf_scripts_styles() {
     else if ( is_page( 'donate' ) ) {
         wp_enqueue_style('style-donate.css', get_template_directory_uri().'/css/style-donate.css',false,'1.0','all');
     }
-    
+   
     else if ( is_single() ) {
         wp_enqueue_style('style-single.css', get_template_directory_uri().'/css/style-single.css',false,'1.1','all');
     }
@@ -44,6 +44,8 @@ function obf_scripts_styles() {
     else if ( is_home() ) {
         wp_enqueue_style('style-home.css', get_template_directory_uri().'/css/style-home.css',false,'1.1','all');
     }
+    
+    
     wp_enqueue_style( 'style', get_stylesheet_uri() );    
 }
 add_action( 'wp_enqueue_scripts','obf_scripts_styles' );
@@ -57,10 +59,6 @@ function obf_enqueue_page_template_styles() {
     }
     else if ( is_page_template( 'bosc.php' ) ) {
         wp_enqueue_style( 'style-bosc.css', get_template_directory_uri() . '/css/style-bosc.css' );
-    }
-    
-    else if ( is_page_template( 'test.php' ) ) {
-        wp_enqueue_style( 'style-test.css', get_template_directory_uri() . '/css/style-test.css' );
     }
     
     else if ( is_page_template( 'about.php' ) ) {
@@ -598,3 +596,36 @@ function custom_breadcrumbs() {
            
     }
 }
+
+/*
+Register widgets area
+*/
+
+if (function_exists('register_sidebar')) {
+
+	register_sidebar(array(
+		'name' => 'Widgetized Area',
+		'id'   => 'widgetized-area',
+		'description'   => 'This is a widgetized area.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+	));
+
+}
+
+/*
+    Add meta box on about page for instructions
+*/
+function obf_add_meta_boxes_callback() {
+    echo 'Please use the code editor for editing timeline events.';
+}
+
+function obf_add_meta_boxes_page() {
+    global $post;
+    if ( 'about.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+        add_meta_box( 'about_meta_box', 'Timeline editing instructions', 'obf_add_meta_boxes_callback', 'page', 'side', 'high' );
+    }
+}
+add_action( 'add_meta_boxes_page', 'obf_add_meta_boxes_page' );

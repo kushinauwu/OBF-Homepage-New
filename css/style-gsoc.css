@@ -10,12 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /*MAIN PAGE*/
 
-/*.gsoc-main-page .container-fluid {
-     margin-left: 0;
-    margin-right: 0;
-    padding-right: 0;
-    padding-left: 0;
-}*/
 
 .container-fluid-cancel {
     margin-left: calc(-2% - 17px);
@@ -76,7 +70,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-family: 'Slabo 27px', serif;
     font-size: 24px;
     color: darkslategray;
-    text-align: justify;
 }
 
 .gsoc-logo {
@@ -100,7 +93,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .gsoc-overview-text p {
     font-family: 'Slabo 27px', serif;
     font-size: 20px;
-    text-align: justify;
 }
 
 .gsoc-overview h2 {
@@ -115,7 +107,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-size: 20px;
     margin-bottom: 30px;
     margin-left: 2%;
-    text-align: justify;
 }
 
 .facts-links-list li {
@@ -123,6 +114,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .gsoc-overview .grid-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.why-apply {
     display: grid;
     grid-template-columns: 70% 30%;
 }
@@ -137,7 +133,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     padding: 10px 15px;
     margin: 1% 2%;
     border-radius: 20px;
-    text-align: justify;
 }
 
 .why-apply-list li:nth-child(odd) {
@@ -148,33 +143,29 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     background-color: #cccccf;
 }
 
-.image-list {
-    text-align: center;
+.why-apply .wp-block-column:nth-child(even) {
+    /* background: pink; */
+    padding-top: 20%;
 }
 
-.image-list img {
+.why-apply img {
     display: block;
-    margin: 0 auto 12%;
-    width: 50%;
+    margin: 15% auto;
     max-width: 170px;
     height: auto;
 }
 
 /*progress reports*/
 
-.progress-reports {
-    margin-top: 40px;
-}
-
 .progress-reports,
 .previous-years {
     background-color: #1b2e25;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .progress-reports h1,
 .previous-years h1 {
-    color: #88eef7
+    color: #88eef7;
 }
 
 .progress-reports-content p,
@@ -183,7 +174,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-family: 'Slabo 27px', serif;
     font-size: 20px;
     margin-bottom: 15px;
-    text-align: justify;
 }
 
 .progress-reports-content a,
@@ -202,8 +192,40 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-size: 20px;
     margin-bottom: 10px;
     margin-left: 2%;
-    text-align: justify;
 }
+
+/*guidelines*/
+.when-apply {
+    background-color: #1b2e25;
+}
+
+.when-apply p,
+.when-apply li,
+.when-apply span,
+.when-apply i {
+    color: ghostwhite;
+
+}
+
+.blurb {
+    background-color: #cfffff;
+    padding: 1.5%;
+    border-radius: 3vh;
+    margin-bottom: 30px;
+}
+
+.when-apply h1,
+.when-apply h2,
+.when-apply h3,
+.when-apply h4,
+.when-apply h5 {
+    color: #88eef7;
+}
+
+.when-apply a {
+    color: lightblue;
+}
+
 
 /*Tablet resolution*/
 @media only screen and (max-width:768px) {
@@ -239,7 +261,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .gsoc-introduction-text p {
         font-size: 22px;
         color: darkslategray;
-        text-align: justify;
     }
 
     .gsoc-logo img {
@@ -353,19 +374,29 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
     /*GSoC overview*/
     .gsoc-overview {
-        margin-top: 20px;
+        margin-top: 0px;
+        display: block;
     }
 
-    .gsoc-overview-text p {
+    .gsoc-overview .wp-block-media-text__content {
+        padding: 0;
+    }
+
+    p {
         font-size: 3vh;
         font-family: 'Lato', serif;
         letter-spacing: normal;
     }
 
-    .gsoc-overview h2 {
+    h2 {
         font-size: 4.2vh;
         margin-top: 3vh;
         margin-bottom: 1vh;
+    }
+
+    a {
+        font-family: 'Lato', sans-serif;
+        font-size: 3vh;
     }
 
     .facts-links-list {
@@ -376,6 +407,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         margin-bottom: 0.5vh;
         font-family: 'Lato', serif;
         letter-spacing: normal;
+    }
+
+    .why-apply {
+        grid-template-columns: 100%;
+    }
+
+    .why-apply .wp-block-column:nth-child(even) {
+        /* background: pink; */
+        padding-top: 0%;
+    }
+
+    .why-apply .wp-block-image figure {
+        display: inline;
     }
 
     .why-apply-list {
@@ -400,7 +444,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         grid-template-columns: auto;
     }
 
-    .image-list img {
+    .why-apply .wp-block-image {
+        max-width: 100%;
+        margin-bottom: 1em;
+        margin-left: 0;
+        display: inline;
+        margin-right: 0;
+    }
+
+    .why-apply img {
         display: inline;
         width: 25%;
         margin: 2vh 1vh;
@@ -430,10 +482,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         padding-bottom: 3vh;
     }
 
-    .previous-years ul li {
+    ul li,
+    ol li {
         font-size: 3vh;
         margin-bottom: 1vh;
         font-family: 'Lato', serif;
         letter-spacing: normal;
+    }
+
+    .previous-years ul li {
+        font-size: 3vh;
+        font-family: 'Lato', sans-serif;
     }
 }

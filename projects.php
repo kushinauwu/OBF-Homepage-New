@@ -9,8 +9,16 @@ Template Name:projects
 <div class="showcase-wrapper" id="main">
     <div class="container-fluid">
         <?php custom_breadcrumbs(); ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php the_content(); ?>
+        <?php endwhile; else : ?>
+        <p>
+            <?php __('No post found'); ?>
+        </p>
+        <?php endif;
+        wp_reset_postdata(); ?>
     </div>
-    <section class="main-projects" id="main-projects-section">
+    <section class="main-projects" id="member-projects">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
@@ -71,7 +79,7 @@ Template Name:projects
         </div>
     </section>
 
-    <section class="affiliated-projects" id="affiliated-projects-section">
+    <section class="affiliated-projects" id="affiliated-projects">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
@@ -134,7 +142,7 @@ Template Name:projects
         </div>
     </section>
 
-    <section class="related-projects" id="related-projects-section">
+    <section class="related-projects" id="related-projects">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
@@ -190,7 +198,7 @@ Template Name:projects
         </div>
     </section>
 
-    <section class="ontologies-definitions" id="ontologies-definitions-section">
+    <section class="ontologies-definitions" id="ontologies-and-definitions">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
@@ -238,7 +246,7 @@ Template Name:projects
         </div>
     </section>
 
-    <section class="in-memoriam" id="in-memoriam-section">
+    <section class="in-memoriam" id="retired-projects">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
