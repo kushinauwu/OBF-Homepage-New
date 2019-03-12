@@ -60,7 +60,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .card-body p {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 22px;
     color: darkslategray;
     margin-top: 20px;
@@ -76,7 +76,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .card-info p {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 20px;
 }
 
@@ -118,7 +118,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .past-events-list li .info-past {
     font-size: 20px;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     color: ghostwhite;
 }
 

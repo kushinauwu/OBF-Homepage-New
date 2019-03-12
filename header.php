@@ -9,7 +9,7 @@
     <meta name="author" content="kushinauwu">
     <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>
@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse">
                 <span class="sr-only">
                     <?php esc_html_e( 'Main Menu', 'obf-new' ); ?></span>
-                <?php 
+                <?php
                             wp_nav_menu( array(
                             'theme_location'  => 'primary',
                             'depth'	          => 3, // 1 = no dropdowns, 2 = with dropdowns.

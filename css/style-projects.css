@@ -39,7 +39,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 .project-info p {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     letter-spacing: 0.7px;
     font-size: 20px;
     color: darkslategray;
@@ -76,7 +76,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .related-projects-info p {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 20px;
     width: 90%;
     margin-left: auto;
@@ -111,7 +111,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .ontologies-definitions-list li p,
 .in-memoriam-list li p {
     margin: 0 15px 20px 5px;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 20px;
     letter-spacing: 0.7px;
     color: whitesmoke;

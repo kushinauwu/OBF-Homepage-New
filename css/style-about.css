@@ -156,7 +156,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     padding 20px 0px;
     background-color: transparent;
     text-decoration: none;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 20px;
 }
 
@@ -166,7 +166,7 @@ p {
     text-decoration: none;
     font-size: 20px;
     color: #2d95b5;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     letter-spacing: 0.7px;
 
 }
@@ -184,7 +184,7 @@ ul.activities-text-wrapper {
 }
 
 ul.activities-text-wrapper li {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 22px;
     padding: 20px;
     margin: 2% auto;

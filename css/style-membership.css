@@ -19,7 +19,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .membership-introduction-text p {
-    font-family: 'Slabo 27px', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     font-size: 20px;
 }
 
@@ -48,7 +48,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .membership-participation p,
 .membership-participation li {
     color: white;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 20px;
 }
 
