@@ -171,7 +171,7 @@ i {
 }
 
 p {
-    font-family: 'Slabo 27px';
+    font-family: 'Roboto Slab';
     font-size: 20px;
     color: darkslategray;
 
@@ -516,7 +516,7 @@ ul.bosc-fellowship-license {
 table {
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 20px;
 }
 
