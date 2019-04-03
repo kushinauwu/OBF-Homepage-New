@@ -4,7 +4,7 @@
 <head>
     <meta charset="<?php bloginfo('charset') ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Open Bioinformatics Foundation theme ">
+    <meta name="description" content="Open Bioinformatics Foundation Homepage">
     <meta name="keywords" content="Bioinformatics, Technology, OBF, BOSC, Open Bioinformatics Foundation">
     <meta name="author" content="kushinauwu">
     <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
