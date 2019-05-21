@@ -47,6 +47,8 @@ h6 {
     color: #275aa1;
     padding: 0;
     text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
 }
 
 
@@ -76,7 +78,7 @@ h6 {
 }
 
 li {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: darkslategray;
 }
@@ -92,7 +94,7 @@ li li li {
 a {
     transition: color 0.2s;
     text-decoration: none;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: inherit;
 }
 
@@ -101,7 +103,7 @@ a:hover {
 }
 
 p {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
 
@@ -317,7 +319,7 @@ i {
     font-size: 16px;
     color: rgb(001, 017, 032);
     margin-bottom: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     margin-left: 6%;
     margin-right: 6%;
     padding-left: 15px;
@@ -399,7 +401,7 @@ i {
 
 .news-section ul li a {
     color: whitesmoke;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 22px;
 }
 
@@ -444,7 +446,7 @@ i {
 
 .fellowships-section p {
     font-size: 16px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     margin-left: 6%;
     margin-right: 6%;
     padding-left: 15px;
@@ -475,7 +477,7 @@ i {
     background-color: transparent;
     text-decoration: none;
     font-size: 22px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     transition: 0.3s ease;
 }
 
@@ -562,7 +564,7 @@ i {
 
 .projects-section ul li a {
     margin-top: 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: whitesmoke;
     /*project titles*/
@@ -651,7 +653,7 @@ join-list {
 .events-list .event-details .event-name,
 .join-list .join-details .join-title {
     margin-top: 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     text-decoration: none;
     font-size: 26px;
@@ -662,7 +664,7 @@ join-list {
 .events-list .event-details .event-date,
 .event-location {
     margin-top: 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: dimgray;
     font-size: 22px;
@@ -723,7 +725,7 @@ join-list {
 
 
 .member-list .member-details .member-name a {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     text-decoration: none;
     font-size: 24px;
@@ -733,7 +735,7 @@ join-list {
 }
 
 .member-list .member-details .member-position {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: lightblue;
     font-size: 22px;
@@ -822,8 +824,7 @@ join-list {
     margin-bottom: 30px;
     color: darkslategray;
     margin-left: 2%;
-    font-family: 'Roboto Slab',
-        serif;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
     text-align: left;
 }
@@ -848,7 +849,7 @@ join-list {
 .footer-section .org-menu .org-menu-item a {
     color: darkslategray;
     transition: color 0.2s;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     padding: 20px;
     font-size: 24px;
 }
@@ -867,7 +868,7 @@ join-list {
 }
 
 .credits {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     text-align: center;
 }
@@ -937,7 +938,7 @@ textarea:focus {
 #comments #author,
 #comments #email,
 textarea {
-    font-family: 'Roboto Slab', serif, "Open Sans", "Droid Sans", Arial;
+    font-family: 'Lato', sans-serif, "Open Sans", "Droid Sans", Arial;
     color: #1d1d1d;
     letter-spacing: 0.7px;
 }
