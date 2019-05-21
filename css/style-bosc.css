@@ -172,9 +172,8 @@ i {
 
 p {
     font-family: 'Roboto Slab';
-    font-size: 20px;
+    font-size: 16px;
     color: darkslategray;
-
 }
 
 /*bosc homepage*/
@@ -245,7 +244,7 @@ p.bosc-overview {
     text-shadow: 1px 1px 2px #a6a6a6;
     font-weight: bold;
     font-family: 'Montserrat', serif;
-    font-size: 20px;
+    font-size: 16px;
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 99%);
     margin-top: 20px;
     transition: 0.3s ease-in-out;
@@ -326,7 +325,7 @@ ul.bosc-timeline li:before {
 
 ul.bosc-timeline li a {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -517,11 +516,11 @@ table {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Roboto Slab', serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 tr:nth-child(1) {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
 }
 
