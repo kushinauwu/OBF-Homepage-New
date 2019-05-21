@@ -146,7 +146,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-size: 48px;
     color: #88eef7;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
     padding: 0;
 }
 
@@ -237,7 +236,6 @@ ul.activities-text-wrapper li:nth-child(even) {
         margin-top: 20px;
         color: #88eef7;
         font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
         padding: 0;
         width: 100%;
     }

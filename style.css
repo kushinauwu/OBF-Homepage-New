@@ -45,7 +45,6 @@ h5,
 h6 {
     font-family: 'Montserrat', sans-serif;
     color: #275aa1;
-    text-transform: uppercase;
     padding: 0;
     text-align: left;
 }
@@ -379,7 +378,6 @@ i {
 .news-section h1 {
     color: #88eef7;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
 }
 
 .news-section img {
@@ -817,7 +815,6 @@ join-list {
 .footer-section h3 {
     color: #275aa1;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
     font-size: 34px;
 }
 
@@ -1010,10 +1007,6 @@ input#submit:active {
     font-family: 'K2D', sans-serif;
 }
 
-.errorpage-wrapper h5 {
-    text-transform: inherit;
-}
-
 .errorpage-wrapper a {
     font-family: 'Montserrat', sans-serif;
 }
@@ -1057,7 +1050,6 @@ input#submit:active {
     h6 {
         font-family: 'Montserrat', sans-serif;
         color: #275aa1;
-        text-transform: uppercase;
         padding: 0;
         text-align: left;
         margin-top: 3vh;
@@ -1127,7 +1119,6 @@ input#submit:active {
         color: #275aa1;
         /* section headings text*/
         font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
         padding: 0;
         text-align: left;
     }
@@ -1330,7 +1321,6 @@ input#submit:active {
         color: #275aa1;
         /* footer heading color */
         font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
         font-size: 4vh;
         word-break: break-word;
     }

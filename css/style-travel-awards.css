@@ -67,7 +67,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     color: lightblue;
     margin-top: 30px;
     padding: 0 0 1% 0;
-    text-transform: uppercase;
 }
 
 .criterion-text p {
@@ -184,7 +183,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .applications-heading h2 {
-    text-transform: uppercase;
     color: #275aa1;
 }
 
@@ -252,7 +250,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         color: #275aa1;
         /* section headings text*/
         font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
         padding: 0;
         text-align: left;
     }
@@ -455,7 +452,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         color: lightblue;
         margin-top: 0px;
         padding: 0;
-        text-transform: uppercase;
         font-size: 3.6vh;
     }
 
@@ -578,7 +574,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .applications-heading h2 {
         margin-top: 3vh;
         padding: 0;
-        text-transform: uppercase;
         color: #275aa1;
         font-size: 3.6vh;
     }
