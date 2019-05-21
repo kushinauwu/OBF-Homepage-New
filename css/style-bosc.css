@@ -415,14 +415,12 @@ iframe {
 .bosc-fellowship-license {
     margin-top: 30px;
     background-color: ghostwhite;
+    padding:0.5em 20px 1em 20px;
 }
 
 h1.bosc-fellowship-license {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding:0.5em 20px;
     margin: 0;
-    padding-bottom: 20px;
-    padding-top: 40px;
 }
 
 p.bosc-fellowship-license {
