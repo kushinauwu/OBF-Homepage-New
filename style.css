@@ -1076,7 +1076,6 @@ input#submit:active {
 
     li {
         font-family: 'Lato', serif;
-        font-size: 3vh;
         color: darkslategray;
     }
 
@@ -1139,7 +1138,6 @@ input#submit:active {
 
     p {
         font-family: 'Lato', serif;
-        font-size: 3vh;
         letter-spacing: normal;
     }
 
