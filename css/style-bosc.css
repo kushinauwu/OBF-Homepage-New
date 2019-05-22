@@ -179,7 +179,15 @@ p {
 /*bosc homepage*/
 
 .bosc-introduction-image {
-    padding-bottom: 30px;
+    padding-top:20px;
+}
+
+.bosc-introduction-image .wp-block-media-text__content {
+    padding-left:0;
+}
+
+.bosc-introduction-image h1:first-of-type {
+    margin-top:-3%;
 }
 
 .bosc-introduction-image img {
@@ -554,6 +562,9 @@ tr:nth-child(1) {
     background: #fffcb9;
 }
 
+.bosc-sponsors-gallery h2 {
+  margin-top:2%;
+}
 .bosc-sponsors-gallery .wp-block-column {
     padding: 1% 2%;
 }
