@@ -45,40 +45,41 @@ h5,
 h6 {
     font-family: 'Montserrat', sans-serif;
     color: #275aa1;
-    text-transform: uppercase;
     padding: 0;
     text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
 }
 
 
 h1 {
-    font-size: 48px;
-}
-
-h2 {
     font-size: 42px;
 }
 
-h3 {
+h2 {
     font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
 }
 
 
 h4 {
-    font-size: 32px;
-}
-
-h5 {
     font-size: 28px;
 }
 
-h6 {
+h5 {
     font-size: 24px;
 }
 
-li {
-    font-family: 'Roboto Slab', serif;
+h6 {
     font-size: 20px;
+}
+
+li {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
     color: darkslategray;
 }
 
@@ -93,7 +94,7 @@ li li li {
 a {
     transition: color 0.2s;
     text-decoration: none;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: inherit;
 }
 
@@ -102,8 +103,8 @@ a:hover {
 }
 
 p {
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
 }
 
 /*NAVIGATION*/
@@ -315,10 +316,10 @@ i {
 }
 
 .about-section p {
-    font-size: 22px;
+    font-size: 16px;
     color: rgb(001, 017, 032);
     margin-bottom: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     margin-left: 6%;
     margin-right: 6%;
     padding-left: 15px;
@@ -379,7 +380,6 @@ i {
 .news-section h1 {
     color: #88eef7;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
 }
 
 .news-section img {
@@ -401,7 +401,7 @@ i {
 
 .news-section ul li a {
     color: whitesmoke;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 22px;
 }
 
@@ -414,7 +414,6 @@ i {
     color: darkslategray;
     text-shadow: 1px 1px 2px #a6a6a6;
     padding: 10px 15px 10px 25px;
-    font-size: 22px;
     font-family: 'Montserrat', serif;
     font-weight: bold;
     border-radius: 25px 0 0 25px;
@@ -446,8 +445,8 @@ i {
 }
 
 .fellowships-section p {
-    font-size: 22px;
-    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
     margin-left: 6%;
     margin-right: 6%;
     padding-left: 15px;
@@ -478,7 +477,7 @@ i {
     background-color: transparent;
     text-decoration: none;
     font-size: 22px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     transition: 0.3s ease;
 }
 
@@ -565,7 +564,7 @@ i {
 
 .projects-section ul li a {
     margin-top: 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: whitesmoke;
     /*project titles*/
@@ -654,7 +653,7 @@ join-list {
 .events-list .event-details .event-name,
 .join-list .join-details .join-title {
     margin-top: 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     text-decoration: none;
     font-size: 26px;
@@ -665,7 +664,7 @@ join-list {
 .events-list .event-details .event-date,
 .event-location {
     margin-top: 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: dimgray;
     font-size: 22px;
@@ -726,7 +725,7 @@ join-list {
 
 
 .member-list .member-details .member-name a {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     text-decoration: none;
     font-size: 24px;
@@ -736,7 +735,7 @@ join-list {
 }
 
 .member-list .member-details .member-position {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: lightblue;
     font-size: 22px;
@@ -818,7 +817,6 @@ join-list {
 .footer-section h3 {
     color: #275aa1;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
     font-size: 34px;
 }
 
@@ -826,9 +824,8 @@ join-list {
     margin-bottom: 30px;
     color: darkslategray;
     margin-left: 2%;
-    font-family: 'Roboto Slab',
-        serif;
-    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
     text-align: left;
 }
 
@@ -852,7 +849,7 @@ join-list {
 .footer-section .org-menu .org-menu-item a {
     color: darkslategray;
     transition: color 0.2s;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     padding: 20px;
     font-size: 24px;
 }
@@ -871,7 +868,7 @@ join-list {
 }
 
 .credits {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     text-align: center;
 }
@@ -891,11 +888,11 @@ h2.screen-reader-text {
 
 h2.comment-reply-title {
     font-family: 'Montserrat', serif;
-    font-size: 26px;
+    font-size: 18px;
 }
 
 p.comment-notes {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
@@ -941,7 +938,7 @@ textarea:focus {
 #comments #author,
 #comments #email,
 textarea {
-    font-family: 'Roboto Slab', serif, "Open Sans", "Droid Sans", Arial;
+    font-family: 'Lato', sans-serif, "Open Sans", "Droid Sans", Arial;
     color: #1d1d1d;
     letter-spacing: 0.7px;
 }
@@ -953,7 +950,7 @@ textarea {
 
 .comments-title {
     font-family: 'Montserrat', serif;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -1011,10 +1008,6 @@ input#submit:active {
     font-family: 'K2D', sans-serif;
 }
 
-.errorpage-wrapper h5 {
-    text-transform: inherit;
-}
-
 .errorpage-wrapper a {
     font-family: 'Montserrat', sans-serif;
 }
@@ -1058,7 +1051,6 @@ input#submit:active {
     h6 {
         font-family: 'Montserrat', sans-serif;
         color: #275aa1;
-        text-transform: uppercase;
         padding: 0;
         text-align: left;
         margin-top: 3vh;
@@ -1084,7 +1076,6 @@ input#submit:active {
 
     li {
         font-family: 'Lato', serif;
-        font-size: 3vh;
         color: darkslategray;
     }
 
@@ -1128,7 +1119,6 @@ input#submit:active {
         color: #275aa1;
         /* section headings text*/
         font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
         padding: 0;
         text-align: left;
     }
@@ -1148,7 +1138,6 @@ input#submit:active {
 
     p {
         font-family: 'Lato', serif;
-        font-size: 3vh;
         letter-spacing: normal;
     }
 
@@ -1331,7 +1320,6 @@ input#submit:active {
         color: #275aa1;
         /* footer heading color */
         font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
         font-size: 4vh;
         word-break: break-word;
     }
@@ -1629,7 +1617,7 @@ input#submit:active {
     }
 
     /*EVENTS SECTION*/
-    .events-section,
+    .events-section
         {
         transition: 1s ease;
         padding-top: 1vh;

@@ -67,7 +67,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .gsoc-introduction-text p {
     padding: 5% 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 24px;
     color: darkslategray;
 }
@@ -91,19 +91,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .gsoc-overview-text p {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
 
 .gsoc-overview h2 {
     color: #275aa1;
-    text-transform: uppercase;
     margin-top: 30px;
     margin-bottom: 10px;
 }
 
 .facts-links-list {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     margin-bottom: 30px;
     margin-left: 2%;
@@ -124,7 +123,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .why-apply-list {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
 
@@ -171,7 +170,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .progress-reports-content p,
 .previous-years p {
     color: ghostwhite;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     margin-bottom: 15px;
 }
@@ -188,7 +187,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .previous-years ul li {
     color: ghostwhite;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     margin-bottom: 10px;
     margin-left: 2%;
@@ -249,7 +248,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     p,
     li,
     a {
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Lato', sans-serif;
         letter-spacing: 0.7px;
     }
 

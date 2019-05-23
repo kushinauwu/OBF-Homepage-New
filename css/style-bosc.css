@@ -171,16 +171,23 @@ i {
 }
 
 p {
-    font-family: 'Roboto Slab';
-    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
     color: darkslategray;
-
 }
 
 /*bosc homepage*/
 
 .bosc-introduction-image {
-    padding-bottom: 30px;
+    padding-top:20px;
+}
+
+.bosc-introduction-image .wp-block-media-text__content {
+    padding-left:0;
+}
+
+.bosc-introduction-image h1:first-of-type {
+    margin-top:-3%;
 }
 
 .bosc-introduction-image img {
@@ -245,7 +252,7 @@ p.bosc-overview {
     text-shadow: 1px 1px 2px #a6a6a6;
     font-weight: bold;
     font-family: 'Montserrat', serif;
-    font-size: 20px;
+    font-size: 16px;
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 99%);
     margin-top: 20px;
     transition: 0.3s ease-in-out;
@@ -326,7 +333,7 @@ ul.bosc-timeline li:before {
 
 ul.bosc-timeline li a {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -416,14 +423,12 @@ iframe {
 .bosc-fellowship-license {
     margin-top: 30px;
     background-color: ghostwhite;
+    padding:0.5em 20px 1em 20px;
 }
 
 h1.bosc-fellowship-license {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding:0.5em 20px;
     margin: 0;
-    padding-bottom: 20px;
-    padding-top: 40px;
 }
 
 p.bosc-fellowship-license {
@@ -516,12 +521,12 @@ ul.bosc-fellowship-license {
 table {
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
 }
 
 tr:nth-child(1) {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -557,6 +562,9 @@ tr:nth-child(1) {
     background: #fffcb9;
 }
 
+.bosc-sponsors-gallery h2 {
+  margin-top:2%;
+}
 .bosc-sponsors-gallery .wp-block-column {
     padding: 1% 2%;
 }
@@ -655,10 +663,14 @@ tr:nth-child(1) {
     }
 
 
+
 }
 
 
 @media only screen and (max-width: 767px) {
+  .bosc-introduction-image h1:first-of-type {
+    margin-top: 0.5em;
+}
 
     .navbar {
         margin-top: 0px;

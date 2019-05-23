@@ -14,7 +14,7 @@ Template Name:board
         <div class="container-fluid">
             <h1>Board of Directors</h1>
             <div class="members-contact">
-                <p>The board can be contacted via email at <a href="mailto:board@open-bio.org">board@open-bio.org</a> (or in case of mailing list problems, try <a href="mailto:obf-board@googlegroups.com">obf-board@googlegroups.com</a> as a fall back), and can be reached via Twitter @<a href="https://twitter.com/OBF_news">OBF_News</a>. The minutes of the previous meetings can be found <a href="http://localhost/obf-new/board/meeting-minutes/">here</a>.</p>
+                <p>The board can be contacted via email at <a href="mailto:board@open-bio.org">board@open-bio.org</a> (or in case of mailing list problems, try <a href="mailto:obf-board@googlegroups.com">obf-board@googlegroups.com</a> as a fall back), and can be reached via Twitter @<a href="https://twitter.com/OBF_news">OBF_News</a>. The minutes of the previous meetings can be found <a href="/board/meeting-minutes/">here</a>.</p>
             </div>
 
             <ul class="list-inline members-list">

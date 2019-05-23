@@ -7,7 +7,7 @@ Template Name:bosc
 <?php get_header('bosc'); ?>
 
 <div class="showcase-wrapper">
-    <div class="container-fluid">
+    <div class="container">
         <?php custom_breadcrumbs(); ?>
 
 
