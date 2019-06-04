@@ -9,7 +9,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 p {
-    font-size: 22px;
     font-family: 'Lato', sans-serif;
     letter-spacing: 0.7px;
 }
@@ -83,7 +82,6 @@ figure {
 }
 
 .single-content p {
-    font-size: 22px;
     font-family: 'Lato', sans-serif;
     letter-spacing: 0.7px;
 }
