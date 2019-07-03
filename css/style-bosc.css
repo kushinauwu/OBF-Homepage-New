@@ -609,7 +609,7 @@ tr:nth-child(1) {
 
 .bosc-footer-sub-section {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -629,7 +629,7 @@ tr:nth-child(1) {
 
 .bosc-footer-sub-section .networks {
     display: grid;
-    grid-template-columns: 24% 28% 24% 24%;
+    grid-template-columns: 18% 24% 18% 18% 18%;
 }
 
 .network-item {

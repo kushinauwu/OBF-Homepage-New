@@ -3,7 +3,7 @@
 <!--main content start -->
 <div class="showcase-wrapper">
 
-    <div class="container-fluid">
+    <div class="container">
         <?php custom_breadcrumbs(); ?>
         <div class="navigation-wrapper">
             <div class="posts-navigation">
@@ -11,7 +11,7 @@
 						array(
 							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post: ', 'obf-new' ) . '</span> ' .
 								'<span class="post-title">%title</span>',
-							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post: ', 'obf-new' ) . '</span> ' . 
+							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post: ', 'obf-new' ) . '</span> ' .
 								'<span class="post-title">%title</span>',
 						)
 					); ?>
@@ -36,7 +36,7 @@
 						array(
 							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post: ', 'obf-new' ) . '</span> ' .
 								'<span class="post-title">%title</span>',
-							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post: ', 'obf-new' ) . '</span> ' . 
+							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post: ', 'obf-new' ) . '</span> ' .
 								'<span class="post-title">%title</span>',
 						)
 					); ?>
