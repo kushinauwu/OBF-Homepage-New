@@ -331,7 +331,13 @@ ul.bosc-timeline li:before {
     margin-top: 10px;
 }
 
+
 ul.bosc-timeline li a {
+    display: inline;
+    font-weight: normal;
+}
+
+ul.bosc-timeline li a:nth-child(1) {
     display: block;
     font-size: 20px;
     font-weight: bold;
